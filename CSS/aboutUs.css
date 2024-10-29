@@ -40,7 +40,7 @@ footer{
     margin: 0 auto;
 }
 
-.area_est,.area_book,.area_video,.area_cyj{
+.area_est,.area_book,.area_video,.area_mem{
     display: flex;
     align-items: flex-start;
 }
@@ -147,23 +147,34 @@ footer{
     margin-bottom: 0;
 }
 
-.area_cyj{
+.area_2member {
+    position: relative;
     width: 1212px;
     height: 350px;
-    background-color: #47587D;
+    overflow: visible;
     border-radius: 50px;
+    background-color: #ffffff;
     margin: 105px 34px 98px 34px;
-    position: relative;
 }
 
-.word_cyj{
+.area_mem {
+    width: 100%;
+    height: 100%;
+    background-color: #47587D;
+    border-radius: 50px;
+    position: absolute;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    overflow: visible;
+}
+
+.word_mem {
     width: 537px;
     height: 218px;
     margin-top: 66px;
     margin-left: 139px;
 }
 
-.tit_cyj{
+.tit_mem {
     width: 106px;
     height: 31px;
     font-size: 16px;
@@ -175,7 +186,7 @@ footer{
     margin-bottom: 5px;
 }
 
-.tit_cyj_name{
+.tit_mem_name {
     width: 155px;
     height: 45px;
     font-size: 24px;
@@ -186,7 +197,7 @@ footer{
     margin: 0;
 }
 
-.intro_cyj{
+.intro_mem {
     width: 537px;
     height: 110px;
     margin-top: 27px;
@@ -194,10 +205,37 @@ footer{
     color: #FFFFFF;
 }
 
-.img_cyj{
-    width: 464px;
-    height: 455px;
+.img_mem_cyj, .img_mem_tobey {
+    height: auto;
     position: absolute;
-    top: -105px;
+}
+
+.img_mem_cyj{
+    width: 339px;
+    height: 455px;
+    margin-top: -105px;
+    left: 873px;
+}
+
+.img_mem_tobey{
+    width: 536px;
+    height: 350px;
+    top: 0;
     left: 676px;
+}
+
+.area_cyj, .area_whj {
+    width: 100%;
+    height: 350px;
+    position: absolute;
+}
+
+.area_cyj {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.area_whj {
+    transform: translateX(100%);
+    opacity: 0;
 }
