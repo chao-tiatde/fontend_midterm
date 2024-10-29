@@ -11,8 +11,8 @@ html{
 }
 
 body{
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
+    font-family: "Noto sans", sans-serif;
+    font-weight: 550;
     margin: 0;
     padding: 0;
 }
@@ -39,10 +39,15 @@ body{
     align-items: flex-start;
 }
 
+.area_est{
+    width: 1280px;
+    height: 374px;
+}
+
 .word_est{
     width: 537px;
-    height: 206px;
-    margin-top: 98px;
+    height: 225px;
+    margin-top: 74px;
     margin-left: 180px;
 }
 
@@ -54,6 +59,7 @@ body{
     background-color: #47587D;
     border-radius: 2px;
     padding: 10px 37px;
+    margin: 0;
 }
 
 .img_est{
@@ -65,7 +71,7 @@ body{
 
 .intro_est{
     width: 537px;
-    height: 133px;
+    height: 153px;
     margin-top: 28px;
     margin-bottom: 0;
 }
@@ -78,9 +84,9 @@ body{
 
 .word_book{
     width: 537px;
-    height: 172px;
-    margin-top: 101px;
-    margin-left: 180px;
+    height: 183px;
+    margin-top: 95px;
+    margin-left: 178px;
 }
 
 .tit_book{
@@ -91,11 +97,12 @@ body{
     background-color: white;
     border-radius: 2px;
     padding: 10px 37px;
+    margin: 0;
 }
 
 .intro_book{
     width: 537px;
-    height: 95px;
+    height: 110px;
     color: white;
     margin-top: 32px;
     margin-bottom: 0;
@@ -111,8 +118,8 @@ body{
     width: 1042px;
     height: 268px;
     margin-top: 68px;
-    margin-left: 120px;
-    margin-right: 118px;
+    margin-left: 132px;
+    margin-right: 133px;
 }
 
 .video{
@@ -122,14 +129,14 @@ body{
 
 .word_video{
     width: 451px;
-    height: 111px;
-    margin-top: 78px;
+    height: 117px;
+    margin-top: 74px;
     margin-left: 113px;
 }
 
 .intro_video{
     width: 451px;
-    height: 38px;
+    height: 44px;
     margin-top: 28px;
     margin-bottom: 0;
 }
