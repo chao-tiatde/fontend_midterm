@@ -56,8 +56,8 @@ p{
     width: 100%;
     height: 100%;
     padding-left: 5px;
-    padding-top: 3px;
-    padding-bottom: 4px;
+    padding-top: 4px;
+    padding-bottom: 3px;
     padding-right: 22px;
     border: 0;
     border-radius: 2px;
@@ -69,5 +69,63 @@ p{
     transform: translateY(-50%);
     cursor: pointer;
 }
-
-
+.btn-lan{
+    weight: 25px;
+    height: 25px;
+    background-color: white;
+    border: 0;
+    color: black;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.nav-content{
+    width: 100%;
+    height: 48px;
+    background-color: #354567;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 115px;
+    padding-left: 115px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.btn-catalog{
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    cursor: pointer;
+}
+.bigpic{
+    width: 100%;
+    position: relative;
+}
+.homeless{
+    width: 100%;
+}
+.bigpic-l{
+    display: flex;
+    flex-direction: column;
+}
+.bigpic-r{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.bigpic-c{
+    background: #FFFFFFB2;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: black;
+}
