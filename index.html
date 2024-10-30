@@ -73,19 +73,40 @@
     </div>
     <!--dohow-->
     <div class = "dohow">
+        <div class = "season-img">
+            <img src="img/img_index/Spring.png" alt="Spring" class="spring-img" style="display: block;">
+            <img src="img/img_index/Summer.png" alt="Summer" class="summer-img" style="display: none;">
+            <img src="img/img_index/Autumn.png" alt="Autumn" class="autumn-img" style="display: none;">
+            <img src="img/img_index/Winter.png" alt="Winter" class="winter-img" style="display: none;">
+        </div>
         <!--do-->
         <h2 class = "do-h">我可以給什麼？</h2>
         <div class = "season">
-            <div class = "btn-season">春季</div>
-            <div class = "btn-season">夏季</div>
-            <div class = "btn-season">秋季</div>
-            <div class = "btn-season">冬季</div>
+            <div class = "btn-season" onclick="changeSeason('spring')">春季</div>
+            <div class = "btn-season" onclick="changeSeason('summer')">夏季</div>
+            <div class = "btn-season" onclick="changeSeason('autumn')">秋季</div>
+            <div class = "btn-season" onclick="changeSeason('winter')">冬季</div>
+        </div>
+        <div class = "season-c">
+            <div class= "spring-c">
+                <h1>4～6<span class="spring-month">月</span></h1>
+                <h2>氣溫升高/ 進入梅雨季節</h2>
+            </div>
+            <div class = "summer-c" style="display: none;">
+                <h1>7～9<span class="summer-month">月</span></h1>
+                <h2>氣溫高/ 颱風季節</h2>
+            </div>
+            <div class = "autumn-c" style="display: none;">
+                <h1>10～12<span class="autumn-month"></h1>
+                <h2>氣溫漸冷/ 降雨減少</h2>
+            </div>
+            <div class = "winter-c" style="display: none;">
+                <h1>1～3<span class="winter-month"></h1>
+                <h2>氣溫較低/ 雨量相對較少</h2>
+            </div>
         </div>
         <!--spring-->
         <div class = "spring">
-            <h1>4～6月</h1>
-            <h2>氣溫升高/ 進入梅雨季節</h2>
-            <img src="img/img_index/Spring.png" alt="Spring" class="spring">
             <div class = "carousel">
                 <!--card1-->
                 <div class = "card">
@@ -131,9 +152,6 @@
         </div>
         <!--summer-->
         <div class = "summer">
-            <h1>7～9月</h1>
-            <h2>氣溫高/ 颱風季節</h2>
-            <img src="img/img_index/Summer.png" alt="Summer" class="summer">
             <div class = "carousel">
                 <!--card1-->
                 <div class = "card">
@@ -189,9 +207,6 @@
         </div>
         <!--autumn-->
         <div class = "autumn">
-            <h1>10～12月</h1>
-            <h2>氣溫漸冷/ 降雨減少</h2>
-            <img src="img/img_index/Autumn.png" alt="Autumn" class="autumn">
             <div class = "carousel">
                 <!--card1-->
                 <div class = "card">
@@ -237,9 +252,6 @@
         </div>
         <!--winter-->
         <div class = "winter">
-            <h1>1～3月</h1>
-            <h2>氣溫較低/ 雨量相對較少</h2>
-            <img src="img/img_index/Winter.png" alt="Winter" class="winter">
             <div class = "carousel">
                 <!--card1-->
                 <div class = "card">
@@ -396,6 +408,7 @@
         <hr>
         <p>2024 produced by Yi-Ju, Chao & Han-Jhen, Wu</p>
     </div>
+    <script src="/js/Index.js"></script>
 </body>
 </html>
 
