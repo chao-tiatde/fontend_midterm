@@ -1,4 +1,3 @@
-// 獲取元素
 const area_cyj = document.querySelector('.area_cyj');
 const area_whj = document.querySelector('.area_whj');
 let currentIndex = 0; // 0 表示顯示 area_cyj，1 表示顯示 area_whj
