@@ -206,7 +206,6 @@ footer{
 }
 
 .img_mem_cyj, .img_mem_tobey {
-    height: auto;
     position: absolute;
 }
 
@@ -215,6 +214,7 @@ footer{
     height: 455px;
     margin-top: -105px;
     left: 873px;
+
 }
 
 .img_mem_tobey{
