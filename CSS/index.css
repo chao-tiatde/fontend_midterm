@@ -212,22 +212,38 @@ p{
     margin: 0;
 }
 .dohow{
+   position: relative;
     background-color: #19396D;
     width: 100%;
     margin-top: 83px;
-    border-radius: 30px 30px 0px 0px;
-    padding-top: 99px;
+    border-radius: 36px 36px 0px 0px;
+}
+.season-img{
+    position: relative;
+}
+.spring-img, .summer-img, .autumn-img, .winter-img{
+    width: 100%;
 }
 .do-h{
+    position: absolute;
+    top: 99px;
+    left: 50%;
+    transform: translateX(-50%); 
     color: white;
     text-align: center;
     font-weight: 700;
-    margin-bottom: 26px;
+    z-index: 5;
+    margin: 0;
 }
 .season{
+    position: absolute;
+    top: 148px;
+    left: 50%;
+    transform: translateX(-50%); 
     display: flex;
     justify-content: center;
     border-radius: 2px 2px 0px 0px;
+    z-index: 5;
 }
 .btn-season{
     padding-left: 9px;
@@ -240,7 +256,7 @@ p{
     cursor: pointer;
     border-radius: 2px 2px 0px 0px;
 }
-.season-button:last-child {
+.btn-season:last-child {
     border-right: none;
 }
 .btn-season:hover {
@@ -250,6 +266,30 @@ p{
 .active {
     background: #47587D80;
     color: white;
+}
+.spring-c h1, .summer-c h1, .autumn-c h1, .winter-c h1{
+    position: absolute;
+    top: 187px;
+    left: 50%;
+    transform: translateX(-50%); 
+    color: #d6ff07;
+    font-size: 100px;
+    font-weight: 900;
+    z-index: 5;
+    margin: 0;
+}
+.spring-month, .summer-month, .autumn-month, .winter-month{
+    font-size: 35px;
+}
+.spring-c h2, .summer-c h2, .autumn-c h2, .winter-c h2{
+    margin: 0;
+    position: absolute;
+    top: 303px;
+    left: 50%;
+    transform: translateX(-50%); 
+    color: #d6ff07;
+    font-weight: 700;
+    z-index: 5;
 }
 
 
