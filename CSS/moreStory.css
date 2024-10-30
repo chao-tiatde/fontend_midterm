@@ -23,6 +23,10 @@ footer{
     background-color: #D9D9D9;
 }
 
+li{
+    line-height: 16px;  
+}
+
 .contain{
     width: 100%;
     margin: 0 auto;
@@ -43,9 +47,143 @@ footer{
 .main_contain{
     width: 1178px;
     height: 1958px;
+    margin: 40px auto 93px auto;
+    color: #354567;
+}
+
+.btn_both{
+    width: 246px;
+    height: 53px;
+    display: flex;
+    align-items: flex-start;
 }
 
 .btn{
     width: 123px;
     height: 53px;
+    font-size: 20px;
+    border-radius:20px 20px 0 0;
+    padding: 13px 29px 10px 29px;
+    margin: 0;
+}
+
+.btn_send{
+    background-color: #B9C1D2;
+    color: #354567;
+}
+
+.btn_homeless{
+    background-color: #354567;
+    color: #FFFFFF;
+}
+
+.area_main{
+    width: 1178px;
+    height: 1905px;
+    background-color: #B9C1D2;
+    border-radius:0 20px 20px 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.area_left{
+    width: 120px;
+    height: 112px;
+    font-size: 16px;
+    padding-left: 24px;
+    margin: 0;
+    position: relative;
+    top: 60px;
+    left: 51px;
+    margin-right: 51px;
+}
+
+.left_word{
+    margin-bottom: 16px;  
+}
+
+.line{
+    width: 1px;
+    height: 1785px;
+    background-color: #354567;
+    border: none;
+    margin: 59px 0 61px 51px;
+}
+
+.area_intro{
+    width: 697px;
+    height: 1785px;
+    position: relative;
+    top: 60px;
+    left: 136px;
+}
+
+.intro1{
+    width: 697px;
+    height: 420px;
+}
+
+.intro2{
+    width: 697px;
+    height: 405px;
+    margin-top: 50px;
+}
+
+.area_tit{    
+    height: 24px;
+    margin-bottom: 13px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.intro_tit{
+    font-size: 24px;
+    font-weight: 700px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.intro_name{
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 10px;
+}
+
+.intro_word1{
+    width: 697px;
+    height: 61px;
+    font-size: 16px;
+    margin: 0;
+}
+
+.intro_word2{
+    width: 697px;
+    height: 44px;
+    font-size: 16px;
+    margin: 0;
+}
+
+.intro_img{
+    width: 485px;
+    height: 298px;
+    display: block;
+    margin: 24px auto 0 auto;
+}
+
+#tit1{
+    width: 192px;
+}
+
+#tit2{
+    width: 258px;
+}
+
+#tit3{
+    width: 252px;
+}
+
+#tit4{
+    width: 216px;
 }

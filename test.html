@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切換區塊範例</title>
+    <style>
+        .content {
+            display: none; /* 預設隱藏所有區塊 */
+        }
+        .active {
+            display: block; /* 只有被激活的區塊顯示 */
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="showContent('block2')">顯示區塊 2</button>
+
+    <div id="block1" class="content active">這是區塊 1 的內容</div>
+    <div id="block2" class="content">這是區塊 2 的內容</div>
+
+    <script>
+        function showContent(blockId) {
+            // 隱藏所有區塊
+            const blocks = document.querySelectorAll('.content');
+            blocks.forEach(block => block.classList.remove('active'));
+
+            // 顯示指定的區塊
+            const activeBlock = document.getElementById(blockId);
+            activeBlock.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
