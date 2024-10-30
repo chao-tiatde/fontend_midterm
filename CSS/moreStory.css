@@ -49,6 +49,7 @@ li{
     height: 1958px;
     margin: 40px auto 93px auto;
     color: #354567;
+    position: relative;
 }
 
 .btn_both{
@@ -87,6 +88,35 @@ li{
     flex-direction: row;
 }
 
+.area_main2{
+    width: 1178px;
+    height: 2041px;
+    background-color: #354567;
+    color: #FFFFFF;
+    border-radius:0 20px 20px 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.area_main, .area_main2 {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute; /* 絕對定位，疊加在同一位置上 */
+    top: 53px;
+    left: 0;
+    width: 100%;
+}
+.active {
+    visibility: visible;
+    opacity: 1;
+}
+.btn_both h1 {
+    cursor: pointer;
+}
+
 .area_left{
     width: 120px;
     height: 112px;
@@ -99,6 +129,18 @@ li{
     margin-right: 51px;
 }
 
+.area_left2{
+    width: 184px;
+    height: 112px;
+    font-size: 16px;
+    padding-left: 24px;
+    margin: 0;
+    position: relative;
+    top: 60px;
+    left: 19px;
+    margin-right: 19px;
+}
+
 .left_word{
     margin-bottom: 16px;  
 }
@@ -109,6 +151,14 @@ li{
     background-color: #354567;
     border: none;
     margin: 59px 0 61px 51px;
+}
+
+.line2{
+    width: 1px;
+    height: 1922px;
+    background-color: #FFFFFF;
+    border: none;
+    margin: 59px 0 61px 19px;
 }
 
 .area_intro{
@@ -128,6 +178,38 @@ li{
     width: 697px;
     height: 405px;
     margin-top: 50px;
+}
+
+.intro_hl1{
+    width: 697px;
+    height: 446px;
+}
+
+.intro_hl2{
+    width: 697px;
+    height: 427px;
+    margin-top: 50px;
+}
+
+.intro_hl3{
+    width: 697px;
+    height: 449px;
+    margin-top: 50px;
+}
+
+.intro_hl_word1{
+    width: 697px;
+    height: 85px;
+}
+
+.intro_hl_word2{
+    width: 697px;
+    height: 66px;
+}
+
+.intro_hl_word3{
+    width: 697px;
+    height: 88px;
 }
 
 .area_tit{    
@@ -186,4 +268,20 @@ li{
 
 #tit4{
     width: 216px;
+}
+
+#tit_hl1{
+    width: 168px;
+}
+
+#tit_hl2{
+    width: 192px;
+}
+
+#tit_hl3{
+    width: 216px;
+}
+
+#tit_hl4{
+    width: 240px;
 }

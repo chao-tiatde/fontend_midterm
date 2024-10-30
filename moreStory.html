@@ -22,20 +22,21 @@
         
         <div class="main_contain">
             <div class="btn_both">
-                <h1 class="btn btn_send">送愛者</h1>
-                <h1 class="btn btn_homeless">無家者</h1>
+                <h1 class="btn btn_send" onclick="showArea('area_main')">送愛者</h1>
+                <h1 class="btn btn_homeless" onclick="showArea('area_main2')">無家者</h1>
             </div>
-            <div class="area_main">
+
+            <div id="area_main" class="area_main active">
                 <ul class="area_left">
-                    <li class="left_word">石頭湯計畫</li>
-                    <li class="left_word">遊民外展服務</li>
-                    <li class="left_word">安心家園</li>
-                    <li>街友販售計畫</li>
+                    <li class="left_word left_js">石頭湯計畫</li>
+                    <li class="left_word left_js">遊民外展服務</li>
+                    <li class="left_word left_js">安心家園</li>
+                    <li class="left_js">街友販售計畫</li>
                 </ul>
                 <hr class="line">
 
             <div class="area_intro">
-                <div class="intro1">
+                <div id="send1" class="intro1">
                     <div class="area_tit" id="tit1">
                         <h2 class="intro_tit">石頭湯計畫</h2>
                         <a class="intro_name">人生百味</a>
@@ -47,7 +48,7 @@
                     </p>
                     <img class="intro_img" src="/img/img_story/石頭湯.png">
                 </div>
-                <div class="intro2">
+                <div id="send2" class="intro2">
                     <div class="area_tit" id="tit2">
                         <h2 class="intro_tit">遊民外展服務</h2>
                         <a class="intro_name">芒草心慈善協會</a>
@@ -58,7 +59,7 @@
                     </p>
                     <img class="intro_img" src="/img/img_story/遊民外展.png">
                 </div>
-                <div class="intro2">
+                <div id="send3" class="intro2">
                     <div class="area_tit" id="tit3">
                         <h2 class="intro_tit">安心家園</h2>
                         <a class="intro_name">撒瑪黎雅婦女關懷協會</a>
@@ -69,13 +70,13 @@
                     </p>
                     <img class="intro_img" src="/img/img_story/安心家園.png">
                 </div>
-                <div class="intro2">
+                <div id="send4" class="intro2">
                     <div class="area_tit" id="tit4">
                         <h2 class="intro_tit">街友販售計畫</h2>
                         <a class="intro_name">大誌雜誌</a>
                     </div>
                     <p class="intro_word2">
-                        大誌」是一個由無家者販售的雜誌，每本售價100元，無家者可獲得其中的50元。這個計畫提供了無家者一個合法且有尊
+                        「大誌」是一個由無家者販售的雜誌，每本售價100元，無家者可獲得其中的50元。這個計畫提供了無家者一個合法且有尊
                         嚴的收入來源，並讓社會大眾有機會透過購買雜誌來支持他們。
                     </p>
                     <img class="intro_img" src="/img/img_story/街友販售.png">
@@ -83,6 +84,57 @@
             </div><!-- area_intro -->
 
             </div><!-- area_main -->
+
+            <div id="area_main2" class="area_main2">
+                <ul class="area_left2">
+                    <li class="left_word left_js">家暴與財務困難</li>
+                    <li class="left_word left_js">生意失敗與高利貸</li>
+                    <li class="left_word left_js">婚姻破裂與心理健康</li>
+                    <li class="left_js">高齡勞工與退休無保障</li>
+                </ul>
+                <hr class="line2">
+
+            <div id="homeless1" class="area_intro">
+                <div class="intro_hl1">
+                    <h2 class="intro_tit" id="tit_hl1">家暴與財務困難</h2>
+                    <p class="intro_hl_word1">
+                        阿雄（化名）是一位原住民中年男子，年輕時在工地打工，收入不高但生活穩定。然而，他的伴侶因家暴問
+                        題而離他而去，阿雄陷入失落與憂鬱，後來開始酗酒，工作表現也因此下降。接著他因酒後發生意外，無法
+                        再工作，積蓄也耗盡。因為無法償還房貸，阿雄最終失去了家，開始在台北街頭流浪。
+                    </p>
+                    <img class="intro_img" src="/img/img_story/家暴.png">
+                </div>
+                <div id="homeless2" class="intro_hl2">
+                    <h2 class="intro_tit" id="tit_hl2">生意失敗與高利貸</h2>
+                    <p class="intro_hl_word2">
+                        阿強（化名）曾經是小企業的經營者，但因市場變遷、投資失利，生意慘賠。他為了補上虧損，不得已向地
+                        下錢莊借款，導致負債累累，最終無法還清債務。債務壓力使得他與家人關係緊張，家人不願再接納他。他
+                        被迫離家，開始在桃園車站附近的公園棲身，靠拾荒為生。
+                    </p>
+                    <img class="intro_img" src="/img/img_story/生意失敗.png">
+                </div>
+                <div id="homeless3" class="intro_hl3">
+                    <h2 class="intro_tit" id="tit_hl3">婚姻破裂與心理健康</h2>
+                    <p class="intro_hl_word3">
+                        阿強（化名）曾經是小企業的經營者，但因市場變遷、投資失利，生意慘賠。他為了補上虧損，不得已向地
+                        下錢莊借款，導致負債累累，最終無法還清債務。債務壓力使得他與家人關係緊張，家人不願再接納他。他
+                        被迫離家，開始在桃園車站附近的公園棲身，靠拾荒為生。
+                    </p>
+                    <img class="intro_img" src="/img/img_story/婚姻破裂.png">
+                </div>
+                <div id="homeless4" class="intro_hl3">
+                    <h2 class="intro_tit" id="tit_hl4">高齡勞工與退休無保障</h2>
+                    <p class="intro_hl_word3">
+                        老李（化名）是一位年近70的老年人，年輕時從事體力勞動工作，沒有退休金。年老體弱後，他的工作機會
+                        逐漸減少，健康也逐漸下滑，最後失去了工作能力。老李因無法繼續負擔生活開銷，無力支付房租，被迫成
+                        為無家可歸者。他平時在台北車站附近找尋臨時工作，但年紀大、體力不足，生活日益艱難。
+                    </p>
+                    <img class="intro_img" src="/img/img_story/高齡勞工.png">
+                </div>
+            </div><!-- area_intro -->
+
+            </div><!-- area_main -->
+
         </div>   
 
 
@@ -91,5 +143,7 @@
         <!-- 照一如加油 -->
 
     </div>
+
+    <script src="/js/moreStory.js"></script>
 </body>
 </html>
