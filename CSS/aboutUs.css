@@ -16,6 +16,7 @@ body{
     margin: 0;
     padding: 0;
     cursor: default;
+    overflow-x: clip;
 }
 
 footer{
@@ -42,7 +43,7 @@ footer{
 }
 
 .main_contain{
-    width: 1280px;
+    min-width: 1212px;
     margin: 0 auto;
 }
 
