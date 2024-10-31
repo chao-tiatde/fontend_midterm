@@ -351,6 +351,7 @@ p{
     height: 256px;
     position: relative;
 }
+
 .card-imgA, .card-imgB, .card-imgC, .card-imgD, .card-imgE{
     position: absolute;
     width: 100%;

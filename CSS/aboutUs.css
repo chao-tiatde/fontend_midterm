@@ -31,6 +31,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 120px;
 }
 
 .area_est,.area_book,.area_video,.area_mem{
