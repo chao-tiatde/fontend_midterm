@@ -77,3 +77,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+console.log("aboutUs.js 已成功載入");
