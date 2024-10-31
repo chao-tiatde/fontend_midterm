@@ -53,7 +53,7 @@ document.querySelector('.area_whj').addEventListener('wheel', (event) => {
 
 
 
-// script.js
+//淡入
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.word_fade');
 

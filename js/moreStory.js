@@ -63,56 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// 切換顯示區域並調整 spacer 高度
-function showArea(areaId) {
-    const areaMain = document.querySelector('.area_main');
-    const areaMain2 = document.querySelector('.area_main2');
-    
-    // 重設兩個區塊的 active 狀態
-    areaMain.classList.remove('active');
-    areaMain2.classList.remove('active');
-    
-    // 根據點擊的按鈕顯示對應區塊
-    if (areaId === 'area_main') {
-        areaMain.classList.add('active');
-    } else if (areaId === 'area_main2') {
-        areaMain2.classList.add('active');
-    }
-
-    // 調整 spacer 高度
-    adjustSpacer();
-}
-
-// 根據顯示的區域來動態調整 spacer 的高度
-function adjustSpacer() {
-    const areaMain = document.querySelector('.area_main');
-    const areaMain2 = document.querySelector('.area_main2');
-    const spacer = document.querySelector('.spacer');
-    
-    // 設置 spacer 高度以匹配顯示的區塊高度
-    if (areaMain.classList.contains('active')) {
-        spacer.style.height = areaMain.offsetHeight + 'px';
-    } else if (areaMain2.classList.contains('active')) {
-        spacer.style.height = areaMain2.offsetHeight + 'px';
-    }
-}
-
-// 按鈕事件綁定
-document.querySelector('.btn_send').onclick = function() {
-    showArea('area_main');
-};
-document.querySelector('.btn_homeless').onclick = function() {
-    showArea('area_main2');
-};
-
-// 初始化高度
-adjustSpacer();
-
-
-
-
-
-// 還沒完
+//左邊區域移動
 window.addEventListener('scroll', function() {
     const aBox = document.querySelector('.area_left');
     const bContainer = document.querySelector('.main');
@@ -168,3 +119,84 @@ window.addEventListener('scroll', function() {
         aBox.style.transform = `translateX(${offset_left1}px)`;
     }
 });
+
+
+
+
+
+
+
+
+
+//調整spacer&&淡入
+// 切換顯示區域
+function showArea(areaId) {
+    const areaMain = document.querySelector('.area_main');
+    const areaMain2 = document.querySelector('.area_main2');
+    
+    // 重設區塊的 active 狀態
+    areaMain.classList.remove('active');
+    areaMain2.classList.remove('active');
+
+    // 根據按鈕顯示對應區塊
+    if (areaId === 'area_main') {
+        areaMain.classList.add('active');
+    } else if (areaId === 'area_main2') {
+        areaMain2.classList.add('active');
+    }
+
+    // 調整 spacer 高度
+    adjustSpacer();
+
+    // 重新觀察動畫元素
+    observeFadeElements();
+}
+
+// 調整 spacer 的高度
+function adjustSpacer() {
+    const areaMain = document.querySelector('.area_main');
+    const areaMain2 = document.querySelector('.area_main2');
+    const spacer = document.querySelector('.spacer');
+
+    // 根據顯示的區塊動態設定 spacer 的高度
+    if (areaMain.classList.contains('active')) {
+        spacer.style.height = areaMain.offsetHeight + 'px';
+    } else if (areaMain2.classList.contains('active')) {
+        spacer.style.height = areaMain2.offsetHeight + 'px';
+    }
+}
+
+// 建立 IntersectionObserver 設定動畫效果
+const options = {
+    root: null,
+    threshold: 0.3
+};
+const fadeInObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate__fadeIn', 'visible'); // 使用 Animate.css 效果
+            fadeInObserver.unobserve(entry.target); // 觀察完成後取消
+        }
+    });
+}, options);
+
+// 重新觀察 .fade 和 .fade2 元素
+function observeFadeElements() {
+    document.querySelectorAll('.area_main .fade, .area_main2 .fade2').forEach(section => {
+        section.classList.remove('visible'); // 重置 visible 類別
+        fadeInObserver.observe(section);     // 重新觀察
+    });
+}
+
+// 按鈕事件綁定
+document.querySelector('.btn_send').onclick = function() {
+    showArea('area_main');
+};
+document.querySelector('.btn_homeless').onclick = function() {
+    showArea('area_main2');
+};
+
+// 初始化高度和動畫觀察
+adjustSpacer();
+observeFadeElements();
+
