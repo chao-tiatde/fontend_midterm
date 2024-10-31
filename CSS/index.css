@@ -491,6 +491,7 @@ p{
 }
 .footer-p{
     position: absolute;
+    right: 92px;
     margin: 0;
     bottom: 17px;
     text-align: end;
