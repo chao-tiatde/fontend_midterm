@@ -216,13 +216,21 @@ p{
     background-color: #19396D;
     width: 100%;
     margin-top: 83px;
-    border-radius: 36px 36px 0px 0px;
+    border-radius: 30px 30px 0px 0px;
 }
 .season-img{
     position: relative;
+    margin-bottom: 34px;
 }
 .spring-img, .summer-img, .autumn-img, .winter-img{
     width: 100%;
+    border-radius: 30px 30px 0px 0px;
+}
+.spring-img, .summer-img, .autumn-img{
+    display: none;
+}
+.winter-img{
+    display: block;
 }
 .do-h{
     position: absolute;
@@ -259,13 +267,12 @@ p{
 .btn-season:last-child {
     border-right: none;
 }
-.btn-season:hover {
+.btn-season:hover, .btn-season.active {
     background: #47587D80;
     color: white;
 }
-.active {
-    background: #47587D80;
-    color: white;
+.spring-c, .summer-c, .winter-c{
+    display: none;
 }
 .spring-c h1, .summer-c h1, .autumn-c h1, .winter-c h1{
     position: absolute;
@@ -291,8 +298,203 @@ p{
     font-weight: 700;
     z-index: 5;
 }
-
-
+.give{
+    position: relative;
+    width: 100%;
+    height: 306px;
+}
+.spring, .summer, .autumn, .winter{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: absolute;
+    top:34px;
+    gap: 25px;
+}
+.cardA, .cardB, .cardC, .cardD, .cardE{
+    width: 191px;
+    height: 256px;
+    position: relative;
+}
+.card-imgA, .card-imgB, .card-imgC, .card-imgD, .card-imgE{
+    position: absolute;
+    width: 100%;
+    height: 167px;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #B4B4B4 80.27%);
+    box-shadow: 0px 1px 3px 0px #0000004D, 0px 4px 8px 3px #00000026;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px 2px 0px 0px;
+}
+.card-cA, .card-cB, .card-cC, .card-cD, .card-cE{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 89px;
+    background-color: #47578D;
+    color: white;
+    padding-top: 11px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.cardcA p, .cardcB p, .cardcC p, .cardcD p,.cardcE p{
+    margin: 0;
+}
+.card-cA h4, .card-cB h4, .card-cC h4, .card-cD h4, .card-cE h4{
+    margin-top: 7px;
+    margin-bottom: 0px;
+}
+.how-h{
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 33px;
+}
+.carousel {
+    width: 100%;
+    height: 356px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #DDDDDD 100%);
+    display: flex;
+    margin-bottom: 68px;
+}
+.carousel-left{
+    width: 50%;
+    height: 356px;
+    position: relative;
+}
+.carousel-img{
+    display: flex;
+    transition: transform 0.5s ease; 
+    width: 100%;
+    height:100%;
+}
+.carousel-img > div {
+    width: 100%;
+    display: none; /* 初始隱藏所有幻燈片 */
+}
+.carousel-img > div.active {
+    display: block; /* 只有當前幻燈片顯示 */
+}
+.carousel-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持比例并填满容器 */
+}
+.control-prev, .control-next {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+    color: #47578D;
+    display: flex;
+    justify-content: center;
+    line-height: 26px;
+    font-size: 30px;
+}
+.control-prev {
+    left: 31px;
+}
+.control-next {
+    right: 31px;
+}
+.indicators-c{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 8px;
+}
+.indicator{
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+.indicator.active {
+    opacity: 1;
+  }
+.carousel-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+.card-c1 h2{
+    margin-top: 0px;
+    margin-bottom: 25px
+}
+.card-c1 hr{
+    margin-top: 0px;
+    margin-bottom: 28px;
+}
+.card-c1 h4{
+    margin: 0;
+}
+.card-c1 {
+    display: none; /* 默认隐藏所有文本 */
+}
+.card-c1.active {
+    display: block; /* 只显示当前的文本 */
+}
+.footer{
+    width: 100%;
+    height: 294px;
+    background-color: #d9d9d9;
+    padding-top: 43px;
+    padding-left: 92px;
+    padding-right: 92px;
+    position: relative;
+}
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+}
+.left h6, .middle1 h6, .middle2 h6, .right h6{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.middle1 h6, .middle2 h6, .right h6, .instagram, .faebook, .youtube{
+    cursor: pointer;
+}
+.left h2{
+    font-weight: 700;
+    margin-top: 0px;
+    color: #19396d;
+    margin-bottom: 18px;
+}
+.middle1 h3, .middle2 h3, .right h3{
+    margin-top: 0px;
+    color: #19396d;
+    margin-bottom: 18px;
+}
+.footer-hr{
+    width: 90%;
+    position: absolute;
+    margin: 0;
+    bottom: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.footer-p{
+    position: absolute;
+    margin: 0;
+    bottom: 17px;
+    text-align: end;
+}
 
 
 
