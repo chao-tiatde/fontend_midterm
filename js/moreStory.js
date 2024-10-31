@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (targetSection) {
                 // 計算目標區域上方 50px 的位置
-                const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - 50;
+                const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - 125;
 
                 // 平滑滾動到計算後的位置
                 window.scrollTo({
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (targetSection2) {
                 // 計算目標區域上方 50px 的位置
-                const targetPosition2 = targetSection2.getBoundingClientRect().top + window.scrollY - 50;
+                const targetPosition2 = targetSection2.getBoundingClientRect().top + window.scrollY - 125;
 
                 // 平滑滾動到計算後的位置
                 window.scrollTo({
@@ -67,23 +67,27 @@ document.addEventListener("DOMContentLoaded", function() {
 window.addEventListener('scroll', function() {
     const aBox = document.querySelector('.area_left');
     const bContainer = document.querySelector('.main');
+    const header = document.querySelector('.fixed');
 
     const rect = bContainer.getBoundingClientRect();
+    const rect2 = header.getBoundingClientRect();
     const offset = 0; // 設定距離
     const offset0 = 60;
+    const offset1 = 170;
+    const offset2 = 107;
     const offset_left1 = 51;
-    const stopDistance = 413;
+    const stopDistance = 513;
 
-    if (rect.top < offset && rect.bottom > aBox.offsetHeight + stopDistance) { 
+    if (rect.top < offset2 && rect.bottom > aBox.offsetHeight + stopDistance) { 
         // 當B區塊頂部超出視窗的60px
         aBox.style.position = 'sticky';
-        aBox.style.top = offset0 + 'px'; // 固定在視窗頂端60px的位置
+        aBox.style.top = offset0 + offset2 + 'px'; // 固定在視窗頂端60px的位置
         aBox.style.transform = `translateX(${offset_left1}px)`;
         
-    } else if (rect.bottom <= aBox.offsetHeight + stopDistance){
+    } else if (rect.bottom <= aBox.offsetHeight + stopDistance ){
         // 當A區塊達到B區塊底部停止距離
         aBox.style.position = 'relative';
-        aBox.style.top = (bContainer.offsetHeight - aBox.offsetHeight - stopDistance + offset0) + 'px';
+        aBox.style.top = (bContainer.offsetHeight - aBox.offsetHeight - stopDistance + offset1) + 'px';
     }else {
         // 在初始狀態
         aBox.style.position = 'relative';
@@ -99,19 +103,21 @@ window.addEventListener('scroll', function() {
     const rect = bContainer.getBoundingClientRect();
     const offset = 0; // 設定距離
     const offset0 = 60;
+    const offset1 = 170;
+    const offset2 = 107;
     const offset_left1 = 19;
-    const stopDistance = 320;
+    const stopDistance = 420;
 
-    if (rect.top < offset && rect.bottom > aBox.offsetHeight + stopDistance) { 
+    if (rect.top < offset2 && rect.bottom > aBox.offsetHeight + stopDistance) { 
         // 當B區塊頂部超出視窗的60px
         aBox.style.position = 'sticky';
-        aBox.style.top = offset0 + 'px'; // 固定在視窗頂端60px的位置
+        aBox.style.top = offset0 + offset2 + 'px'; // 固定在視窗頂端60px的位置
         aBox.style.transform = `translateX(${offset_left1}px)`;
         
     } else if (rect.bottom <= aBox.offsetHeight + stopDistance){
         // 當A區塊達到B區塊底部停止距離
         aBox.style.position = 'relative';
-        aBox.style.top = (bContainer.offsetHeight - aBox.offsetHeight - stopDistance + offset0) + 'px';
+        aBox.style.top = (bContainer.offsetHeight - aBox.offsetHeight - stopDistance + offset1) + 'px';
     }else {
         // 在初始狀態
         aBox.style.position = 'relative';
