@@ -16,25 +16,7 @@ body{
     margin: 0;
     padding: 0;
     cursor: default;
-    overflow-x: clip;
-}
-
-footer{
-    width: 100%;
-    height: 292px;
-    background-color: #D9D9D9;
-}
-
-.header{
-    background-color: #19396D;
-    width: 100%;
-    height: 59px;
-}
-
-.nav{
-    background-color: #354567;
-    width: 100%;
-    height: 48px;
+    overflow-x: hidden;
 }
 
 .contain{
@@ -43,8 +25,11 @@ footer{
 }
 
 .main_contain{
-    min-width: 1212px;
+    width: 1280px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .area_est,.area_book,.area_video,.area_mem{
