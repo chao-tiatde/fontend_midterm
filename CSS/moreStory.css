@@ -109,10 +109,6 @@ li:hover{
     width: 100%;
 }
 
-.area_main2 p{
-    font-size: 16px;
-}
-
 .active {
     visibility: visible;
     opacity: 1;
@@ -245,16 +241,19 @@ li:hover{
 .intro_hl_word1{
     width: 697px;
     height: 85px;
+    font-size: 16px;
 }
 
 .intro_hl_word2{
     width: 697px;
     height: 66px;
+    font-size: 16px;
 }
 
 .intro_hl_word3{
     width: 697px;
     height: 88px;
+    font-size: 16px;
 }
 
 .area_tit{    
