@@ -70,7 +70,7 @@ p{
     cursor: pointer;
 }
 .btn-lan{
-    weight: 25px;
+    font-weight: 25px;
     height: 25px;
     background-color: white;
     border: 0;
