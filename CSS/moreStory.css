@@ -151,7 +151,7 @@ li{
     margin: 0;
     position: relative;
     top: 60px;
-    left: 19px;
+    transform: translateX(19px);
     margin-right: 19px;
 }
 
