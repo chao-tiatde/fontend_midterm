@@ -46,3 +46,34 @@ document.querySelector('.area_2member').addEventListener('wheel', (event) => {
 document.querySelector('.area_whj').addEventListener('wheel', (event) => {
     enablePageScroll(); // 確保頁面可以滾動
 });
+
+
+
+
+
+
+
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.word_fade');
+
+    const options = {
+        root: null, // 使用viewport
+        threshold: 0.3 // 當區塊出現在視窗的10%時觸發
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate__fadeIn'); // 添加淡入效果類別
+                entry.target.classList.add('visible'); // 將透明度設置為1
+                observer.unobserve(entry.target); // 移除觀察，避免重複觸發
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        observer.observe(section); // 觀察每個區塊
+    });
+});
+

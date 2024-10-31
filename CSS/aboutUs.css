@@ -41,6 +41,11 @@ footer{
     margin: 0 auto;
 }
 
+.main_contain{
+    width: 1280px;
+    margin: 0 auto;
+}
+
 .area_est,.area_book,.area_video,.area_mem{
     display: flex;
     align-items: flex-start;
@@ -81,6 +86,15 @@ footer{
     height: 153px;
     margin-top: 28px;
     margin-bottom: 0;
+}
+
+.word_fade{
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.visible {
+    opacity: 1;
 }
 
 .area_book{
@@ -156,6 +170,7 @@ footer{
     border-radius: 50px;
     background-color: #ffffff;
     margin: 105px 34px 98px 34px;
+    overflow-x: clip;
 }
 
 .area_mem {
