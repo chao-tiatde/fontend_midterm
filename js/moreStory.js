@@ -206,3 +206,4 @@ document.querySelector('.btn_homeless').onclick = function() {
 adjustSpacer();
 observeFadeElements();
 
+console.log("aboutUs.js 已成功載入");
