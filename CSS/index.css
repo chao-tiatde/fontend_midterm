@@ -395,6 +395,12 @@ p{
     background: linear-gradient(180deg, #FFFFFF 0%, #DDDDDD 100%);
     display: flex;
     margin-bottom: 68px;
+
+    opacity: 0; 
+    transition: opacity 0.8s ease; 
+}
+.carousel.show {
+    opacity: 1; 
 }
 .carousel-left{
     width: 50%;

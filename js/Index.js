@@ -100,6 +100,22 @@ const allElements = document.querySelectorAll('.season-img img, .season-c > div,
 allElements.forEach(element => {
     element.style.transition = 'opacity 0.8s ease'; // 设置过渡效果
 });
+//carousel淡入
+document.addEventListener("DOMContentLoaded", function() {
+    const purposeSection = document.querySelector('.carousel');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                purposeSection.classList.add('show');
+                observer.unobserve(entry.target); // 只觸發一次
+            }
+        });
+    });
+
+    observer.observe(purposeSection);
+});
+//輪播器
 document.addEventListener('DOMContentLoaded', () => {
     let currentSlide = 0; // 當前顯示的幻燈片索引
     const slides = document.querySelectorAll('.carousel-img > div'); // 獲取所有幻燈片
