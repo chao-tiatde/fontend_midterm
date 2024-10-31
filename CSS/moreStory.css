@@ -139,7 +139,7 @@ li{
     margin: 0;
     position: relative;
     top: 60px;
-    left: 51px;
+    transform: translateX(51px);
     margin-right: 51px;
 }
 

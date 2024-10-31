@@ -108,3 +108,35 @@ document.querySelector('.btn_homeless').onclick = function() {
 // 初始化高度
 adjustSpacer();
 
+
+
+
+
+// 還沒完
+window.addEventListener('scroll', function() {
+    const aBox = document.querySelector('.area_left');
+    const bContainer = document.querySelector('.main');
+
+    const rect = bContainer.getBoundingClientRect();
+    const offset = 0; // 設定距離
+    const offset0 = 60;
+    const offset_left1 = 51;
+    const stopDistance = 413;
+
+    if (rect.top < offset && rect.bottom > aBox.offsetHeight + stopDistance) { 
+        // 當B區塊頂部超出視窗的60px
+        aBox.style.position = 'sticky';
+        aBox.style.top = offset0 + 'px'; // 固定在視窗頂端60px的位置
+        aBox.style.transform = `translateX(${offset_left1}px)`;
+        
+    } else if (rect.bottom <= aBox.offsetHeight + stopDistance){
+        // 當A區塊達到B區塊底部停止距離
+        aBox.style.position = 'relative';
+        aBox.style.top = (bContainer.offsetHeight - aBox.offsetHeight - stopDistance + offset0) + 'px';
+    }else {
+        // 在初始狀態
+        aBox.style.position = 'relative';
+        aBox.style.top = offset0 + 'px'; // 距離B區塊頂端60px
+        aBox.style.transform = `translateX(${offset_left1}px)`;
+    }
+});
