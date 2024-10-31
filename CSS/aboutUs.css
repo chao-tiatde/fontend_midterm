@@ -15,6 +15,7 @@ body{
     font-weight: 550;
     margin: 0;
     padding: 0;
+    cursor: default;
 }
 
 footer{
@@ -37,6 +38,11 @@ footer{
 
 .contain{
     width: 100%;
+    margin: 0 auto;
+}
+
+.main_contain{
+    width: 1280px;
     margin: 0 auto;
 }
 
@@ -80,6 +86,15 @@ footer{
     height: 153px;
     margin-top: 28px;
     margin-bottom: 0;
+}
+
+.word_fade{
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.visible {
+    opacity: 1;
 }
 
 .area_book{
@@ -155,6 +170,7 @@ footer{
     border-radius: 50px;
     background-color: #ffffff;
     margin: 105px 34px 98px 34px;
+    overflow-x: clip;
 }
 
 .area_mem {

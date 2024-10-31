@@ -1,0 +1,374 @@
+html{
+    background-color: #FFFFFF; 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: "Noto sans", sans-serif;
+    font-weight: 550;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+
+footer{
+    width: 100%;
+    height: 292px;
+    background-color: #D9D9D9;
+    margin-top: 93px;
+}
+
+li{
+    line-height: 16px;
+    list-style-type: disc;
+    list-style-position: outside;
+    display: list-item;
+}
+
+li:hover{
+    cursor: pointer;
+}
+
+.contain{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header{
+    background-color: #19396D;
+    width: 100%;
+    height: 59px;
+}
+
+.nav{
+    background-color: #354567;
+    width: 100%;
+    height: 48px;
+}
+
+.main_contain{
+    width: 1178px;
+    min-height: 1958px;
+    margin: 40px auto 93px auto;
+    color: #354567;
+    position: relative;
+}
+
+.btn_both{
+    width: 246px;
+    height: 53px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.btn{
+    width: 123px;
+    height: 53px;
+    font-size: 20px;
+    border-radius:20px 20px 0 0;
+    padding: 13px 29px 10px 29px;
+    margin: 0;
+}
+
+.btn_send{
+    background-color: #B9C1D2;
+    color: #354567;
+}
+
+.btn_send:hover {
+    box-shadow : 10px 0px 5px #19396D;
+}
+
+.btn_homeless{
+    background-color: #354567;
+    color: #FFFFFF;
+}
+
+.btn_homeless:hover {
+    box-shadow : 10px 0px 5px #B9C1D2;
+}
+
+.area_main{
+    width: 1178px;
+    height: 1905px;
+    background-color: #B9C1D2;
+    border-radius:0 20px 20px 20px;
+    align-items: flex-start;
+    flex-direction: row;
+    position: relative;
+}
+
+.area_main2{
+    width: 1178px;
+    height: 2041px;
+    background-color: #354567;
+    color: #FFFFFF;
+    border-radius:0 20px 20px 20px;
+    margin-bottom: 93px;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.area_main, .area_main2 {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute; /* 絕對定位，疊加在同一位置上 */
+    top: 53px;
+    left: 0;
+    width: 100%;
+}
+.active {
+    visibility: visible;
+    opacity: 1;
+}
+.btn_both h1 {
+    cursor: pointer;
+}
+
+.area_left{
+    width: 120px;
+    min-height: 112px;
+    font-size: 16px;
+    padding-left: 24px;
+    margin: 0;
+    position: relative;
+    top: 60px;
+    transform: translateX(51px);
+    margin-right: 51px;
+}
+
+.area_left2{
+    width: 184px;
+    height: 112px;
+    font-size: 16px;
+    padding-left: 24px;
+    margin: 0;
+    position: relative;
+    top: 60px;
+    transform: translateX(19px);
+    margin-right: 19px;
+}
+
+.left{
+    vertical-align: middle;
+    position: relative;
+}
+
+.left_line{
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all .3s linear;
+}
+
+.left_line_blue{
+    background-color: #354567;
+}
+
+.left_line_white{
+    background-color: white;
+}
+
+.left:hover .left_line{
+    width: 100%;
+}
+
+.left_word{
+    margin-bottom: 16px;  
+}
+
+.line{
+    width: 1px;
+    height: 1785px;
+    background-color: #354567;
+    border: none;
+    margin: 59px 0 61px 51px;
+}
+
+.line2{
+    width: 1px;
+    height: 1922px;
+    background-color: #FFFFFF;
+    border: none;
+    margin: 59px 0 61px 19px;
+}
+
+.area_intro{
+    width: 697px;
+    height: 1785px;
+    position: relative;
+    top: 60px;
+    left: 136px;
+}
+
+.fade{
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.fade2{
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.intro1{
+    width: 697px;
+    height: 420px;
+}
+
+.intro2{
+    width: 697px;
+    height: 405px;
+    margin-top: 50px;
+}
+
+.intro_hl1{
+    width: 697px;
+    height: 446px;
+}
+
+.intro_hl2{
+    width: 697px;
+    height: 427px;
+    margin-top: 50px;
+}
+
+.intro_hl3{
+    width: 697px;
+    height: 449px;
+    margin-top: 50px;
+}
+
+.intro_hl_word1{
+    width: 697px;
+    height: 85px;
+}
+
+.intro_hl_word2{
+    width: 697px;
+    height: 66px;
+}
+
+.intro_hl_word3{
+    width: 697px;
+    height: 88px;
+}
+
+.area_tit{    
+    height: 24px;
+    margin-bottom: 13px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.intro_tit{
+    font-size: 24px;
+    font-weight: 700px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.intro_name{
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 10px;
+}
+
+.intro_word1{
+    width: 697px;
+    height: 61px;
+    font-size: 16px;
+    margin: 0;
+}
+
+.intro_word2{
+    width: 697px;
+    height: 44px;
+    font-size: 16px;
+    margin: 0;
+}
+
+.intro_img{
+    width: 485px;
+    height: 298px;
+    display: block;
+    margin: 24px auto 0 auto;
+}
+
+.spacer {
+    width: 100%;
+    height: 0; /* 預設為0，JavaScript動態調整 */
+    visibility: hidden;
+}
+
+#left1{
+    width: 80px;
+}
+
+#left2, #left4{
+    width: 96px;
+}
+
+#left3{
+    width: 64px;
+}
+
+#left_hl1{
+    width: 112px;
+}
+
+#left_hl2{
+    width: 128px;
+}
+
+#left_hl3{
+    width: 144px;
+}
+
+#tit1{
+    width: 192px;
+}
+
+#tit2{
+    width: 258px;
+}
+
+#tit3{
+    width: 252px;
+}
+
+#tit4{
+    width: 216px;
+}
+
+#tit_hl1{
+    width: 168px;
+}
+
+#tit_hl2{
+    width: 192px;
+}
+
+#tit_hl3{
+    width: 216px;
+}
+
+#tit_hl4{
+    width: 240px;
+}
