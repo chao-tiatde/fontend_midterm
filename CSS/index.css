@@ -27,6 +27,13 @@ h6{
 p{
     font-size: 10px;;
 }
+.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
 .nav-header{
     display: flex;
     align-items: center;
@@ -112,6 +119,7 @@ p{
 .bigpic{
     width: 100%;
     position: relative;
+    margin-top: 107px;
 }
 .homeless{
     width: 100%;
