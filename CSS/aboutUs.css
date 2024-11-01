@@ -90,9 +90,16 @@ body{
 }
 
 .area_book{
-    width: 100%;
+    width: 100vw;
     height: 374px;
     background-color: #47587D;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    justify-content: center;
 }
 
 .word_book{
