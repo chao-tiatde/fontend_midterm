@@ -12,23 +12,30 @@ window.onload = function() {
     }
 };
 
-
 function showArea(areaId) {
-    const areaMain1 = document.getElementById('area_main');
-    const areaMain2 = document.getElementById('area_main2');
+    const areaMain = document.querySelector('.area_main');
+    const areaMain2 = document.querySelector('.area_main2');
 
+    // 重設區塊的 active 狀態
+    areaMain.classList.remove('active');
+    areaMain2.classList.remove('active');
+
+    // 根據按鈕顯示對應區塊，並更新 URL hash
     if (areaId === 'area_main') {
-        areaMain1.classList.add('active');
-        areaMain2.classList.remove('active');
-        // 改變網址為 "moreStory.html#sendLove"
-        window.location.hash = 'sendLove';
+        areaMain.classList.add('active');
+        window.location.hash = 'sendLove'; // 更新 URL hash
     } else if (areaId === 'area_main2') {
         areaMain2.classList.add('active');
-        areaMain1.classList.remove('active');
-        // 改變網址為 "moreStory.html#homeless"
-        window.location.hash = 'homeless';
+        window.location.hash = 'homeless'; // 更新 URL hash
     }
+
+    // 調整 spacer 高度
+    adjustSpacer();
+
+    // 重新觀察動畫元素
+    observeFadeElements();
 }
+
 
 
 
