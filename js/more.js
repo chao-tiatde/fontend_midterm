@@ -1,42 +1,12 @@
-window.onload = function() {
-    const hash = window.location.hash;
-    const query = new URLSearchParams(window.location.search);
-
-    if (hash === '#sendLove' || query.get('type') === 'sendLove') {
-        showArea('area_main');
-    } else if (hash === '#homeless' || query.get('type') === 'homeless') {
-        showArea('area_main2');
-    } else {
-        // 預設顯示送愛者
-        showArea('area_main');
-    }
-};
-
+// 
 function showArea(areaId) {
-    const areaMain = document.querySelector('.area_main');
-    const areaMain2 = document.querySelector('.area_main2');
+    // 隱藏所有區塊
+    document.getElementById("area_main").classList.remove("active");
+    document.getElementById("area_main2").classList.remove("active");
 
-    // 重設區塊的 active 狀態
-    areaMain.classList.remove('active');
-    areaMain2.classList.remove('active');
-
-    // 根據按鈕顯示對應區塊，並更新 URL hash
-    if (areaId === 'area_main') {
-        areaMain.classList.add('active');
-        window.location.hash = 'sendLove'; // 更新 URL hash
-    } else if (areaId === 'area_main2') {
-        areaMain2.classList.add('active');
-        window.location.hash = 'homeless'; // 更新 URL hash
-    }
-
-    // 調整 spacer 高度
-    adjustSpacer();
-
-    // 重新觀察動畫元素
-    observeFadeElements();
+    // 顯示選定的區塊
+    document.getElementById(areaId).classList.add("active");
 }
-
-
 
 
 
