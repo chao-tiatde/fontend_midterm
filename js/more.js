@@ -1,12 +1,35 @@
-// 
-function showArea(areaId) {
-    // 隱藏所有區塊
-    document.getElementById("area_main").classList.remove("active");
-    document.getElementById("area_main2").classList.remove("active");
+window.onload = function() {
+    const hash = window.location.hash;
+    const query = new URLSearchParams(window.location.search);
 
-    // 顯示選定的區塊
-    document.getElementById(areaId).classList.add("active");
+    if (hash === '#sendLove' || query.get('type') === 'sendLove') {
+        showArea('area_main');
+    } else if (hash === '#homeless' || query.get('type') === 'homeless') {
+        showArea('area_main2');
+    } else {
+        // 預設顯示送愛者
+        showArea('area_main');
+    }
+};
+
+
+function showArea(areaId) {
+    const areaMain1 = document.getElementById('area_main');
+    const areaMain2 = document.getElementById('area_main2');
+
+    if (areaId === 'area_main') {
+        areaMain1.classList.add('active');
+        areaMain2.classList.remove('active');
+        // 改變網址為 "moreStory.html#sendLove"
+        window.location.hash = 'sendLove';
+    } else if (areaId === 'area_main2') {
+        areaMain2.classList.add('active');
+        areaMain1.classList.remove('active');
+        // 改變網址為 "moreStory.html#homeless"
+        window.location.hash = 'homeless';
+    }
 }
+
 
 
 
