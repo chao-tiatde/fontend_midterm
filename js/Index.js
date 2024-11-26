@@ -1,3 +1,6 @@
+console.log("測試 JavaScript 是否正常執行");
+alert("JS 正在運行！");
+
 //綁定點擊事件
 document.querySelector(".btn-lan.zh").addEventListener("click", () => switchLanguage("zh"));
 document.querySelector(".btn-lan.en").addEventListener("click", () => switchLanguage("en"));
