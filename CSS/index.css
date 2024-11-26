@@ -81,7 +81,7 @@ p{
     cursor: pointer;
 }
 .btn-lan{
-    font-weight: 25px;
+    weight: 25px;
     height: 25px;
     background-color: white;
     border: 0;
@@ -147,7 +147,7 @@ p{
     right: 30px;
     bottom: 30px;
     opacity: 0; 
-    transform: translateX(100%); 
+    transform: translateX(+100%); 
     transition: opacity 0.5s ease, transform 0.8s ease; 
 }
 .bigpic-l.show, .bigpic-r.show {
