@@ -1,15 +1,3 @@
-//綁定點擊事件
-document.querySelector(".btn-lan.zh").addEventListener("click", () => switchLanguage("zh"));
-document.querySelector(".btn-lan.en").addEventListener("click", () => switchLanguage("en"));
-//語言切換函數
-function switchLanguage(language) {
-    document.querySelectorAll("[data-zh]").forEach(element => {
-        element.textContent = element.getAttribute(`data-${language}`) || element.textContent;
-        if (element.placeholder) {
-            element.placeholder = element.getAttribute(`data-${language}`);
-        }
-    });
-}
 // bigpic文字滑入
 window.onload = function() {
     document.querySelector('.bigpic-l').classList.add('show');
