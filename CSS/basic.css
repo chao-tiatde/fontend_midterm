@@ -1,3 +1,7 @@
+html{
+    box-sizing: border-box;
+    
+}
 h2{
     font-size: 20px;
 }
@@ -70,7 +74,10 @@ p{
     cursor: pointer;
 }
 .btn-lan{
-    font-weight: 25px;
+    /* weight: 25px; */
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    width: 26px;
     height: 25px;
     background-color: white;
     border: 0;
@@ -96,6 +103,7 @@ p{
 }
 .btn-catalog{
     background-color: transparent;
+    font-family: 'Inter', sans-serif;
     border: 0;
     color: white;
     font-size: 15px;
@@ -105,6 +113,11 @@ p{
     padding-bottom: 0px;
     cursor: pointer;
 }
+
+
+
+
+
 .footer{
     width: 100%;
     height: 294px;
