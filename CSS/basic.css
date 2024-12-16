@@ -1,6 +1,5 @@
 html{
     box-sizing: border-box;
-    
 }
 h2{
     font-size: 20px;
@@ -41,6 +40,8 @@ p{
 .nav-header h2{
     color: white;
     font-weight: 700;
+    width: 220px;
+    height: 23px;
 }
 .header-r{
     display: flex;
@@ -75,17 +76,16 @@ p{
 }
 .btn-lan{
     /* weight: 25px; */
-    font-family: 'Inter', sans-serif;
     font-size: 16px;
     width: 26px;
     height: 25px;
     background-color: white;
     border: 0;
     color: black;
-    padding-right: 5px;
-    padding-left: 5px;
-    padding-top: 4px;
-    padding-bottom: 3px;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+    padding-top: 4px !important; 
+    padding-bottom: 3px !important;
     cursor: pointer;
     border-radius: 2px;
 }
@@ -103,7 +103,6 @@ p{
 }
 .btn-catalog{
     background-color: transparent;
-    font-family: 'Inter', sans-serif;
     border: 0;
     color: white;
     font-size: 15px;
@@ -112,8 +111,12 @@ p{
     padding-top: 0px;
     padding-bottom: 0px;
     cursor: pointer;
+    height: 17.25px;
 }
-
+.nav-header, .nav-content, .btn-catalog, .btn-lan{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
 
 
 
