@@ -7,7 +7,7 @@ const translatableElements = document.querySelectorAll('[data-zh][data-en]');
 // 為每個按鈕添加點擊事件
 langButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const selectedLang = button.textContent.trim(); // 根據按鈕文字判斷語言
+        const selectedLang = button.innerText.trim(); // 根據按鈕文字判斷語言
 
         // 遍歷所有有 data-zh 和 data-en 的元素
         translatableElements.forEach(element => {

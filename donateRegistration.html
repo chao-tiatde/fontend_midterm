@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>送愛登錄</title>
+    <title data-zh="送愛登錄" data-en="Donate Registration">送愛登錄</title>
     <link rel="stylesheet" type="text/css" href="CSS/donateRegistration.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +14,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/taiwan-area-selector@1.0.2/dist/taiwan-area-selector.min.css">
     <script src="https://cdn.jsdelivr.net/npm/taiwan-area-selector@1.0.2/dist/taiwan-area-selector.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js"></script>
 </head>
 <body>
     <!--nav-header-->
@@ -35,7 +38,7 @@
             <li><a href="#" data-zh="我要送愛" data-en="Donation Suppulies">我要送愛 </a>
                 <ul>
                     <li><a href="#" data-zh="無家者據點查詢" data-en="Search Homeless Locations">無家者據點查詢</a></li>
-                    <li><a href="#" data-zh="送愛登錄" data-en="Donation Registration">送愛登錄</a></li>
+                    <li><a href="#" data-zh="送愛登錄" data-en="Donate Registration">送愛登錄</a></li>
                     <li><a href="#" data-zh="送愛情形一覽" data-en="Donation Overview">送愛情形一覽</a></li>
                 </ul>
             </li>
@@ -54,28 +57,30 @@
             <h2 class = "title" data-zh="基本資訊" data-en="Basic Information">基本資訊</h2>
             <div class ="sheet-c">
                 <div class = "sheet-cl">
-                    <h2 class ="sheet-ct" data-zh="名義" data-en="Basis">名義</h2>
+                    <h2 class ="sheet-ct" data-zh="名義" data-en="Basis" >名義</h2>
                     <label class = "label">
-                        <input type="radio" name="user_type" value="1" class = "radio"> 個人
+                        <input type="radio" name="user_type" value="1" class = "radio"> 
+                        <span class="label-text" data-zh="個人" data-en="Individual">個人</span>
                     </label>
                     <label>
-                        <input type="radio" name="user_type" value="2" class = "radio"> 團體
+                        <input type="radio" name="user_type" value="2" class = "radio"> 
+                        <span class="label-text" data-zh="團體" data-en="Organization">團體</span>
                     </label>
                 </div>
                 <div class = "sheet-cr">
                     <h2 class = "sheet-ct" data-zh="單位名稱" data-en="Name">單位名稱</h2>
-                    <input type="text" placeholder="王小明/ 國立臺北教育大學" class = "input">
+                    <input type="text" placeholder="王小明/ 國立臺北教育大學" class = "input" data-zh="王小明/ 國立臺北教育大學" data-en="Ben/ National Taipei University of Education">
                 </div>
             </div>
             <!--deliver information-->
-            <h2 class = "title">配送資訊</h2>
+            <h2 class = "title" data-zh="配送資訊" data-en="Delivery Information">配送資訊</h2>
             <div class = "sheet-c">
                 <div class = sheet-cl>
-                    <h2 class = "sheet-ct">日期</h2>
-                    <input type="date" class="input">
-                    <h2 class = "sheet-cm">縣市</h2>
+                    <h2 class = "sheet-ct" data-zh="日期" data-en="Date">日期</h2>
+                    <input type="date" class="input" id="dateInput">
+                    <h2 class = "sheet-cm" data-zh="縣市" data-en="Country/ City">縣市</h2>
                     <select id="city" name="city" onchange="updateAreaOptions()" class="input">
-                        <option>請選擇縣市</option>
+                        <option data-zh="請選擇縣市" data-en="Please select a county/ city">請選擇縣市</option>
                         <option value="臺北市">臺北市</option>
                         <option value="新北市">新北市</option>
                         <option value="基隆市">基隆市</option>
@@ -99,57 +104,57 @@
                         <option value="金門縣">金門縣</option>
                         <option value="連江縣">連江縣</option>
                     </select>
-                    <h2 class = "sheet-cm">類別（地點）</h2>
+                    <h2 class = "sheet-cm" data-zh="類別（地點）" data-en="Category(Place)">類別（地點）</h2>
                     <select id="place" name="place" onchange="updateLocationOptions()" class="input">
-                        <option>請選擇類別（地點）</option>
+                        <option data-zh="請選擇類別（地點）" data-en="Please select a category(place)">請選擇類別（地點）</option>
                     </select>
                 <div class="div-other">
                     <input type="checkbox" id="other" name="other" value="other" class="checkbox" onclick="toggleOtherInput()">
-                    <label for="other" class="other-label">其他</label><br>
-                    <input type="text" class="input-other" id="input-other" placeholder="請輸入詳細地點">
+                    <label for="other" class="other-label" data-zh="其他" data-en="Other">其他</label><br>
+                    <input type="text" class="input-other" id="input-other" placeholder="請輸入詳細地點"  data-zh="請輸入詳細地點" data-en="Please enter a specific place">
                 </div>
                 </div>
                 <div class = "sheet-cr">
-                    <h2 class = "sheet-ct">時間</h2>
+                    <h2 class = "sheet-ct" data-zh="時間" data-en="Time">時間</h2>
                     <input type="time" class="input">
-                    <h2 class = "sheet-cm">地區</h2>
+                    <h2 class = "sheet-cm" data-zh="地區" data-en="District">地區</h2>
                     <select id="area" name="area" onchange="updatePlaceOptions()" class="input">
-                        <option>請選擇地區</option>
+                        <option data-zh="請選擇地區" data-en="Please select a district">請選擇地區</option>
                     </select>
-                    <h2 class = "sheet-cm">詳細地點</h2>
+                    <h2 class = "sheet-cm" data-zh="詳細地點" data-en="Specific Place">詳細地點</h2>
                     <select id="location" name="location" class="input">
-                        <option>請選擇詳細地點</option>
+                        <option data-zh="請選擇詳細地點" data-en="Please select a specific place">請選擇詳細地點</option>
                     </select>    
                 </div>
             </div>
             <!--object information-->
-            <h2 class = "title">物品資訊</h2>
+            <h2 class = "title"  data-zh="物品資訊" data-en="Supplies Information">物品資訊</h2>
             <div class = "sheet-c">
                 <div class = "sheet-cl">
-                    <h2 class ="sheet-ct">類別（物品）</h2>
+                    <h2 class ="sheet-ct" data-zh="類別（物品）" data-en="Category(Supplies)">類別（物品）</h2>
                     <select id="object" name="object" class="input">
-                        <option>請選擇類別（物品）</option>
-                        <option value="food">食品</option>
-                        <option value="dailyNecessities">生活用品</option>
-                        <option value="emergencyMedicalSupplies">緊急醫療用品</option>
-                        <option value="others">其他</option>
+                        <option data-zh="請選擇類別（物品）" data-en="Please select a category(supply)">請選擇類別（物品）</option>
+                        <option value="food" data-zh="食品" data-en="Food">食品</option>
+                        <option value="dailyNecessities" data-zh="生活用品" data-en="Daily Necessities">生活用品</option>
+                        <option value="emergencyMedicalSupplies" data-zh="緊急醫療用品" data-en="Emergency">緊急醫療用品</option>
+                        <option value="others" data-zh="其他" data-en="Others">其他</option>
                     </select>    
-                    <h2 class = "sheet-cm">預計受惠人數</h2>
+                    <h2 class = "sheet-cm" data-zh="預計受惠人數" data-en="Expected Number of Beneficiaries">預計受惠人數</h2>
                     <input type="number" placeholder="60" min="0" class="input">
                 </div>
                 <div class = sheet-cr>
-                    <h2 class ="sheet-ct">物品名稱/ 件數</h2>
-                    <input type="text" placeholder="毛衣/ 60件" class="input">
+                    <h2 class ="sheet-ct" data-zh="物品名稱/ 件數" data-en="Item name/ Quantity">物品名稱/ 件數</h2>
+                    <input type="text" placeholder="毛衣/ 60件" class="input" data-zh="毛衣/ 60件" data-en="sweaters/ 60">
                 </div>
             </div>
             <!--other information-->
-            <h2 class = "title">其他資訊</h2>
+            <h2 class = "title" data-zh="其他資訊" data-en="Other Information">其他資訊</h2>
             <div class="other">
-                <h2 class ="sheet-ct">備註</h2>
-                <textarea class="other-input" placeholder="女用20件，男用40件"></textarea>
+                <h2 class ="sheet-ct" data-zh="備註" data-en="Remarks">備註</h2>
+                <textarea class="other-input" placeholder="女用20件，男用40件" data-zh="女用20件，男用40件" data-en="20 for female, 40 for male"></textarea>
             </div>
             <div class="div-button">
-                <button type="submit" class="button">送出</button>
+                <button type="submit" class="button" data-zh="送出" data-en="Submit">送出</button>
             </div>
         </form>
         <!--footer-->

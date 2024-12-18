@@ -2801,3 +2801,61 @@ function toggleOtherInput() {
     }
 }
 
+const dateInput = document.getElementById('dateInput');
+    const today = new Date();
+    const formattedDate = today.toISOString().split('T')[0]; // 格式化為 YYYY-MM-DD
+    dateInput.value = formattedDate;
+
+    // 如果需要強制顯示 YYYY/MM/DD，則監聽輸入框變化
+    dateInput.addEventListener('change', (event) => {
+        const selectedDate = new Date(event.target.value);
+        const year = selectedDate.getFullYear();
+        const month = String(selectedDate.getMonth() + 1).padStart(2, '0'); // 月份補零
+        const day = String(selectedDate.getDate()).padStart(2, '0'); // 日期補零
+        alert(`${year}/${month}/${day}`); // 示例，替換為你需要的操作
+    });
+
+    // 替換為你的 Firebase 專案設定
+ const firebaseConfig = {
+    apiKey: "AIzaSyDPifQUmES6_NQDDkOzA18SS_2-1-DRZTg",
+    authDomain: "frontend-midterm-4a62f.firebaseapp.com",
+    projectId: "frontend-midterm-4a62f",
+    storageBucket: "frontend-midterm-4a62f.firebasestorage.app",
+    messagingSenderId: "922826580440",
+    appId: "1:922826580440:web:1aae31a36a0b4a9d1ad2ad",
+    measurementId: "G-VXTCCCKXCL"
+  };
+  // 初始化 Firebase
+const app = firebase.initializeApp(firebaseConfig);
+const database = firebase.database(app);
+document.querySelector('form').addEventListener('submit', async (e) => {
+    e.preventDefault(); // 防止表單提交刷新頁面
+
+    // 收集資料
+    const data = {
+        basis: document.querySelector('input[name="user_type"]:checked')?.value || "",
+        name: document.querySelector('input[type="text"]').value || "",
+        date: document.getElementById('dateInput').value || "",
+        city: document.getElementById('city').value || "",
+        area: document.getElementById('area').value || "",
+        place: document.getElementById('place').value || "",
+        specificPlace: document.getElementById('input-other').value || "",
+        time: document.querySelector('input[type="time"]').value || "",
+        category: document.getElementById('object').value || "",
+        beneficiaries: document.querySelector('input[type="number"]').value || 0,
+        itemNameQuantity: document.querySelector('input[placeholder="毛衣/ 60件"]').value || "",
+        remarks: document.querySelector('textarea').value || ""
+    };
+
+    try {
+        // 將資料寫入 Firebase
+        await firebase.database().ref('donations').push(data);
+        alert('資料已成功提交！');
+    } catch (error) {
+        console.error('資料提交失敗', error);
+        alert('資料提交失敗，請稍後再試！');
+    }
+});
+
+
+    

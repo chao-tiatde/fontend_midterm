@@ -7,18 +7,30 @@ const translatableElements = document.querySelectorAll('[data-zh][data-en]');
 // 為每個按鈕添加點擊事件
 langButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const selectedLang = button.textContent.trim(); // 根據按鈕文字判斷語言
+        const selectedLang = button.innerText.trim(); // 根據按鈕文字判斷語言
 
         // 遍歷所有有 data-zh 和 data-en 的元素
         translatableElements.forEach(element => {
-            if (selectedLang === '中') {
-                element.textContent = element.getAttribute('data-zh'); // 切換為中文
-            } else if (selectedLang === 'En') {
-                element.textContent = element.getAttribute('data-en'); // 切換為英文
+            // 只處理 input 和 textarea 元素的 placeholder
+            if (element.tagName.toLowerCase() === 'input' || element.tagName.toLowerCase() === 'textarea') {
+                if (selectedLang === '中') {
+                    element.placeholder = element.getAttribute('data-zh'); // 切換為中文
+                } else if (selectedLang === 'En') {
+                    element.placeholder = element.getAttribute('data-en'); // 切換為英文
+                }
+            } else {
+                // 更新其他元素的文本內容（例如 <label> 和 <span>）
+                if (selectedLang === '中') {
+                    element.textContent = element.getAttribute('data-zh'); // 切換為中文
+                } else if (selectedLang === 'En') {
+                    element.textContent = element.getAttribute('data-en'); // 切換為英文
+                }
             }
         });
     });
 });
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     // 當用户按下 Enter 鍵時觸發搜索
