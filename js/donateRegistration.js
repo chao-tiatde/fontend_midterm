@@ -2815,20 +2815,19 @@ const dateInput = document.getElementById('dateInput');
         alert(`${year}/${month}/${day}`); // 示例，替換為你需要的操作
     });
 
-    // 替換為你的 Firebase 專案設定
-const firebaseConfig = {
-    apiKey: "AIzaSyDPifQUmES6_NQDDkOzA18SS_2-1-DRZTg",
-    authDomain: "frontend-midterm-4a62f.firebaseapp.com",
-    projectId: "frontend-midterm-4a62f",
-    storageBucket: "frontend-midterm-4a62f.firebasestorage.app",
-    messagingSenderId: "922826580440",
-    appId: "1:922826580440:web:1aae31a36a0b4a9d1ad2ad",
-    measurementId: "G-VXTCCCKXCL"
-};
+    const firebaseConfig = {
+        apiKey: "AIzaSyDPifQUmES6_NQDDkOzA18SS_2-1-DRZTg",
+        authDomain: "frontend-midterm-4a62f.firebaseapp.com",
+        projectId: "frontend-midterm-4a62f",
+        storageBucket: "frontend-midterm-4a62f.firebasestorage.app",
+        messagingSenderId: "922826580440",
+        appId: "1:922826580440:web:1aae31a36a0b4a9d1ad2ad",
+        measurementId: "G-VXTCCCKXCL"
+      };
 
-// 初始化 Firebase
-const app = firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore(app); // 使用 Firestore
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig)
+const db = firebase.firestore()
 
 document.querySelector('form').addEventListener('submit', async (e) => {
     e.preventDefault(); // 防止表單提交刷新頁面
@@ -2850,8 +2849,8 @@ document.querySelector('form').addEventListener('submit', async (e) => {
     };
 
     try {
-        // 將資料寫入 Firestore
-        await db.collection('donations').add(data);
+        // 將資料寫入 Firebase
+        await firebase.database().ref('donations').push(data);
         alert('資料已成功提交！');
     } catch (error) {
         console.error('資料提交失敗', error);
