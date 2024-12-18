@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>送愛登錄</title>
+    <link rel="stylesheet" type="text/css" href="CSS/donateRegistration.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="google" content="notranslate">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="icon" href="img/img_favicon/box.png" type="image/png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/taiwan-area-selector@1.0.2/dist/taiwan-area-selector.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/taiwan-area-selector@1.0.2/dist/taiwan-area-selector.min.js"></script>
+</head>
+<body>
+    <!--nav-header-->
+    <div class = "fixed">
+        <div class="nav-header">
+            <h2 data-zh="台灣無家者送愛整合平臺" data-en="Homeless Care and Meal Coordination Platform">台灣無家者送愛整合平臺</h2>
+            <div class="header-r">
+                <button class="btn-lan">中</button>
+                <button class="btn-lan">En</button>
+                <div class="search-box">
+                    <input type="text" placeholder="Search" class="search-input" id="search-input">
+                    <img src="img/img_index/Search.png" alt="Search Icon" class="search-icon" id="search-icon">
+                </div>
+            </div>
+        </div>
+        <!--nav-content-->
+        <div class="nav-content">
+            <a href="index.html"><img src="img/img_index/Home.png" alt="Home Icon" class="home-icon" style="cursor: pointer;"></a><div class="dropdown">
+            <li><a href="#" data-zh="我要送愛" data-en="Donation Suppulies">我要送愛 </a>
+                <ul>
+                    <li><a href="#" data-zh="無家者據點查詢" data-en="Search Homeless Locations">無家者據點查詢</a></li>
+                    <li><a href="#" data-zh="送愛登錄" data-en="Donation Registration">送愛登錄</a></li>
+                    <li><a href="#" data-zh="送愛情形一覽" data-en="Donation Overview">送愛情形一覽</a></li>
+                </ul>
+            </li>
+        </div>
+            <a href="aboutUs.html"  class=a-catalog><button class=btn-catalog data-zh="關於我們" data-en="About Us">關於我們</button></a>
+            <a href="moreStory.html" class=a-catalog><button class=btn-catalog data-zh="更多故事" data-en="More Stories">更多故事</button></a>
+            <button class=btn-catalog data-zh="常見問題" data-en="FAQ">常見問題</button>
+            <button class=btn-catalog data-zh="用戶登入/註冊" data-en="User Login/Register">用戶登入/註冊</button>
+        </div>
+    </div>
+        <h2 class = "sheet-h" data-zh="送愛登錄" data-en="Donate Registration">送愛登錄</h2>
+        <h4 class = "sheet-hc" data-zh="本平臺僅供送愛物資資訊彙整，不提供代送服務" data-en="This platform is solely for consolidating information on donated supplies and does not provide delivery services.">本平臺僅供送愛物資資訊彙整，不提供代送服務</h4>
+        <hr>
+        <form>
+            <!--basic information-->
+            <h2 class = "title" data-zh="基本資訊" data-en="Basic Information">基本資訊</h2>
+            <div class ="sheet-c">
+                <div class = "sheet-cl">
+                    <h2 class ="sheet-ct" data-zh="名義" data-en="Basis">名義</h2>
+                    <label class = "label">
+                        <input type="radio" name="user_type" value="1" class = "radio"> 個人
+                    </label>
+                    <label>
+                        <input type="radio" name="user_type" value="2" class = "radio"> 團體
+                    </label>
+                </div>
+                <div class = "sheet-cr">
+                    <h2 class = "sheet-ct" data-zh="單位名稱" data-en="Name">單位名稱</h2>
+                    <input type="text" placeholder="王小明/ 國立臺北教育大學" class = "input">
+                </div>
+            </div>
+            <!--deliver information-->
+            <h2 class = "title">配送資訊</h2>
+            <div class = "sheet-c">
+                <div class = sheet-cl>
+                    <h2 class = "sheet-ct">日期</h2>
+                    <input type="date" class="input">
+                    <h2 class = "sheet-cm">縣市</h2>
+                    <select id="city" name="city" onchange="updateAreaOptions()" class="input">
+                        <option>請選擇縣市</option>
+                        <option value="臺北市">臺北市</option>
+                        <option value="新北市">新北市</option>
+                        <option value="基隆市">基隆市</option>
+                        <option value="新竹市">新竹市</option>
+                        <option value="桃園市">桃園市</option>
+                        <option value="新竹縣">新竹縣</option>
+                        <option value="宜蘭縣">宜蘭縣</option>
+                        <option value="臺中市">臺中市</option>
+                        <option value="苗栗縣">苗栗縣</option>
+                        <option value="彰化縣">彰化縣</option>
+                        <option value="南投縣">南投縣</option>
+                        <option value="雲林縣">雲林縣</option>
+                        <option value="高雄市">高雄市</option>
+                        <option value="臺南市">臺南市</option>
+                        <option value="嘉義市">嘉義市</option>
+                        <option value="嘉義縣">嘉義縣</option>
+                        <option value="屏東縣">屏東縣</option>
+                        <option value="澎湖縣">澎湖縣</option>
+                        <option value="花蓮縣">花蓮縣</option>
+                        <option value="臺東縣">臺東縣</option>
+                        <option value="金門縣">金門縣</option>
+                        <option value="連江縣">連江縣</option>
+                    </select>
+                    <h2 class = "sheet-cm">類別（地點）</h2>
+                    <select id="place" name="place" onchange="updateLocationOptions()" class="input">
+                        <option>請選擇類別（地點）</option>
+                    </select>
+                <div class="div-other">
+                    <input type="checkbox" id="other" name="other" value="other" class="checkbox" onclick="toggleOtherInput()">
+                    <label for="other" class="other-label">其他</label><br>
+                    <input type="text" class="input-other" id="input-other" placeholder="請輸入詳細地點">
+                </div>
+                </div>
+                <div class = "sheet-cr">
+                    <h2 class = "sheet-ct">時間</h2>
+                    <input type="time" class="input">
+                    <h2 class = "sheet-cm">地區</h2>
+                    <select id="area" name="area" onchange="updatePlaceOptions()" class="input">
+                        <option>請選擇地區</option>
+                    </select>
+                    <h2 class = "sheet-cm">詳細地點</h2>
+                    <select id="location" name="location" class="input">
+                        <option>請選擇詳細地點</option>
+                    </select>    
+                </div>
+            </div>
+            <!--object information-->
+            <h2 class = "title">物品資訊</h2>
+            <div class = "sheet-c">
+                <div class = "sheet-cl">
+                    <h2 class ="sheet-ct">類別（物品）</h2>
+                    <select id="object" name="object" class="input">
+                        <option>請選擇類別（物品）</option>
+                        <option value="food">食品</option>
+                        <option value="dailyNecessities">生活用品</option>
+                        <option value="emergencyMedicalSupplies">緊急醫療用品</option>
+                        <option value="others">其他</option>
+                    </select>    
+                    <h2 class = "sheet-cm">預計受惠人數</h2>
+                    <input type="number" placeholder="60" min="0" class="input">
+                </div>
+                <div class = sheet-cr>
+                    <h2 class ="sheet-ct">物品名稱/ 件數</h2>
+                    <input type="text" placeholder="毛衣/ 60件" class="input">
+                </div>
+            </div>
+            <!--other information-->
+            <h2 class = "title">其他資訊</h2>
+            <div class="other">
+                <h2 class ="sheet-ct">備註</h2>
+                <textarea class="other-input" placeholder="女用20件，男用40件"></textarea>
+            </div>
+            <div class="div-button">
+                <button type="submit" class="button">送出</button>
+            </div>
+        </form>
+        <!--footer-->
+    <div class="footer">
+        <div class = "footer-top">
+            <div class="left">
+                <h2>Homeless Care & Meal <br>Coordination Platform</h2>
+                <h6 data-zh="數位二甲 | 111219005 | 吳函蓁" data-en="NTUE DTD | 111219005 | Han-Jhen, Wu">數位二甲 | 111219005 | 吳函蓁</h6>
+                <h6 data-zh="數位二甲 | 111219007 | 趙翊如" data-en="NTUE DTD | 111219007 | Yi-Ju, Chao">數位二甲 | 111219007 | 趙翊如</h6>
+                <h6 data-zh="113學年度上學期（大二）" data-en="First semester of the 113th academic year (sophomore year)">113學年度上學期（大二）</h6>
+                <h6 data-zh="前端工程設計" data-en="Frontend web development">前端工程設計</h6>
+                <h6  data-zh="期末專題成果" data-en="Final Project Results">期中專題成果</h6>
+            </div>
+            <div class="middle1">
+                <h3 data-zh="人生百味" data-en="Do You a Flavor">人生百味</h3>
+                <a href="https://doyouaflavor.tw/" target="_blank" class = "footer-a"><h6 data-zh="官方網站" data-en="Official website">官方網站</h6></a> 
+                <a href="https://doyouaflavor.tw/activities/" target="_blank" class = "footer-a"><h6 data-zh="專案列表" data-en="Project list">專案列表</h6></a> 
+                <a href="https://doyouaflavor.tw/blog/" target="_blank" class = "footer-a"><h6 data-zh="議題文章" data-en="Topic articles">議題文章</h6></a> 
+                <a href="https://doyouaflavor.tw/donate/" target="_blank" class = "footer-a"><h6 data-zh="捐款支持" data-en="Donate to support">捐款資訊</h6></a> 
+                <a href="https://www.books.com.tw/products/0010741248?" target="_blank" class = "footer-a"><h6 data-zh="街頭生存指南" data-en="Street survival guide">街頭生存指南</h6></a> 
+                <a href="https://doyouaflavor.tw/homeless-helper/" target="_blank" class = "footer-a"><h6 data-zh="無家者小幫手" data-en="Homeless helper">無家者小幫手</h6></a> 
+            </div>
+            <div class="middle2">
+                <h3 data-zh="其他" data-en="Others">其他</h3>
+                <a href="https://www.instagram.com/tiatde/" target="_blank" class = "footer-a"><h6 data-zh="開發者支持" data-en="Developer support">開發者支持</h6></a> 
+                <a href="https://www.instagram.com/tiatde/" target="_blank" class = "footer-a"><h6 data-zh="平臺問題回報" data-en="Platform issue report">平臺問題回報</h6></a> 
+                <a href="https://www.youtube.com/@yijuchao5024" target="_blank" class = "footer-a"><h6 data-zh="更多影音作品" data-en="More video content">更多影音作品</h6></a> 
+            </div>
+            <div class="right">
+                <h3>FOLLOW</h3>
+                <a href="https://www.instagram.com/tiatde/" target="_blank" class = "footer-a"><img src="img/img_index/Instagram.png" alt="Instagram" class="instagram"></a> 
+                <a href="https://www.facebook.com/profile.php?id=100004458227420" target="_blank" class = "footer-a"><img src="img/img_index/Facebook.png" alt="Facebook" class="facebook"></a> 
+                <a href="https://www.youtube.com/@yijuchao5024" target="_blank" class = "footer-a"><img src="img/img_index/Youtube.png" alt="Youtube" class="youtube"></a> 
+            </div>
+        </div>
+        <div class = "footer-bottom">
+            <hr class = "footer-hr">
+            <p class = "footer-p">2024 produced by Yi-Ju, Chao & Han-Jhen, Wu</p>
+        </div class = "footer-bottom">
+    </div>
+    <script src="js/donateRegistration.js"></script>
+    <script src="js/basic.js"></script>
+    </body>
+</html>
