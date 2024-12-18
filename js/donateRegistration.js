@@ -2816,7 +2816,7 @@ const dateInput = document.getElementById('dateInput');
     });
 
     // 替換為你的 Firebase 專案設定
- const firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyDPifQUmES6_NQDDkOzA18SS_2-1-DRZTg",
     authDomain: "frontend-midterm-4a62f.firebaseapp.com",
     projectId: "frontend-midterm-4a62f",
@@ -2824,10 +2824,12 @@ const dateInput = document.getElementById('dateInput');
     messagingSenderId: "922826580440",
     appId: "1:922826580440:web:1aae31a36a0b4a9d1ad2ad",
     measurementId: "G-VXTCCCKXCL"
-  };
-  // 初始化 Firebase
+};
+
+// 初始化 Firebase
 const app = firebase.initializeApp(firebaseConfig);
-const database = firebase.database(app);
+const db = firebase.firestore(app); // 使用 Firestore
+
 document.querySelector('form').addEventListener('submit', async (e) => {
     e.preventDefault(); // 防止表單提交刷新頁面
 
@@ -2848,14 +2850,15 @@ document.querySelector('form').addEventListener('submit', async (e) => {
     };
 
     try {
-        // 將資料寫入 Firebase
-        await firebase.database().ref('donations').push(data);
+        // 將資料寫入 Firestore
+        await db.collection('donations').add(data);
         alert('資料已成功提交！');
     } catch (error) {
         console.error('資料提交失敗', error);
         alert('資料提交失敗，請稍後再試！');
     }
 });
+
 
 
     
