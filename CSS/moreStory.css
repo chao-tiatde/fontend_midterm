@@ -174,7 +174,7 @@ li:hover{
 
 .line{
     width: 1px;
-    height: 1785px;
+    height: 1801px;
     background-color: #354567;
     border: none;
     margin: 59px 0 61px 51px;
@@ -212,13 +212,13 @@ li:hover{
 
 .intro1{
     width: 697px;
-    height: 420px;
+    height: 438px;
 }
 
 .intro2{
     width: 697px;
-    height: 405px;
-    margin-top: 50px;
+    height: 423px;
+    margin-top: 32px;
 }
 
 .intro_hl1{
@@ -296,6 +296,21 @@ li:hover{
     height: 298px;
     display: block;
     margin: 24px auto 0 auto;
+}
+
+.img_source{
+    width: 468px;
+    height: 18px;
+    margin-left: 115px;
+    margin-right: 114px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_source a{
+    font-size: 14px;
+    color: #8391AE;
 }
 
 .spacer {
