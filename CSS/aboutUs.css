@@ -25,6 +25,10 @@ body{
     overflow-x: hidden
 }
 
+/* .en-font-size {
+    font-size: 14px;
+} */
+
 .main_contain{
     width: 1280px;
     margin: 0 auto;
@@ -78,6 +82,7 @@ body{
 
 .intro_word{
     font-size: 16px;
+    white-space: pre-line;
 }
 
 .word_fade{
@@ -196,7 +201,7 @@ body{
     color: #47587D;
     background-color: #FFFFFF;
     border-radius: 2px;
-    padding: 5px 21px 4px 21px;
+    padding: 6px 21px 4px 21px;
     margin-top: 0;
     margin-bottom: 5px;
 }
@@ -208,7 +213,7 @@ body{
     color: #47587D;
     background-color: white;
     border-radius: 2px;
-    padding: 6px 41px;
+    padding: 9px 41px;
     margin: 0;
 }
 

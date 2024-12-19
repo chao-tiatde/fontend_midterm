@@ -21,131 +21,130 @@
     <!--nav-header-->
     <div class = "fixed">
         <div class="nav-header">
-            <h2>台灣無家者送愛整合平臺</h2>
+            <h2 data-zh="台灣無家者送愛整合平臺" data-en="Homeless Care and Meal Coordination Platform">台灣無家者送愛整合平臺</h2>
             <div class="header-r">
                 <button class="btn-lan">中</button>
                 <button class="btn-lan">En</button>
                 <div class="search-box">
-                    <input type="text" placeholder="Search" class="search-input">
-                    <img src="img/img_index/Search.png" alt="Search Icon" class="search-icon">
+                    <input type="text" placeholder="Search" class="search-input" id="search-input">
+                    <img src="img/img_index/Search.png" alt="Search Icon" class="search-icon" id="search-icon">
                 </div>
             </div>
         </div>
         <!--nav-content-->
         <div class="nav-content">
-            <a href="index.html"><img src="img/img_index/Home.png" alt="Home Icon" class="home-icon" style="cursor: pointer;"></a>
-            <button class=btn-catalog>我要送愛</button>
-            <a href="aboutUs.html"><button class=btn-catalog>關於我們</button></a>
-            <a href="moreStory.html"><button class=btn-catalog>更多故事</button></a>
-            <button class=btn-catalog>常見問題</button>
-            <button class=btn-catalog>用戶登入/註冊</button>
+            <a href="index.html"><img src="img/img_index/Home.png" alt="Home Icon" class="home-icon" style="cursor: pointer;"></a><div class="dropdown">
+            <li><a href="#" data-zh="我要送愛" data-en="Donation Suppulies">我要送愛 </a>
+                <ul>
+                    <li><a href="#" data-zh="無家者據點查詢" data-en="Search Homeless Locations">無家者據點查詢</a></li>
+                    <li><a href="donateRegistration.html" data-zh="送愛登錄" data-en="Donate Registration">送愛登錄</a></li>
+                    <li><a href="#" data-zh="送愛情形一覽" data-en="Donation Overview">送愛情形一覽</a></li>
+                </ul>
+            </li>
+        </div>
+            <a href="aboutUs.html"  class=a-catalog><button class=btn-catalog data-zh="關於我們" data-en="About Us">關於我們</button></a>
+            <a href="moreStory.html" class=a-catalog><button class=btn-catalog data-zh="更多故事" data-en="More Stories">更多故事</button></a>
+            <a href="FAQ.html" class=a-catalog><button class=btn-catalog data-zh="常見問題" data-en="FAQ">常見問題</button></a>
+            <button class=btn-catalog data-zh="用戶登入/註冊" data-en="User Login/Register">用戶登入/註冊</button>
         </div>
     </div>
 
+    <!--content-->
     <div class="main_contain">
         <div class="area_est">
             <img class="img_est" src="img/img_about/Establishment_background.png">
-                <div class="word_est animate__animated animate__fadeInLeft">
-                    <h2 class="tit_est">成立背景</h2>
-                    <p class="intro_est intro_word">
-                        113學年度上學期，我們在「多媒體概論」這門課程當中，意外了解到無家者所面臨的困境，這讓我們開始思考如何以微小的力量提供這群無家可歸的人們一些幫助。隨著我們更深入的了解及研究無家者們的日常生活及需求，最終我們決定架設此網站，讓人們能夠透過網路更加了解無家者的生活挑戰，同時提供資源以及協助，讓有意願的民眾能夠參與關懷、捐款或志願服務。希望這個網站能成為一個橋樑，串聯社會的愛心與需要幫助的無家者們，達到讓世界變得更美好的宏願。
-                    </p>
-                </div>
+            <div class="word_est animate__animated animate__fadeInLeft">
+                <h2 class="tit_est" data-zh="成立背景" data-en="Establishment Background">成立背景</h2>
+                <p class="intro_est intro_word" data-zh="113學年度上學期，我們在「多媒體概論」這門課程當中，意外了解到無家者所面臨的困境，這讓我們開始思考如何以微小的力量提供這群無家可歸的人們一些幫助。隨著我們更深入的了解及研究無家者們的日常生活及需求，最終我們決定架設此網站，讓人們能夠透過網路更加了解無家者的生活挑戰，同時提供資源以及協助，讓有意願的民眾能夠參與關懷、捐款或志願服務。希望這個網站能成為一個橋樑，串聯社會的愛心與需要幫助的無家者們，達到讓世界變得更美好的宏願。" data-en="In the first semester of the 113 academic year, we unexpectedly learned about the challenges faced by homeless individuals during the 'Introduction to Multimedia' course. This inspired us to think about how we could provide small-scale assistance to this group of homeless people. As we delved deeper into understanding and researching the daily lives and needs of the homeless, we ultimately decided to create this website to allow people to better understand the challenges of homeless life through the internet, while also providing resources and assistance to encourage willing individuals to participate in caring, donating, or volunteering. We hope this website can become a bridge connecting societal love with homeless individuals in need, achieving the vision of making the world a better place.">113學年度上學期，我們在「多媒體概論」這門課程當中，意外了解到無家者所面臨的困境，這讓我們開始思考如何以微小的力量提供這群無家可歸的人們一些幫助。隨著我們更深入的了解及研究無家者們的日常生活及需求，最終我們決定架設此網站，讓人們能夠透過網路更加了解無家者的生活挑戰，同時提供資源以及協助，讓有意願的民眾能夠參與關懷、捐款或志願服務。希望這個網站能成為一個橋樑，串聯社會的愛心與需要幫助的無家者們，達到讓世界變得更美好的宏願。</p>
+            </div>
         </div>
-
+    
         <div class="area_book word_fade">
             <div class="word_book">
-                <h2 class="tit_book">參考書籍</h2>
-                <p class="intro_book intro_word">
-                    人生百味的「街頭生存指南」，此書籍改變了很多我們原先對於無家者的看法，尤其是這本書的slogan「就算身無分文，我們仍有生存之道」深深觸動了我們，讓我們看見生命的頑強與對抗命運不公的毅力，於是我們大量參考了這本書，製作成了下方的影片，也希望大家看完後能更了解無家者的生活，以及提升各位對於此書的興趣。
-                </p>
+                <h2 class="tit_book" data-zh="參考書籍" data-en="Reference Books">參考書籍</h2>
+                <p class="intro_book intro_word" data-zh="人生百味的「街頭生存指南」，此書籍改變了很多我們原先對於無家者的看法，尤其是這本書的slogan「就算身無分文，我們仍有生存之道」深深觸動了我們，讓我們看見生命的頑強與對抗命運不公的毅力，於是我們大量參考了這本書，製作成了下方的影片，也希望大家看完後能更了解無家者的生活，以及提升各位對於此書的興趣。" data-en="The 'Street Survival Guide' by Homeless Taiwan has significantly changed many of our original perceptions of homeless individuals. The book's slogan, 'Even without a penny, we still have a way to survive,' deeply moved us, showing the resilience of life and the determination to fight against the unfairness of fate. We heavily referenced this book to create the video below, hoping that everyone will understand more about the lives of the homeless after watching and become more interested in this book.">人生百味的「街頭生存指南」，此書籍改變了很多我們原先對於無家者的看法，尤其是這本書的slogan「就算身無分文，我們仍有生存之道」深深觸動了我們，讓我們看見生命的頑強與對抗命運不公的毅力，於是我們大量參考了這本書，製作成了下方的影片，也希望大家看完後能更了解無家者的生活，以及提升各位對於此書的興趣。</p>
             </div>
             <img class="img_book" src="img/img_about/book.png">
         </div>
-
+    
         <div class="area_video word_fade">
             <div class="video">
                 <iframe width="478px" height="268px" src="https://www.youtube-nocookie.com/embed/m1_yrlLXRcg?si=f3jXQHVYuZ-yKGID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="word_video">
-                <h2 class="tit_video">介紹影片</h2>
-                <p class="intro_video intro_word">
-                    此影片為我們在「多媒體概論」課程中與其餘兩位小組成員共同製作的期中專題。
-                </p>
+                <h2 class="tit_video" data-zh="介紹影片" data-en="Introduction Video">介紹影片</h2>
+                <p class="intro_video intro_word" data-zh="此影片為我們在「多媒體概論」課程中與其餘兩位小組成員共同製作的期中專題。" data-en="This video was our midterm project, co-produced with two other group members during the 'Introduction to Multimedia' course.">此影片為我們在「多媒體概論」課程中與其餘兩位小組成員共同製作的期中專題。</p>
             </div>
         </div>
-
+    
         <div class="area_2member word_fade">
             <div class="area_mem area_cyj">
                 <div class="word_mem">
-                    <h2 class="tit_mem">團隊成員</h2>
-                    <h2 class="tit_mem_name">趙翊如</h2>
-                    <p class="intro_mem intro_word">
-                        負責項目：網站設計/網站架設/影片編劇<br>
-                        開始動機：比基尼好看不好看<br>
-                        就讀校系：國立台北教育大學 | 數位科技設計系<br>
-                        喜歡的人：劉恩伶<br>
-                        聯絡資訊：s111219007@stu.ntue.edu.tw<br>
-                    </p>
+                    <h2 class="tit_mem" data-zh="團隊成員" data-en="Team Members">團隊成員</h2>
+                    <h2 class="tit_mem_name" data-zh="趙翊如" data-en="Yi-Ju Chao">趙翊如</h2>
+                    <p class="intro_mem intro_word" data-zh="負責項目：網站設計/網站架設/影片剪輯
+                    開始動機：抽菸有害健康
+                    就讀校系：國立台北教育大學 | 數位科技設計系
+                    喜歡的人：劉恩伶
+                    聯絡資訊：s111219005@stu.ntue.edu.tw" 
+                        data-en="Responsibilities: Website design/setup, video editing
+                    Motivation: Smoking is harmful to health
+                    Department: National Taipei University of Education | Digital Technology Design
+                    Likes: Liu En-Ling
+                    Contact: s111219005@stu.ntue.edu.tw">負責項目：網站設計/網站架設/影片編劇<br>開始動機：比基尼好看不好看<br>就讀校系：國立台北教育大學 | 數位科技設計系<br>喜歡的人：劉恩伶<br>聯絡資訊：s111219007@stu.ntue.edu.tw<br></p>
                 </div>
                 <img class="img_mem_cyj" src="img/img_about/pic_cyj.png">
             </div>
-
+    
             <div class="area_mem area_whj">
                 <div class="word_mem">
-                    <h2 class="tit_mem">團隊成員</h2>
-                    <h2 class="tit_mem_name">吳函蓁</h2>
-                    <p class="intro_mem intro_word">
-                        負責項目：網站設計/網站架設/影片剪輯<br>
-                        開始動機：抽菸有害健康<br>
-                        就讀校系：國立台北教育大學 | 數位科技設計系<br>
-                        喜歡的人：劉恩伶<br>
-                        聯絡資訊：s111219005@stu.ntue.edu.tw<br>
-                    </p>
+                    <h2 class="tit_mem" data-zh="團隊成員" data-en="Team Members">團隊成員</h2>
+                    <h2 class="tit_mem_name" data-zh="吳函蓁" data-en="Han-Jhen Wu">吳函蓁</h2>
+                    <p class="intro_mem intro_word" data-zh="負責項目：網站設計/網站架設/影片剪輯 <br>開始動機：抽菸有害健康<br>就讀校系：國立台北教育大學 | 數位科技設計系<br>喜歡的人：劉恩伶<br>聯絡資訊：s111219005@stu.ntue.edu.tw<br>" data-en="Responsibilities: Website design/setup, video editing<br>Motivation: Smoking is harmful to health<br>Department: National Taipei University of Education | Digital Technology Design<br>Likes: Liu En-Ling<br>Contact: s111219005@stu.ntue.edu.tw<br>">負責項目：網站設計/網站架設/影片剪輯<br>開始動機：抽菸有害健康<br>就讀校系：國立台北教育大學 | 數位科技設計系<br>喜歡的人：劉恩伶<br>聯絡資訊：s111219005@stu.ntue.edu.tw<br></p>
                 </div>
                 <img class="img_mem_tobey" src="img/img_about/tobey.png">
             </div>
         </div>
     </div><!-- main_contain -->
-
-        
+    
     <div class="footer">
-        <div class = "footer-top">
+        <div class="footer-top">
             <div class="left">
-                <h2>Homeless Care & Meal <br>Coordination Platform</h2>
-                <h6>數位二甲 | 111219005 | 吳函蓁</h6>
-                <h6>數位二甲 | 111219007 | 趙翊如</h6>
-                <h6>113學年度上學期（大二）</h6>
-                <h6>前端工程設計</h6>
-                <h6>期中專題成果</h6>
+                <h2 data-zh="Homeless Care & Meal Coordination Platform" data-en="Homeless Care & Meal Coordination Platform">Homeless Care & Meal Coordination Platform</h2>
+                <h6 data-zh="數位二甲 | 111219005 | 吳函蓁" data-en="Digital 2A | 111219005 | Han-Jhen Wu">數位二甲 | 111219005 | 吳函蓁</h6>
+                <h6 data-zh="數位二甲 | 111219007 | 趙翊如" data-en="Digital 2A | 111219007 | Yi-Ju Chao">數位二甲 | 111219007 | 趙翊如</h6>
+                <h6 data-zh="113學年度上學期（大二）" data-en="First semester of the 113 academic year (Sophomore)">113學年度上學期（大二）</h6>
+                <h6 data-zh="前端工程設計" data-en="Frontend Engineering Design">前端工程設計</h6>
+                <h6 data-zh="期中專題成果" data-en="Midterm Project Result">期中專題成果</h6>
             </div>
             <div class="middle1">
-                <h3>人生百味</h3>
-                <h6>官方網站</h6>
-                <h6>專案列表</h6>
-                <h6>議題文章</h6>
-                <h6>捐款支持</h6>
-                <h6>街頭生存指南</h6>
-                <h6>無家者小幫手</h6>
+                <h3 data-zh="人生百味" data-en="Homeless Taiwan">人生百味</h3>
+                <h6 data-zh="官方網站" data-en="Official Website">官方網站</h6>
+                <h6 data-zh="專案列表" data-en="Project List">專案列表</h6>
+                <h6 data-zh="議題文章" data-en="Issue Articles">議題文章</h6>
+                <h6 data-zh="捐款支持" data-en="Donate Support">捐款支持</h6>
+                <h6 data-zh="街頭生存指南" data-en="Street Survival Guide">街頭生存指南</h6>
+                <h6 data-zh="無家者小幫手" data-en="Homeless Helper">無家者小幫手</h6>
             </div>
             <div class="middle2">
-                <h3>其他</h3>
-                <h6>開發者支持</h6>
-                <h6>平臺問題回報</h6>
-                <h6>更多影音作品</h6>
+                <h3 data-zh="其他" data-en="Others">其他</h3>
+                <h6 data-zh="開發者支持" data-en="Developer Support">開發者支持</h6>
+                <h6 data-zh="平臺問題回報" data-en="Platform Issue Reporting">平臺問題回報</h6>
+                <h6 data-zh="更多影音作品" data-en="More Video Works">更多影音作品</h6>
             </div>
             <div class="right">
-                <h3>FOLLOW</h3>
+                <h3 data-zh="FOLLOW" data-en="FOLLOW">FOLLOW</h3>
                 <img src="img/img_index/Instagram.png" alt="Instagram" class="instagram">
                 <img src="img/img_index/Facebook.png" alt="Facebook" class="facebook">
                 <img src="img/img_index/Youtube.png" alt="Youtube" class="youtube">
             </div>
         </div>
-        <div class = "footer-bottom">
-            <hr class = "footer-hr">
-            <p class = "footer-p">2024 produced by Yi-Ju, Chao & Han-Jhen, Wu</p>
+        <div class="footer-bottom">
+            <hr class="footer-hr">
+            <p class="footer-p" data-zh="2024 produced by Yi-Ju, Chao & Han-Jhen, Wu" data-en="2024 produced by Yi-Ju, Chao & Han-Jhen, Wu">2024 produced by Yi-Ju, Chao & Han-Jhen, Wu</p>
         </div>
     </div>
+    
         
     
     </div><!-- contain -->
@@ -153,6 +152,7 @@
     <script src="js/about.js">
         console.log("內聯 JavaScript 測試");
     </script>
+    <script src="js/basic.js"></script>
 </body>
 
 </html>

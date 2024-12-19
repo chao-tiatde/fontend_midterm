@@ -15,22 +15,24 @@ langButtons.forEach(button => {
             if (element.tagName.toLowerCase() === 'input' || element.tagName.toLowerCase() === 'textarea') {
                 if (selectedLang === '中') {
                     element.placeholder = element.getAttribute('data-zh'); // 切換為中文
+                    element.classList.remove('en-font-size'); // 移除英文樣式
                 } else if (selectedLang === 'En') {
                     element.placeholder = element.getAttribute('data-en'); // 切換為英文
+                    element.classList.add('en-font-size'); // 添加英文樣式
                 }
             } else {
                 // 更新其他元素的文本內容（例如 <label> 和 <span>）
                 if (selectedLang === '中') {
                     element.textContent = element.getAttribute('data-zh'); // 切換為中文
+                    element.classList.remove('en-font-size'); // 移除英文樣式
                 } else if (selectedLang === 'En') {
                     element.textContent = element.getAttribute('data-en'); // 切換為英文
+                    element.classList.add('en-font-size'); // 添加英文樣式
                 }
             }
         });
     });
 });
-
-
 
 document.addEventListener("DOMContentLoaded", function() {
     // 當用户按下 Enter 鍵時觸發搜索
