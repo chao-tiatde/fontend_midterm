@@ -2812,52 +2812,67 @@ const dateInput = document.getElementById('dateInput');
         const year = selectedDate.getFullYear();
         const month = String(selectedDate.getMonth() + 1).padStart(2, '0'); // 月份補零
         const day = String(selectedDate.getDate()).padStart(2, '0'); // 日期補零
-        alert(`${year}/${month}/${day}`); // 示例，替換為你需要的操作
     });
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyDPifQUmES6_NQDDkOzA18SS_2-1-DRZTg",
-        authDomain: "frontend-midterm-4a62f.firebaseapp.com",
-        projectId: "frontend-midterm-4a62f",
-        storageBucket: "frontend-midterm-4a62f.firebasestorage.app",
-        messagingSenderId: "922826580440",
-        appId: "1:922826580440:web:1aae31a36a0b4a9d1ad2ad",
-        measurementId: "G-VXTCCCKXCL"
-      };
+const firebaseConfig = {
+    apiKey: "AIzaSyDPifQUmES6_NQDDkOzA18SS_2-1-DRZTg",
+    authDomain: "frontend-midterm-4a62f.firebaseapp.com",
+    projectId: "frontend-midterm-4a62f",
+    storageBucket: "frontend-midterm-4a62f.firebasestorage.app",
+    messagingSenderId: "922826580440",
+    appId: "1:922826580440:web:1aae31a36a0b4a9d1ad2ad",
+    measurementId: "G-VXTCCCKXCL"
+};
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig)
-const db = firebase.firestore()
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
 document.querySelector('form').addEventListener('submit', async (e) => {
-    e.preventDefault(); // 防止表單提交刷新頁面
+    e.preventDefault();
 
-    // 收集資料
-    const data = {
-        basis: document.querySelector('input[name="user_type"]:checked')?.value || "",
-        name: document.querySelector('input[type="text"]').value || "",
-        date: document.getElementById('dateInput').value || "",
-        city: document.getElementById('city').value || "",
-        area: document.getElementById('area').value || "",
-        place: document.getElementById('place').value || "",
-        specificPlace: document.getElementById('input-other').value || "",
-        time: document.querySelector('input[type="time"]').value || "",
-        category: document.getElementById('object').value || "",
-        beneficiaries: document.querySelector('input[type="number"]').value || 0,
-        itemNameQuantity: document.querySelector('input[placeholder="毛衣/ 60件"]').value || "",
-        remarks: document.querySelector('textarea').value || ""
-    };
+    // 收集表單資料
+    const 名義 = document.querySelector('input[name="user_type"]:checked')?.value;
+    const 單位名稱 = document.querySelector('input[placeholder="王小明/ 國立臺北教育大學"]').value;
+    const 日期 = document.getElementById('dateInput').value;
+    const 縣市 = document.getElementById('city').value;
+    const 地區 = document.getElementById('area').value;
+    const 地點類別 = document.getElementById('place').value;
+    const 其他地點 = document.getElementById('input-other').value;
+    const 時間 = document.querySelector('input[type="time"]').value;
+    const 物品類別 = document.getElementById('object').value;
+    const 預計受惠人數 = document.getElementById('beneficiaries').value;
+    const 物品名稱及件數 = document.querySelector('input[placeholder="毛衣/ 60件"]').value;
+    const 備註 = document.querySelector('textarea').value;
+    const 詳細地點 = document.getElementById('location').value;
 
+    // 判斷「其他」是否勾選
+    const otherCheckbox = document.getElementById('other');
+    const isOtherChecked = otherCheckbox.checked;
+    
     try {
-        // 將資料寫入 Firebase
-        await firebase.database().ref('donations').push(data);
-        alert('資料已成功提交！');
+        // 儲存至 Firestore
+        await db.collection('deliver registration').add({
+            名義,
+            單位名稱,
+            日期,
+            時間,
+            縣市,
+            地區,
+            地點類別: isOtherChecked ? null : 地點類別,
+            詳細地點: isOtherChecked ? null : 詳細地點,
+            其他地點: 其他地點 || null,
+            物品類別,
+            物品名稱及件數,
+            預計受惠人數: parseInt(預計受惠人數, 10),
+            備註,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        });
+        alert('資料已成功送出！');
     } catch (error) {
-        console.error('資料提交失敗', error);
-        alert('資料提交失敗，請稍後再試！');
+        console.error('資料送出失敗', error);
+        alert('送出失敗，請稍後再試');
     }
 });
-
 
 
     

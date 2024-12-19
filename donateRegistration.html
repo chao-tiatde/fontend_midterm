@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="icon" href="img/img_favicon/box.png" type="image/png">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/taiwan-area-selector@1.0.2/dist/taiwan-area-selector.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/taiwan-area-selector@1.0.2/dist/taiwan-area-selector.min.js"></script>
 </head>
 <body>
     <!--nav-header-->
@@ -35,8 +33,8 @@
             <li><a href="#" data-zh="我要送愛" data-en="Donation Suppulies">我要送愛 </a>
                 <ul>
                     <li><a href="#" data-zh="無家者據點查詢" data-en="Search Homeless Locations">無家者據點查詢</a></li>
-                    <li><a href="#" data-zh="送愛登錄" data-en="Donate Registration">送愛登錄</a></li>
-                    <li><a href="#" data-zh="送愛情形一覽" data-en="Donation Overview">送愛情形一覽</a></li>
+                    <li><a href="donateRegistration.html" data-zh="送愛登錄" data-en="Donate Registration">送愛登錄</a></li>
+                    <li><a href="donationOverview.html" data-zh="送愛情形一覽" data-en="Donation Overview">送愛情形一覽</a></li>
                 </ul>
             </li>
         </div>
@@ -131,13 +129,13 @@
                     <h2 class ="sheet-ct" data-zh="類別（物品）" data-en="Category(Supplies)">類別（物品）</h2>
                     <select id="object" name="object" class="input">
                         <option data-zh="請選擇類別（物品）" data-en="Please select a category(supply)">請選擇類別（物品）</option>
-                        <option value="food" data-zh="食品" data-en="Food">食品</option>
-                        <option value="dailyNecessities" data-zh="生活用品" data-en="Daily Necessities">生活用品</option>
-                        <option value="emergencyMedicalSupplies" data-zh="緊急醫療用品" data-en="Emergency">緊急醫療用品</option>
-                        <option value="others" data-zh="其他" data-en="Others">其他</option>
+                        <option value="food">食品</option>
+                        <option value="dailyNecessities">生活用品</option>
+                        <option value="emergencyMedicalSupplies">緊急醫療用品</option>
+                        <option value="others">其他</option>
                     </select>    
                     <h2 class = "sheet-cm" data-zh="預計受惠人數" data-en="Expected Number of Beneficiaries">預計受惠人數</h2>
-                    <input type="number" placeholder="60" min="0" class="input">
+                    <input type="number" placeholder="60" min="0" class="input" id="beneficiaries">
                 </div>
                 <div class = sheet-cr>
                     <h2 class ="sheet-ct" data-zh="物品名稱/ 件數" data-en="Item name/ Quantity">物品名稱/ 件數</h2>
@@ -192,9 +190,9 @@
             <p class = "footer-p">2024 produced by Yi-Ju, Chao & Han-Jhen, Wu</p>
         </div class = "footer-bottom">
     </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="js/donateRegistration.js"></script>
     <script src="js/basic.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
     </body>
 </html>
