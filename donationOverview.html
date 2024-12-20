@@ -11,6 +11,16 @@
     <meta name="google" content="notranslate">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="icon" href="img/img_favicon/box.png" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- 加载 AG Grid 样式 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ag-grid-community/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ag-grid-community/styles/ag-theme-alpine.css">
+    
+    <!-- 加载 Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 </head>
 <body>
     <!--nav-header-->
@@ -42,13 +52,16 @@
             <button class=btn-catalog data-zh="常見問題" data-en="FAQ">常見問題</button>
             <button class=btn-catalog data-zh="用戶登入/註冊" data-en="User Login/Register">用戶登入/註冊</button>
         </div>
+    </div>
     <!--list-->
     <div class="list-bg">
         <h2 class="list-h">送愛情形一覽</h2>
+        <div id="myGrid" class="ag-theme-alpine" style="height: 540px;"></div>
     </div>
     
-    
+    <script src="https://www.itxst.com/package/ag-grid/ag-grid-community.js"></script>
+    <link href="https://www.itxst.com/package/ag-grid/styles/ag-grid.css" rel="stylesheet"/>
     <script src="js/basic.js"></script>
-    <script src="js/donationOverview.js"></script>
+    <script type="module" src="js/donationOverview.js"></script>
 </body>
 </html>
