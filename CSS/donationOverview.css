@@ -189,6 +189,96 @@ li > a:hover {
     height: 540px;
     z-index: 2;
 }
-.ag-icon.filter {
-    border: none !important;  /* 强制移除边框 */
-  }
+/*chart*/
+.chart-h{
+    color: #19396d;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+.chart-p{
+    color: #ff0202;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 58px;
+}
+.chart{
+    display: flex;
+    margin-left: 60px;
+    margin-right: 60px;
+    height: 480px;
+    margin-bottom: 70px;
+}
+.chart-l{
+    padding-right: 42.5px;
+    width: 50%;
+}
+.chart-r{
+    padding-left: 42.5px;
+    width: 50%;
+}
+.chart-lh, .chart-rh{
+    margin-top: 0px;
+    color: #19396D;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.chart-lp, .chart-rp{
+    color: #000000;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 27px;
+}
+/*footer*/
+.footer{
+    width: 100%;
+    height: 294px;
+    background-color: #d9d9d9;
+    padding-top: 43px;
+    padding-left: 92px;
+    padding-right: 92px;
+    position: relative;
+}
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+}
+.left h6, .middle1 h6, .middle2 h6, .right h6{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.middle1 h6, .middle2 h6, .right h6, .instagram, .facebook, .youtube{
+    cursor: pointer;
+}
+.left h2{
+    font-weight: 700;
+    margin-top: 0px;
+    color: #19396d;
+    margin-bottom: 18px;
+}
+.middle1 h3, .middle2 h3, .right h3{
+    margin-top: 0px;
+    color: #19396d;
+    margin-bottom: 18px;
+}
+.footer-hr{
+    width: 90%;
+    position: absolute;
+    margin: 0;
+    bottom: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.footer-p{
+    position: absolute;
+    right: 92px;
+    margin: 0;
+    bottom: 17px;
+    text-align: end;
+}
+.footer-a{
+    text-decoration: none;
+    color: black;
+}
