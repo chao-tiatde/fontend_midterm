@@ -2831,7 +2831,8 @@ document.querySelector('form').addEventListener('submit', async (e) => {
     e.preventDefault();
 
     // 收集表單資料
-    const 名義 = document.querySelector('input[name="user_type"]:checked')?.value;
+    const userType = document.querySelector('input[name="user_type"]:checked')?.value;
+    const 名義 = userType === "1" ? "個人" : (userType === "2" ? "團體" : "");
     const 單位名稱 = document.querySelector('input[placeholder="王小明/ 國立臺北教育大學"]').value;
     const 日期 = document.getElementById('dateInput').value;
     const 縣市 = document.getElementById('city').value;
@@ -2851,7 +2852,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
     
     try {
         // 儲存至 Firestore
-        await db.collection('deliver registration').add({
+        await db.collection('donate registration').add({
             名義,
             單位名稱,
             日期,
