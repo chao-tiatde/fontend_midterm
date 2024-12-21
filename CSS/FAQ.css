@@ -1,10 +1,11 @@
 .main_contain{
     width: 1120px;
-    height: 663px;
+    height: auto;
     margin-top: 147px;
     color: #354567;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 68px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,20 +49,124 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
-    
+    margin-bottom: 45px;
 }
 
 .sub{
     width: 120px;
     height: 40px;
     background-color: #B9C1D2;
+    color: #354567;
     border-radius: 2px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: none;
+}
+
+.sub:hover {
+    background-color: #354567;
+    color: #ffffff;
+}
+
+.sub.active {
+    background-color: #354567;
+    color: #ffffff;
 }
 
 .sub h2{
     font-size: 18px;
+}
+
+.Q_section {
+    display: none;
+}
+
+.Q_section.active {
+    display: block;
+}
+
+.Q{
+    width: 1120px;
+    height: 51px;
+    font-weight: 900;
+    margin-top: 5px;
+    cursor: pointer;
+    color: #354567;
+}
+
+.Q hr{
+    width: 1120px;
+    height: 1px;
+    border: none;
+    margin: 0;
+    background-color: #B9C1D2;
+}
+
+.Q h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.Q_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.A{
+    height: 21px;
+    width: 1120px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    max-height: 25px;
+}
+
+.A.open {
+    max-height: 200px; /* 動態調整高度 */
+    padding: 15px;
+}
+
+.A a{
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.btn_click {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    z-index: 1;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+}
+
+.btn-click img {
+    width: 50px;
+    height: 50px;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.line_last{
+    width: 1120px;
+    height: 1px;
+    border: none;
+    margin-top: 5px;
+    background-color: #B9C1D2;
 }

@@ -10,8 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
     <meta name="google" content="notranslate">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="icon" href="img/img_favicon/box.png" type="image/png">
 </head>
 <body>
@@ -54,14 +56,555 @@
                 <hr>
             </div>
             <div class="subtitle center">
-                <div class="sub"><h2>影片介紹</h2></div>
-                <div class="sub"><h2>送愛訊息</h2></div>
-                <div class="sub"><h2>故事分享</h2></div>
-                <div class="sub"><h2>平台使用</h2></div>
-                <div class="sub"><h2>平台聯繫</h2></div>
+                <button class="sub" data-target="Q1"><h2>帳戶問題</h2></button>
+                <button class="sub" data-target="Q2"><h2>送愛訊息</h2></button>
+                <button class="sub" data-target="Q3"><h2>故事分享</h2></button>
+                <button class="sub" data-target="Q4"><h2>平台使用</h2></button>
+                <button class="sub" data-target="Q5"><h2>平台聯繫</h2></button>
+            </div>
+            <!-- Question1 -->
+            <div id="Q1" class="Q_section active">
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 我是否需要註冊帳戶才能使用網站功能？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>是的，註冊帳戶可以讓您完整使用平台功能，例如登記送愛訊息。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 註冊帳戶需要提供哪些個人資訊？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>您只需要提供電子郵件、密碼和暱稱即可完成基本註冊。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 我可以修改帳戶的個人資料嗎？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>登入後，前往「我的帳戶」頁面即可編輯您的個人資料。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 如何登出我的帳戶？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>您可以在「帳戶設定」中找到登出帳戶選項，請注意登出帳戶後將無法使用本平台的部分功能。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 我可以使用社群媒體帳戶登入嗎？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>是的，我們支援使用 Google 帳戶登入。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 為什麼我的帳戶被停用？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>如果帳戶因違規使用被停用，請聯繫我們的客服了解更多資訊。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 我是否可以使用多個裝置登入同一帳戶？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>可以，同一帳戶可在多個裝置上同步使用。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 註冊後的電子郵件無法收到驗證信該怎麼辦？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>請檢查垃圾郵件夾，或重新發送驗證信。如果問題仍存在，請聯繫我們。</a>
+                </div>
+                <hr class="line_last">
+            </div>
+            <!-- Question2 -->
+            <div id="Q2" class="Q_section">
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 登記送愛訊息後，是否可以修改或取消？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>可以，在送愛訊息頁面找到您提交的訊息後點擊「編輯」或「取消」。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 如果當天已滿，是否可以選擇其他日期？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>是的，您可以選擇其他尚未滿額的日期和時段。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 送愛訊息會公開顯示給所有人嗎？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>是的，送愛訊息的摘要會公開顯示，但詳細聯繫方式僅供無家者查閱。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 送愛內容有沒有特定規範？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>我們建議以乾淨、健康且便於攜帶的食物為主，例如便當、麵包或罐頭等。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 如何確認登記訊息是否成功？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>成功登記後，可以在「用戶資訊」頁面查看。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 如果無法按時送愛怎麼辦？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>請務必在平台上取消訊息或聯繫我們，避免影響無家者的安排。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 是否可以一起登記捐贈物資而不僅限於餐食？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>可以，我們提供捐贈物資的選項，您可以在填寫訊息時選擇相關類型。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 如何得知送愛需求最迫切的地區？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>平台會標註需求量高的地區，建議您根據這些資訊安排送愛。</a>
+                </div>
+                <hr class="line_last">
+            </div>
+            <!-- Question3 -->
+            <div id="Q3" class="Q_section">
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 無家者的故事是如何收集的？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>目前資料皆自網路蒐集。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 送愛者是否可以分享自己的經歷？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>可以，登入後在「更多故事」頁面提交您的經歷，我們會進行審核。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 我分享的故事會顯示個人資料嗎？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>您可以選擇是否匿名，未選擇匿名的故事僅顯示暱稱和簡要背景。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 故事可以包含圖片或影片嗎？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>是的，您可以上傳相關圖片或影片，讓故事更具感染力。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 是否可以為特定故事提供捐款？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>我們目前尚未支持此功能，但歡迎提供物資或參與送愛行動。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 無家者的故事多久更新一次？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>我們將根據投稿不定期更新，期待您的分享，幫助我們以多個故事呈現無家者或送愛者的不同面向。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 是否有篩選故事的功能？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>目前由於故事量尚未累積至一定數量，故不支持此功能。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 如果發現故事不符合事實該怎麼辦？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>請透過 Instagram 或 Facebook 平台告知我們，我們會進行調查與處理。</a>
+                </div>
+                <hr class="line_last">
+            </div>
+            <!-- Question4 -->
+            <div id="Q4" class="Q_section">
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 我是否需要繳交會員費才能使用？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>不需要，平台所有功能皆免費提供。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 我可以如何支援這個平台的運營？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>您可以選擇捐款、參與志願服務，或協助推廣我們的理念。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 是否支援行動裝置操作？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>是的，平台已全面支援手機和平板裝置。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 如何查看即時的需求清單？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>您可以在「送愛情形一覽」頁面查看統計長條圖。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 平台會不會洩露我的個人資訊？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>我們嚴格遵守隱私政策，確保您的資料安全。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 如何向平台反饋建議或問題？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>您可以透過 Instagram 或 Facebook 平台向我們反饋。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 我可以匯出送愛記錄嗎？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>可以，在「用戶資訊」頁面下載您的送愛記錄報表。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 平台是否有推播通知功能？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>目前尚不支持。</a>
+                </div>
+                <hr class="line_last">
+            </div>
+            <!-- Question5 -->
+            <div id="Q5" class="Q_section">
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 我可以如何聯繫客服？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>您可以使用 Instagram 或 Facebook 平台聯繫我們。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 平台是否有社群媒體帳號？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>是的，您可以在 Instagram 、 Facebook 上關注我們。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 是否有線下活動可以參與？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>由於團隊人手不足，故暫時不會實現。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 平台的營運資金來源是什麼？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>我們的資金來自志願者支持。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 如何成為平台的志願者？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>您可以使用 Instagram 或 Facebook 平台聯繫我們，我們團隊會與您聯絡。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 如果我想合作或贊助該怎麼辦？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>請通過 Instagram 或 Facebook 平台聯繫我們，或直接發送郵件至 s111219007@stu.ntue.edu.tw。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 是否有支持多語言的計劃？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>我們目前僅提供繁體中文及英文，但未來會考慮增加多語言支援。</a>
+                </div>
+                <button class="btn_click">
+                    <div class="Q">
+                        <hr>
+                        <div class="Q_content">
+                            <h2>Q. 如何知道最新的網站功能更新？</h2>
+                            <img src="img/img_FAQ/arrow down.svg">
+                        </div>
+                    </div>
+                </button>
+                <div class="A hidden">
+                    <a>我們會透過 Instagram 與 Facebook 平台發布資訊，敬請密切關注我們的社群帳號。</a>
+                </div>
+                <hr class="line_last">
             </div>
         </div>
-
+        
+        <!-- footer -->
+        <div class="footer">
+            <div class="footer-top">
+                <div class="left">
+                    <h2 data-zh="Homeless Care & Meal Coordination Platform" data-en="Homeless Care & Meal Coordination Platform">Homeless Care & Meal Coordination Platform</h2>
+                    <h6 data-zh="數位二甲 | 111219005 | 吳函蓁" data-en="Digital 2A | 111219005 | Han-Jhen Wu">數位二甲 | 111219005 | 吳函蓁</h6>
+                    <h6 data-zh="數位二甲 | 111219007 | 趙翊如" data-en="Digital 2A | 111219007 | Yi-Ju Chao">數位二甲 | 111219007 | 趙翊如</h6>
+                    <h6 data-zh="113學年度上學期（大二）" data-en="First semester of the 113 academic year (Sophomore)">113學年度上學期（大二）</h6>
+                    <h6 data-zh="前端工程設計" data-en="Frontend Engineering Design">前端工程設計</h6>
+                    <h6 data-zh="期中專題成果" data-en="Midterm Project Result">期中專題成果</h6>
+                </div>
+                <div class="middle1">
+                    <h3 data-zh="人生百味" data-en="Homeless Taiwan">人生百味</h3>
+                    <h6 data-zh="官方網站" data-en="Official Website">官方網站</h6>
+                    <h6 data-zh="專案列表" data-en="Project List">專案列表</h6>
+                    <h6 data-zh="議題文章" data-en="Issue Articles">議題文章</h6>
+                    <h6 data-zh="捐款支持" data-en="Donate Support">捐款支持</h6>
+                    <h6 data-zh="街頭生存指南" data-en="Street Survival Guide">街頭生存指南</h6>
+                    <h6 data-zh="無家者小幫手" data-en="Homeless Helper">無家者小幫手</h6>
+                </div>
+                <div class="middle2">
+                    <h3 data-zh="其他" data-en="Others">其他</h3>
+                    <h6 data-zh="開發者支持" data-en="Developer Support">開發者支持</h6>
+                    <h6 data-zh="平臺問題回報" data-en="Platform Issue Reporting">平臺問題回報</h6>
+                    <h6 data-zh="更多影音作品" data-en="More Video Works">更多影音作品</h6>
+                </div>
+                <div class="right">
+                    <h3 data-zh="FOLLOW" data-en="FOLLOW">FOLLOW</h3>
+                    <img src="img/img_index/Instagram.png" alt="Instagram" class="instagram">
+                    <img src="img/img_index/Facebook.png" alt="Facebook" class="facebook">
+                    <img src="img/img_index/Youtube.png" alt="Youtube" class="youtube">
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <hr class="footer-hr">
+                <p class="footer-p" data-zh="2024 produced by Yi-Ju, Chao & Han-Jhen, Wu" data-en="2024 produced by Yi-Ju, Chao & Han-Jhen, Wu">2024 produced by Yi-Ju, Chao & Han-Jhen, Wu</p>
+            </div>
+        </div>
     </div>
+
+    <script src="js/FAQ.js"></script>
+    <script src="js/basic.js"></script>
 </body>
 </html>
