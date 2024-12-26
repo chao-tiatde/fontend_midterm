@@ -207,3 +207,65 @@ adjustSpacer();
 observeFadeElements();
 
 console.log("aboutUs.js 已成功載入");
+
+
+
+
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // 添加平滑滾動效果
+    });}
+
+
+
+
+
+// Get language buttons and elements
+const zhButton = document.querySelector('.btn-lan:nth-child(1)');
+const enButton = document.querySelector('.btn-lan:nth-child(2)');
+const areaMain = document.querySelector('.area_main');
+const line = document.querySelector('.line');
+const MainContain = document.querySelector('.main_contain');
+
+
+// Function to adjust styles based on language
+function adjustStyles(language) {
+    // Remove any existing inserted div
+    const existingDiv = document.querySelector('.inserted-div');
+    if (existingDiv) {
+        existingDiv.remove();
+    }
+
+    if (language === 'en') {
+        // Increase height for English content
+        areaMain.style.height = '1974px'; // Adjust this value as needed
+        line.style.height = '1902px';     // Adjust this value as needed
+        MainContain.style.height = '2027px';
+
+        // Create and insert a new div
+        const newDiv = document.createElement('div');
+        newDiv.classList.add('inserted-div');
+        newDiv.style.height = '100px'; // Adjust this value as needed
+        newDiv.style.backgroundColor = '#f0f0f0'; // Adjust this value as needed
+        areaMain.appendChild(newDiv);
+    } else {
+        // Reset to original heights for Chinese
+        areaMain.style.height = '1905px'; // Original height
+        line.style.height = '1801px';     // Original height
+        MainContain.style.height = '1958px';
+    }
+}
+
+// Add click event listeners to language buttons
+zhButton.addEventListener('click', () => {
+    adjustStyles('zh');
+});
+
+enButton.addEventListener('click', () => {
+    adjustStyles('en');
+});
+
+// Initial setup
+adjustStyles('zh');

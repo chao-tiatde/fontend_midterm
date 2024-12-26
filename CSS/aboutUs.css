@@ -45,18 +45,21 @@ body{
 
 .area_est{
     width: 100%;
-    height: 374px;
+    min-height: 374px;
+    padding-bottom: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 180px;
 }
 
 .word_est{
     width: 537px;
-    height: 225px;
-    margin-top: 74px;
-    margin-left: 180px;
+    height: auto;
 }
 
 .tit_est,.tit_video{
-    width: 155px;
+    width: auto;
     height: 45px;
     font-size: 20px;
     color: white;
@@ -64,20 +67,20 @@ body{
     border-radius: 2px;
     padding: 10px 37px;
     margin: 0;
+    display: inline-block;
 }
 
 .img_est{
     max-width:323px;
     max-height: 337px;
-    margin-top: 17px;
-    margin-left: 96px;
 }
 
 .intro_est{
     width: 537px;
-    height: 153px;
+    height: auto;
     margin-top: 28px;
     margin-bottom: 0;
+    display: inline-block;
 }
 
 .intro_word{
@@ -115,7 +118,7 @@ body{
 }
 
 .tit_book{
-    width: 155px;
+    width: auto;
     height: 45px;
     font-size: 20px;
     color: #47587D;
@@ -123,6 +126,7 @@ body{
     border-radius: 2px;
     padding: 10px 37px;
     margin: 0;
+    display: inline-block;
 }
 
 .intro_book{
@@ -195,7 +199,7 @@ body{
 }
 
 .tit_mem {
-    width: 106px;
+    width: auto;
     height: 31px;
     font-size: 16px;
     color: #47587D;
@@ -204,10 +208,11 @@ body{
     padding: 6px 21px 4px 21px;
     margin-top: 0;
     margin-bottom: 5px;
+    display: inline-block;
 }
 
 .tit_mem_name {
-    width: 155px;
+    width: auto;
     height: 45px;
     font-size: 24px;
     color: #47587D;
@@ -215,6 +220,7 @@ body{
     border-radius: 2px;
     padding: 9px 41px;
     margin: 0;
+    display: inline-block;
 }
 
 .intro_mem {
