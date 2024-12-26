@@ -230,6 +230,9 @@ li > a:hover {
     margin-top: 107px;
     z-index: 1;
     position: relative;
+    @media (max-width: 360px) {
+        margin-top: 120px;
+    }
 }
 .sh{
     margin-left: 50px;
