@@ -8,6 +8,8 @@ html{
 
 *{
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body{
@@ -16,6 +18,7 @@ body{
     margin: 0;
     padding: 0;
     cursor: default;
+    height: 100%;
 }
 
 li{
@@ -49,12 +52,527 @@ i a{
     margin: 0 auto;
 }
 
-.main_contain{
-    width: 1178px;
-    /* min-height: 1958px; */
-    margin: 120px auto 93px auto;
-    color: #354567;
-    position: relative;
+@media screen and (min-width: 1220px){
+    .main_contain{
+        width: 1178px;
+        /* min-height: 1958px; */
+        margin: 120px auto 93px auto;
+        color: #354567;
+        position: relative;
+    }
+
+    .area_main{
+        width: 1178px;
+        min-height: 1905px;
+        /* min-height: 2016px; */
+        /* display: inline-block; */
+        background-color: #B9C1D2;
+        border-radius:0 20px 20px 20px;
+        align-items: flex-start;
+        flex-direction: row;
+        position: relative;
+    }
+    
+    .area_main2{
+        width: 1178px;
+        height: 2041px;
+        background-color: #354567;
+        color: #FFFFFF;
+        border-radius:0 20px 20px 20px;
+        margin-bottom: 93px;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    
+    .area_main, .area_main2 {
+        display: flex;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        position: absolute; /* 絕對定位，疊加在同一位置上 */
+        top: 53px;
+        left: 0;
+        width: 100%;
+    }
+
+    .area_left{
+        width: 120px;
+        min-height: 112px;
+        font-size: 16px;
+        padding-left: 24px;
+        margin: 0;
+        position: relative;
+        top: 60px;
+        transform: translateX(51px);
+        margin-right: 51px;
+    }
+    
+    .area_left2{
+        width: 184px;
+        height: 112px;
+        font-size: 16px;
+        padding-left: 24px;
+        margin: 0;
+        position: relative;
+        top: 60px;
+        transform: translateX(19px);
+        margin-right: 19px;
+    }
+    
+    .left{
+        vertical-align: middle;
+        position: relative;
+    }
+    
+    .left_line{
+        width: 0%;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all .3s linear;
+    }
+    
+    .left_line_blue{
+        background-color: #354567;
+    }
+    
+    .left_line_white{
+        background-color: white;
+    }
+    
+    .left:hover .left_line{
+        width: 100%;
+    }
+    
+    .left_word{
+        margin-bottom: 16px;  
+    }
+    
+    .line{
+        width: 1px;
+        height: 1801px;
+        background-color: #354567;
+        border: none;
+        margin: 59px 0 61px 51px;
+    }
+    
+    .line2{
+        width: 1px;
+        height: 1922px;
+        background-color: #FFFFFF;
+        border: none;
+        margin: 59px 0 61px 19px;
+    }
+    
+    .area_intro{
+        width: 697px;
+        height: 1785px;
+        position: relative;
+        top: 60px;
+        left: 136px;
+    }
+
+    .intro_img{
+        width: 485px;
+        height: 298px;
+        display: block;
+        margin: 24px auto 0 auto;
+    }
+
+    .intro1{
+        width: 697px;
+        height: 438px;
+    }
+    
+    .intro2{
+        width: 697px;
+        /* height: 423px; */
+        display: inline-block;
+        margin-top: 32px;
+    }
+
+    .intro_word1{
+        width: 697px;
+        font-size: 16px;
+        margin: 0;
+        display: inline-block;
+    }
+    
+    .intro_word2{
+        width: 697px;
+        font-size: 16px;
+        margin: 0;
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1220px){
+    .main_contain{
+        width: 900px;
+        /* min-height: 1958px; */
+        margin: 120px auto 93px auto;
+        color: #354567;
+        position: relative;
+    }
+
+    .area_main{
+        width: 900px;
+        min-height: 1905px;
+        /* min-height: 2016px; */
+        /* display: inline-block; */
+        background-color: #B9C1D2;
+        border-radius:0 20px 20px 20px;
+        align-items: flex-start;
+        flex-direction: row;
+        position: relative;
+    }
+    
+    .area_main2{
+        width: 900px;
+        height: 2041px;
+        background-color: #354567;
+        color: #FFFFFF;
+        border-radius:0 20px 20px 20px;
+        margin-bottom: 93px;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    
+    .area_main, .area_main2 {
+        display: flex;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        position: absolute; /* 絕對定位，疊加在同一位置上 */
+        top: 53px;
+        left: 0;
+        width: 100%;
+    }
+
+    .area_left{
+        display: none;
+    }
+    
+    .area_left2{
+        display: none;
+    }
+    
+    .line{
+        display: none;
+    }
+    
+    .line2{
+        display: none;
+    }
+    
+    .area_intro{
+        width: 697px;
+        height: 1785px;
+        position: relative;
+        margin-left: 101px;
+        margin-right: 101px;
+    }
+
+    .intro_img{
+        width: 485px;
+        height: 298px;
+        display: block;
+        margin: 24px auto 0 auto;
+    }
+
+    .intro1{
+        width: 697px;
+        height: 438px;
+        margin-top: 60px;
+    }
+    
+    .intro2{
+        width: 697px;
+        /* height: 423px; */
+        display: inline-block;
+        margin-top: 32px;
+    }
+
+    .intro_word1{
+        width: 697px;
+        font-size: 16px;
+        margin: 0;
+        display: inline-block;
+    }
+    
+    .intro_word2{
+        width: 697px;
+        font-size: 16px;
+        margin: 0;
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .main_contain{
+        width: 600px;
+        height: 1500px !important;
+        /* min-height: 1958px; */
+        margin: 120px auto 20px auto;
+        color: #354567;
+        position: relative;
+    }
+
+    .area_main{
+        width: 600px;
+        height: 1400px !important;
+        /* min-height: 2016px; */
+        /* display: inline-block; */
+        background-color: #B9C1D2;
+        border-radius:0 20px 20px 20px;
+        align-items: flex-start;
+        flex-direction: row;
+        position: relative;
+    }
+    
+    .area_main2{
+        width: 600px;
+        min-height: 1400px !important;
+        background-color: #354567;
+        color: #FFFFFF;
+        border-radius:0 20px 20px 20px;
+        margin-bottom: 93px;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    
+    .area_main, .area_main2 {
+        display: flex;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        position: absolute; /* 絕對定位，疊加在同一位置上 */
+        top: 53px;
+        left: 0;
+        width: 100%;
+    }
+
+    .area_left{
+        display: none;
+    }
+    
+    .area_left2{
+        display: none;
+    }
+    
+    .line{
+        display: none;
+    }
+    
+    .line2{
+        display: none;
+    }
+    
+    .area_intro{
+        width: 497px;
+        height: 1272px;
+        position: relative;
+        margin-left: 51px;
+        margin-right: 51px;
+    }
+
+    .intro_img{
+        width: 285px;
+        height: 175px;
+        display: block;
+        margin: 24px auto 0 auto;
+    }
+
+    .intro1{
+        width: 497px;
+        height: 312px;
+        margin-top: 45px;
+    }
+    
+    .intro2{
+        width: 497px;
+        /* height: 312px; */
+        display: inline-block;
+        margin-top: 32px;
+    }
+
+    .intro_word1{
+        width: 497px;
+        font-size: 14px;
+        margin: 0;
+        display: inline-block;
+    }
+    
+    .intro_word2{
+        width: 497px;
+        font-size: 14px;
+        margin: 0;
+        display: inline-block;
+    }
+
+    .contain{
+        min-height: 100vh; /* 確保父容器填滿視窗高度 */
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .contain{
+        min-height: 100vh; /* 確保父容器填滿視窗高度 */
+        overflow: hidden;
+    }
+
+    .fixed-element {
+        bottom: 0;
+    }
+
+    .main_contain{
+        width: 450px;
+        height: 1340px !important;
+        /* min-height: 1958px; */
+        margin: 120px auto 20px auto;
+        color: #354567;
+        
+        gap: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-items: start;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .area_main, .btn_both {
+        margin: 0;
+        padding: 0;
+    }
+
+    .area_main{
+        width: 450px;
+        height: 1300px !important;
+        /* min-height: 2016px; */
+        /* display: inline-block; */
+        background-color: #B9C1D2;
+        border-radius:0 20px 20px 20px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        position: relative;
+    }
+    
+    .area_main2{
+        width: 450px;
+        min-height: 1300px !important;
+        background-color: #354567;
+        color: #FFFFFF;
+        border-radius:0 20px 20px 20px;
+        margin-bottom: 93px;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    
+    .area_main, .area_main2 {
+        display: flex;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        position: absolute; /* 絕對定位，疊加在同一位置上 */
+        top: 38px;
+        left: 0;
+        width: 100%;
+    }
+
+    .area_left{
+        display: none;
+    }
+    
+    .area_left2{
+        display: none;
+    }
+    
+    .line{
+        display: none;
+    }
+    
+    .line2{
+        display: none;
+    }
+    
+    .area_intro{
+        width: 330px;
+        height: 466px;
+        position: relative;
+        margin-left: 51px;
+        margin-right: 51px;
+    }
+
+    .intro_img{
+        width: 255px;
+        height: 153px;
+        display: block;
+        margin: 24px auto 0 auto;
+    }
+
+    .intro1{
+        width: 330px;
+        height: auto;
+        margin-top: 25px;
+    }
+    
+    .intro2{
+        width: 330px;
+        /* height: 312px; */
+        display: inline-block;
+        margin-top: 32px;
+    }
+
+    .intro_word1{
+        width: 330px;
+        font-size: 10px;
+        margin: 0;
+        display: inline-block;
+    }
+    
+    .intro_word2{
+        width: 330px;
+        font-size: 10px;
+        margin: 0;
+        display: inline-block;
+    }
+
+    .intro_tit{
+        width: auto;
+        font-size: 16px !important;
+        font-weight: 700px;
+        line-height: 24px;
+        margin: 0;
+        display: inline-block;
+    }
+    
+    .intro_name{
+        font-size: 12px !important;
+        line-height: 14px;
+        margin-top: 10px;
+    }
+
+    .img_source a{
+        font-size: 10px !important;
+        color: #8391AE;
+    }
+
+    .btn{
+        width: auto !important;
+        height: auto !important;
+        font-size: 14px !important;
+        margin: 0;
+    }
+
+    .btn_both{
+        width: 246px;
+        height: 40px !important;
+        display: flex;
+        align-items: flex-start;
+    }
 }
 
 .btn_both{
@@ -92,40 +610,6 @@ i a{
     box-shadow : 10px 0px 5px #B9C1D2;
 }
 
-.area_main{
-    width: 1178px;
-    min-height: 1905px;
-    /* min-height: 2016px; */
-    /* display: inline-block; */
-    background-color: #B9C1D2;
-    border-radius:0 20px 20px 20px;
-    align-items: flex-start;
-    flex-direction: row;
-    position: relative;
-}
-
-.area_main2{
-    width: 1178px;
-    height: 2041px;
-    background-color: #354567;
-    color: #FFFFFF;
-    border-radius:0 20px 20px 20px;
-    margin-bottom: 93px;
-    align-items: flex-start;
-    flex-direction: row;
-}
-
-.area_main, .area_main2 {
-    display: flex;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    position: absolute; /* 絕對定位，疊加在同一位置上 */
-    top: 53px;
-    left: 0;
-    width: 100%;
-}
-
 .active {
     visibility: visible;
     opacity: 1;
@@ -133,84 +617,6 @@ i a{
 
 .btn_both h1 {
     cursor: pointer;
-}
-
-.area_left{
-    width: 120px;
-    min-height: 112px;
-    font-size: 16px;
-    padding-left: 24px;
-    margin: 0;
-    position: relative;
-    top: 60px;
-    transform: translateX(51px);
-    margin-right: 51px;
-}
-
-.area_left2{
-    width: 184px;
-    height: 112px;
-    font-size: 16px;
-    padding-left: 24px;
-    margin: 0;
-    position: relative;
-    top: 60px;
-    transform: translateX(19px);
-    margin-right: 19px;
-}
-
-.left{
-    vertical-align: middle;
-    position: relative;
-}
-
-.left_line{
-    width: 0%;
-    height: 1px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: all .3s linear;
-}
-
-.left_line_blue{
-    background-color: #354567;
-}
-
-.left_line_white{
-    background-color: white;
-}
-
-.left:hover .left_line{
-    width: 100%;
-}
-
-.left_word{
-    margin-bottom: 16px;  
-}
-
-.line{
-    width: 1px;
-    height: 1801px;
-    background-color: #354567;
-    border: none;
-    margin: 59px 0 61px 51px;
-}
-
-.line2{
-    width: 1px;
-    height: 1922px;
-    background-color: #FFFFFF;
-    border: none;
-    margin: 59px 0 61px 19px;
-}
-
-.area_intro{
-    width: 697px;
-    height: 1785px;
-    position: relative;
-    top: 60px;
-    left: 136px;
 }
 
 .fade{
@@ -225,18 +631,6 @@ i a{
 
 .visible {
     opacity: 1;
-}
-
-.intro1{
-    width: 697px;
-    height: 438px;
-}
-
-.intro2{
-    width: 697px;
-    /* height: 423px; */
-    display: inline-block;
-    margin-top: 32px;
 }
 
 .intro_hl1{
@@ -300,31 +694,10 @@ i a{
     margin-top: 10px;
 }
 
-.intro_word1{
-    width: 697px;
-    font-size: 16px;
-    margin: 0;
-    display: inline-block;
-}
-
-.intro_word2{
-    width: 697px;
-    font-size: 16px;
-    margin: 0;
-    display: inline-block;
-}
-
-.intro_img{
-    width: 485px;
-    height: 298px;
-    display: block;
-    margin: 24px auto 0 auto;
-}
-
 .img_source{
     /* width: 468px; */
     width: auto;
-    height: 18px;
+    height: auto;
     /* margin-left: 115px;
     margin-right: 114px; */
     display: flex;
