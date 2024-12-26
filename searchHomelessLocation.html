@@ -11,6 +11,9 @@
     <meta name="google" content="notranslate">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="icon" href="img/img_favicon/box.png" type="image/png">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
     <!--nav-header-->
@@ -43,7 +46,104 @@
             <a href="#" class=a-catalog><button class=btn-catalog data-zh="用戶登入/註冊" data-en="User Login/Register">用戶登入/註冊</button></a>
         </div>
     </div>
-
+    <div id="map" style="height: 600px;" class="map"></div>
+    <div class="choose">
+        <h2 class="choose-h" data-zh="無家者據點查詢" data-en="Search Homeless Locations">無家者據點查詢</h2>
+        <hr class="choose-hr">
+        <h2 class="sh" data-zh="1. 搜尋欲標記的所在地" data-en="1. Search Your Location">1. 搜尋欲標記的所在地</h2>
+        <div class="myPlace">
+            <img src="img/img_searchHomelessLocations/myPlace.png" class="myPlace-img" id="myPlace-img">
+            <div class="search-box1">
+                <input type="text" placeholder="您的所在地（台灣）" class="search-input1" id="search-input1" data-zh="您的所在地（台灣）" data-en="Your Location(Taiwan)">
+                <img src="img/img_index/Search.png" alt="Search Icon1" class="search-icon1" id="search-icon1">
+            </div>
+        </div>
+        <h2 class="sh" data-zh="2. 選擇所在地區查看與各據點的相對距離" data-en="2. Select a category to view the relative distance">2. 選擇所在地區查看與各據點的相對距離</h2>
+        <div class="search">
+            <div class="search-l">
+                <div class="search-c">
+                    <h2 class = "sheet-cm" data-zh="縣市" data-en="Country/ City">縣市</h2>
+                        <select id="city" name="city" onchange="updateAreaOptions()" class="input">
+                            <option data-zh="請選擇縣市" data-en="Please select a county/ city">請選擇縣市</option>
+                            <option value="臺北市">臺北市</option>
+                            <option value="新北市">新北市</option>
+                            <option value="基隆市">基隆市</option>
+                            <option value="新竹市">新竹市</option>
+                            <option value="桃園市">桃園市</option>
+                            <option value="新竹縣">新竹縣</option>
+                            <option value="宜蘭縣">宜蘭縣</option>
+                            <option value="臺中市">臺中市</option>
+                            <option value="苗栗縣">苗栗縣</option>
+                            <option value="彰化縣">彰化縣</option>
+                            <option value="南投縣">南投縣</option>
+                            <option value="雲林縣">雲林縣</option>
+                            <option value="高雄市">高雄市</option>
+                            <option value="臺南市">臺南市</option>
+                            <option value="嘉義市">嘉義市</option>
+                            <option value="嘉義縣">嘉義縣</option>
+                            <option value="屏東縣">屏東縣</option>
+                            <option value="澎湖縣">澎湖縣</option>
+                            <option value="花蓮縣">花蓮縣</option>
+                            <option value="臺東縣">臺東縣</option>
+                            <option value="金門縣">金門縣</option>
+                            <option value="連江縣">連江縣</option>
+                        </select>
+                </div>
+                <div class="search-c1">
+                    <h2 class = "sheet-cm" data-zh="類別" data-en="Category">類別</h2>
+                        <select id="place" name="place" class="input">
+                            <option data-zh="請選擇類別" data-en="Please select a category(place)">請選擇類別</option>
+                        </select>
+                </div>
+            </div>
+            <div class="search-r">
+                <h2 class = "sheet-cm" data-zh="地區" data-en="District">地區</h2>
+                    <select id="area" name="area" onchange="updatePlaceOptions()" class="input">
+                        <option data-zh="請選擇地區" data-en="Please select a district">請選擇地區</option>
+                    </select>
+            </div>
+        </div>
+        <button class="btn-search" onclick="searchLocations()" data-zh="搜尋" data-en="Search">搜尋</button>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="footer">
+        <div class = "footer-top">
+            <div class="left">
+                <h2>Homeless Care & Meal <br>Coordination Platform</h2>
+                <h6 data-zh="數位二甲 | 111219005 | 吳函蓁" data-en="NTUE DTD | 111219005 | Han-Jhen, Wu">數位二甲 | 111219005 | 吳函蓁</h6>
+                <h6 data-zh="數位二甲 | 111219007 | 趙翊如" data-en="NTUE DTD | 111219007 | Yi-Ju, Chao">數位二甲 | 111219007 | 趙翊如</h6>
+                <h6 data-zh="113學年度上學期（大二）" data-en="First semester of the 113th academic year (sophomore year)">113學年度上學期（大二）</h6>
+                <h6 data-zh="前端工程設計" data-en="Frontend web development">前端工程設計</h6>
+                <h6  data-zh="期末專題成果" data-en="Final Project Results">期中專題成果</h6>
+            </div>
+            <div class="middle1">
+                <h3 data-zh="人生百味" data-en="Do You a Flavor">人生百味</h3>
+                <a href="https://doyouaflavor.tw/" target="_blank" class = "footer-a"><h6 data-zh="官方網站" data-en="Official website">官方網站</h6></a> 
+                <a href="https://doyouaflavor.tw/activities/" target="_blank" class = "footer-a"><h6 data-zh="專案列表" data-en="Project list">專案列表</h6></a> 
+                <a href="https://doyouaflavor.tw/blog/" target="_blank" class = "footer-a"><h6 data-zh="議題文章" data-en="Topic articles">議題文章</h6></a> 
+                <a href="https://doyouaflavor.tw/donate/" target="_blank" class = "footer-a"><h6 data-zh="捐款支持" data-en="Donate to support">捐款資訊</h6></a> 
+                <a href="https://www.books.com.tw/products/0010741248?" target="_blank" class = "footer-a"><h6 data-zh="街頭生存指南" data-en="Street survival guide">街頭生存指南</h6></a> 
+                <a href="https://doyouaflavor.tw/homeless-helper/" target="_blank" class = "footer-a"><h6 data-zh="無家者小幫手" data-en="Homeless helper">無家者小幫手</h6></a> 
+            </div>
+            <div class="middle2">
+                <h3 data-zh="其他" data-en="Others">其他</h3>
+                <a href="https://www.instagram.com/tiatde/" target="_blank" class = "footer-a"><h6 data-zh="開發者支持" data-en="Developer support">開發者支持</h6></a> 
+                <a href="https://www.instagram.com/tiatde/" target="_blank" class = "footer-a"><h6 data-zh="平臺問題回報" data-en="Platform issue report">平臺問題回報</h6></a> 
+                <a href="https://www.youtube.com/@yijuchao5024" target="_blank" class = "footer-a"><h6 data-zh="更多影音作品" data-en="More video content">更多影音作品</h6></a> 
+            </div>
+            <div class="right">
+                <h3>FOLLOW</h3>
+                <a href="https://www.instagram.com/tiatde/" target="_blank" class = "footer-a"><img src="img/img_index/Instagram.png" alt="Instagram" class="instagram"></a> 
+                <a href="https://www.facebook.com/profile.php?id=100004458227420" target="_blank" class = "footer-a"><img src="img/img_index/Facebook.png" alt="Facebook" class="facebook"></a> 
+                <a href="https://www.youtube.com/@yijuchao5024" target="_blank" class = "footer-a"><img src="img/img_index/Youtube.png" alt="Youtube" class="youtube"></a> 
+            </div>
+        </div>
+        <div class = "footer-bottom">
+            <hr class = "footer-hr">
+            <p class = "footer-p">2024 produced by Yi-Ju, Chao & Han-Jhen, Wu</p>
+        </div class = "footer-bottom">
+    </div>
     <script src="js/basic.js"></script>
     <script src="js/searchHomelessLocation.js"></script>
 </body>
