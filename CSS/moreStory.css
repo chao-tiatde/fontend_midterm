@@ -25,22 +25,36 @@ li{
     display: list-item;
 }
 
-li:hover{
+li:hover, i:hover, i a:hover{
     cursor: pointer;
+}
+
+i{
+    font-size: 30px;
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+}
+
+i a{
+    font-family: "Noto sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 5px;
 }
 
 .contain{
     width: 100%;
+    height: auto;
     margin: 0 auto;
 }
 
 .main_contain{
     width: 1178px;
-    min-height: 1958px;
-    margin: 40px auto 93px auto;
+    /* min-height: 1958px; */
+    margin: 120px auto 93px auto;
     color: #354567;
     position: relative;
-    margin-top: 120px;
 }
 
 .btn_both{
@@ -69,6 +83,7 @@ li:hover{
 }
 
 .btn_homeless{
+    width: auto;
     background-color: #354567;
     color: #FFFFFF;
 }
@@ -79,7 +94,9 @@ li:hover{
 
 .area_main{
     width: 1178px;
-    height: 1905px;
+    min-height: 1905px;
+    /* min-height: 2016px; */
+    /* display: inline-block; */
     background-color: #B9C1D2;
     border-radius:0 20px 20px 20px;
     align-items: flex-start;
@@ -217,7 +234,8 @@ li:hover{
 
 .intro2{
     width: 697px;
-    height: 423px;
+    /* height: 423px; */
+    display: inline-block;
     margin-top: 32px;
 }
 
@@ -257,18 +275,23 @@ li:hover{
 }
 
 .area_tit{    
-    height: 24px;
+    width: auto;
+    /* height: 24px; */
+    height: auto;
     margin-bottom: 13px;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: left;
+    gap: 16px;
 }
 
 .intro_tit{
+    width: auto;
     font-size: 24px;
     font-weight: 700px;
     line-height: 24px;
     margin: 0;
+    display: inline-block;
 }
 
 .intro_name{
@@ -279,16 +302,16 @@ li:hover{
 
 .intro_word1{
     width: 697px;
-    height: 61px;
     font-size: 16px;
     margin: 0;
+    display: inline-block;
 }
 
 .intro_word2{
     width: 697px;
-    height: 44px;
     font-size: 16px;
     margin: 0;
+    display: inline-block;
 }
 
 .intro_img{
@@ -299,10 +322,11 @@ li:hover{
 }
 
 .img_source{
-    width: 468px;
+    /* width: 468px; */
+    width: auto;
     height: 18px;
-    margin-left: 115px;
-    margin-right: 114px;
+    /* margin-left: 115px;
+    margin-right: 114px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -343,22 +367,6 @@ li:hover{
     width: 144px;
 }
 
-#tit1{
-    width: 192px;
-}
-
-#tit2{
-    width: 258px;
-}
-
-#tit3{
-    width: 252px;
-}
-
-#tit4{
-    width: 216px;
-}
-
 #tit_hl1{
     width: 168px;
 }
@@ -373,4 +381,9 @@ li:hover{
 
 #tit_hl4{
     width: 240px;
+}
+
+#send2_tit{
+    height: auto;
+    display: inline-block;
 }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ch">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-zh="更多故事" data-en="More Stories">更多故事</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="CSS/moreStory.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="CSS/moreStory.css">
     <link rel="stylesheet" type="text/css" href="CSS/basic.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,7 @@
     <meta name="google" content="notranslate">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="icon" href="img/img_favicon/box.png" type="image/png">
+    <script src="https://kit.fontawesome.com/3e63dd965f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="contain">
@@ -35,90 +36,98 @@
             <a href="index.html"><img src="img/img_index/Home.png" alt="Home Icon" class="home-icon" style="cursor: pointer;"></a><div class="dropdown">
             <li><a href="#" data-zh="我要送愛" data-en="Donation Suppulies">我要送愛 </a>
                 <ul>
-                    <li><a href="#" data-zh="無家者據點查詢" data-en="Search Homeless Locations">無家者據點查詢</a></li>
+                    <li><a href="searchHomelessLocation.html" data-zh="無家者據點查詢" data-en="Search Homeless Locations">無家者據點查詢</a></li>
                     <li><a href="donateRegistration.html" data-zh="送愛登錄" data-en="Donate Registration">送愛登錄</a></li>
-                    <li><a href="#" data-zh="送愛情形一覽" data-en="Donation Overview">送愛情形一覽</a></li>
+                    <li><a href="donationOverview.html" data-zh="送愛情形一覽" data-en="Donation Overview">送愛情形一覽</a></li>
                 </ul>
             </li>
         </div>
             <a href="aboutUs.html"  class=a-catalog><button class=btn-catalog data-zh="關於我們" data-en="About Us">關於我們</button></a>
             <a href="moreStory.html" class=a-catalog><button class=btn-catalog data-zh="更多故事" data-en="More Stories">更多故事</button></a>
             <a href="FAQ.html" class=a-catalog><button class=btn-catalog data-zh="常見問題" data-en="FAQ">常見問題</button></a>
-            <button class=btn-catalog data-zh="用戶登入/註冊" data-en="User Login/Register">用戶登入/註冊</button>
+            <a href="signUp.html" class=a-catalog><button class=btn-catalog data-zh="用戶登入/註冊" data-en="User Login/Register">用戶登入/註冊</button></a>
         </div>
     </div>
 
     <!-- content -->        
     <div class="main_contain">
         <div class="btn_both">
-            <h1 class="btn btn_send" onclick="showArea('area_main')">送愛者</h1>
-            <h1 class="btn btn_homeless" onclick="showArea('area_main2')">無家者</h1>
+            <h1 class="btn btn_send" onclick="showArea('area_main')" data-zh="送愛者" data-en="Sender">送愛者</h1>
+            <h1 class="btn btn_homeless" onclick="showArea('area_main2')" data-zh="無家者" data-en="Homeless">無家者</h1>
         </div>
-
+    
         <div id="area_main" class="area_main active main">
             <ul class="area_left">
-                <li id="left1" class="left_word left">石頭湯計畫
-                    <div class="left_line left_line_blue" ></div>
+                <li id="left1" class="left_word left" data-zh="石頭湯計畫" data-en="Stone Soup Project">石頭湯計畫
+                    <div class="left_line left_line_blue" data-zh="" data-en=""></div>
                 </li>
-                <li id="left2" class="left_word left">遊民外展服務
-                    <div class="left_line left_line_blue" ></div>
+                <li id="left2" class="left_word left" data-zh="遊民外展服務" data-en="Outreach Services for the Homeless">遊民外展服務
+                    <div class="left_line left_line_blue" data-zh="" data-en=""></div>
                 </li>
-                <li id="left3" class="left_word left">安心家園
-                    <div class="left_line left_line_blue" ></div>
+                <li id="left3" class="left_word left" data-zh="安心家園" data-en="Safe Haven">安心家園
+                    <div class="left_line left_line_blue" data-zh="" data-en=""></div>
                 </li>
-                <li id="left4" class="left">街友販售計畫
-                    <div class="left_line left_line_blue" ></div>
+                <li id="left4" class="left" data-zh="街友販售計畫" data-en="Street Vendor Project">街友販售計畫
+                    <div class="left_line left_line_blue" data-zh="" data-en=""></div>
                 </li>
             </ul>
-            <hr class="line">
-
+            <hr class="line" data-zh="" data-en="">
+    
             <div class="area_intro">
                 <div id="send1" class="intro1">
-                    <div class="area_tit" id="tit1">
-                        <h2 class="intro_tit">石頭湯計畫</h2>
-                        <a class="intro_name">人生百味</a>
+                    <div class="area_tit">
+                        <h2 class="intro_tit" data-zh="石頭湯計畫" data-en="Stone Soup Project">石頭湯計畫</h2>
+                        <a class="intro_name" data-zh="人生百味" data-en="Do You a Flavor">人生百味</a>
                     </div>
-                    <p class="intro_word1">
+                    <p class="intro_word1" data-zh="「人生百味」是一個關注無家者的社會團體，他們發起了「石頭湯計畫」，邀請志願者與無家者共同煮湯、用餐，並藉此建立關係，提供情感支持。這個計畫不僅讓無家者感受到社會的關懷，也促使志願者更深入了解無家者的生活境況。" data-en="'Do You a Flavor' is a social group focused on the homeless. They initiated the 'Stone Soup Project,' inviting volunteers and homeless individuals to cook soup and dine together, fostering relationships and providing emotional support. This project helps the homeless feel societal care and encourages volunteers to deeply understand their circumstances.">
                         「人生百味」是一個關注無家者的社會團體，他們發起了「石頭湯計畫」，邀請志願者與無家者共同煮湯、用餐，並藉此建立關係，提供情感支持。這個計畫不僅讓無家者感受到社會的關懷，也促使志願者更深入了解無家者的生活境況。
                     </p>
-                    <img class="intro_img" src="img/img_story/石頭湯.png">
-                    <div class="img_source"><a>圖片來源：「人生百味」官方網站</a></div>
+                    <img class="intro_img" src="img/img_story/石頭湯.png" data-zh="圖片來源：「人生百味」官方網站" data-en="Image source: Do You a Flavor Official Website">
+                    <div class="img_source">
+                        <a data-zh="圖片來源：「人生百味」官方網站" data-en="Image source: Do You a Flavor Official Website">圖片來源：「人生百味」官方網站</a>
+                    </div>
                 </div>
                 <div id="send2" class="intro2 fade">
-                    <div class="area_tit" id="tit2">
-                        <h2 class="intro_tit">遊民外展服務</h2>
-                        <a class="intro_name">芒草心慈善協會</a>
+                    <div class="area_tit">
+                        <h2 class="intro_tit" id="send2_tit" data-zh="遊民外展服務" data-en="Outreach Services for the Homeless">遊民外展服務</h2>
+                        <a class="intro_name" data-zh="芒草心慈善協會" data-en="Heart of Miscanthus Charity Association">芒草心慈善協會</a>
                     </div>
-                    <p class="intro_word2">
+                    <p class="intro_word2" data-zh="「芒草心慈善協會」長期致力於服務無家者，他們的外展服務團隊定期深入街頭，為無家者提供食物、衣物和生活用品，並協助他們尋找工作機會，提供職業訓練，幫助其重新融入社會。" data-en="The 'Heart of Miscanthus Charity Association' has long been dedicated to serving the homeless. Their outreach service teams regularly visit the streets to provide food, clothing, and supplies, assist in job searching, and offer vocational training to help reintegrate them into society.">
                         「芒草心慈善協會」長期致力於服務無家者，他們的外展服務團隊定期深入街頭，為無家者提供食物、衣物和生活用品，並協助他們尋找工作機會，提供職業訓練，幫助其重新融入社會。
                     </p>
-                    <img class="intro_img" src="img/img_story/遊民外展.png">
-                    <div class="img_source"><a>圖片來源：「社團法人台灣芒草心慈善協會」粉絲團</a></div>
+                    <img class="intro_img" src="img/img_story/遊民外展.png" data-zh="圖片來源：「社團法人台灣芒草心慈善協會」粉絲團" data-en="Image source: Heart of Miscanthus Charity Association Facebook page">
+                    <div class="img_source">
+                        <a data-zh="圖片來源：「社團法人台灣芒草心慈善協會」粉絲團" data-en="Image source: Heart of Miscanthus Charity Association Facebook page">圖片來源：「社團法人台灣芒草心慈善協會」粉絲團</a>
+                    </div>
                 </div>
                 <div id="send3" class="intro2 fade">
-                    <div class="area_tit" id="tit3">
-                        <h2 class="intro_tit">安心家園</h2>
-                        <a class="intro_name">撒瑪黎雅婦女關懷協會</a>
+                    <div class="area_tit">
+                        <h2 class="intro_tit" data-zh="安心家園" data-en="Safe Haven">安心家園</h2>
+                        <a class="intro_name" data-zh="撒瑪黎雅婦女關懷協會" data-en="Samaritan Women's Concern Association">撒瑪黎雅婦女關懷協會</a>
                     </div>
-                    <p class="intro_word2">
+                    <p class="intro_word2" data-zh="位於台中的「撒瑪黎雅婦女關懷協會」專門服務女性無家者，提供住宿、用餐、洗澡等基本生活需求，並提供心理輔導和職業訓練，協助她們重建生活。" data-en="Located in Taichung, the 'Samaritan Women's Concern Association' specializes in serving homeless women, providing accommodations, meals, bathing facilities, psychological counseling, and vocational training to help rebuild their lives.">
                         位於台中的「撒瑪黎雅婦女關懷協會」專門服務女性無家者，提供住宿、用餐、洗澡等基本生活需求，並提供心理輔導和職業訓練，協助她們重建生活。
                     </p>
-                    <img class="intro_img" src="img/img_story/安心家園.png">
-                    <div class="img_source"><a>圖片來源：「慈善撒瑪黎雅婦女關懷協會」官方網站</a></div>
+                    <img class="intro_img" src="img/img_story/安心家園.png" data-zh="圖片來源：「慈善撒瑪黎雅婦女關懷協會」官方網站" data-en="Image source: Samaritan Women's Concern Association Official Website">
+                    <div class="img_source">
+                        <a data-zh="圖片來源：「慈善撒瑪黎雅婦女關懷協會」官方網站" data-en="Image source: Samaritan Women's Concern Association Official Website">圖片來源：「慈善撒瑪黎雅婦女關懷協會」官方網站</a>
+                    </div>
                 </div>
                 <div id="send4" class="intro2 fade">
-                    <div class="area_tit" id="tit4">
-                        <h2 class="intro_tit">街友販售計畫</h2>
-                        <a class="intro_name">大誌雜誌</a>
+                    <div class="area_tit">
+                        <h2 class="intro_tit" data-zh="街友販售計畫" data-en="Street Vendor Project">街友販售計畫</h2>
+                        <a class="intro_name" data-zh="大誌雜誌" data-en="The Big Issue">大誌雜誌</a>
                     </div>
-                    <p class="intro_word2">
+                    <p class="intro_word2" data-zh="「大誌」是一個由無家者販售的雜誌，每本售價100元，無家者可獲得其中的50元。這個計畫提供了無家者一個合法且有尊嚴的收入來源，並讓社會大眾有機會透過購買雜誌來支持他們。" data-en="'The Big Issue' is a magazine sold by the homeless, priced at 100 TWD per copy, of which the homeless receive 50 TWD. This project provides a legitimate and dignified income source for the homeless and allows the public to support them by purchasing the magazine.">
                         「大誌」是一個由無家者販售的雜誌，每本售價100元，無家者可獲得其中的50元。這個計畫提供了無家者一個合法且有尊嚴的收入來源，並讓社會大眾有機會透過購買雜誌來支持他們。
                     </p>
                     <img class="intro_img" src="img/img_story/街友販售.png">
-                    <div class="img_source"><a>圖片來源：中時新聞網</a></div>
+                    <div class="img_source">
+                        <a data-zh="圖片來源：中時新聞網" data-en="Source of the image: Zhongshi News Network">圖片來源：中時新聞網</a>
+                    </div>
                 </div>
             </div><!-- area_intro -->
-
+            <i class="fa-solid fa-arrow-up fade" style="color: #354567;" onclick="scrollToTop()"><a>top</a></i>
         </div><!-- area_main -->
         
         <div id="area_main2" class="area_main2 main">
@@ -168,47 +177,49 @@
                     <img class="intro_img" src="img/img_story/高齡勞工.png">
                 </div>
             </div><!-- area_intro -->
+            <i class="fa-solid fa-arrow-up" style="color: #354567;">箭頭</i>
         </div><!-- area_main2 -->
         <div class="spacer"></div>
     </div>   <!-- main_contain -->
 
-        <div class="footer">
-            <div class = "footer-top">
-                <div class="left">
-                    <h2>Homeless Care & Meal <br>Coordination Platform</h2>
-                    <h6>數位二甲 | 111219005 | 吳函蓁</h6>
-                    <h6>數位二甲 | 111219007 | 趙翊如</h6>
-                    <h6>113學年度上學期（大二）</h6>
-                    <h6>前端工程設計</h6>
-                    <h6>期中專題成果</h6>
-                </div>
-                <div class="middle1">
-                    <h3>人生百味</h3>
-                    <h6>官方網站</h6>
-                    <h6>專案列表</h6>
-                    <h6>議題文章</h6>
-                    <h6>捐款支持</h6>
-                    <h6>街頭生存指南</h6>
-                    <h6>無家者小幫手</h6>
-                </div>
-                <div class="middle2">
-                    <h3>其他</h3>
-                    <h6>開發者支持</h6>
-                    <h6>平臺問題回報</h6>
-                    <h6>更多影音作品</h6>
-                </div>
-                <div class="right">
-                    <h3>FOLLOW</h3>
-                    <img src="img/img_index/Instagram.png" alt="Instagram" class="instagram">
-                    <img src="img/img_index/Facebook.png" alt="Facebook" class="facebook">
-                    <img src="img/img_index/Youtube.png" alt="Youtube" class="youtube">
-                </div>
+    <!--footer-->
+    <div class="footer">
+        <div class = "footer-top">
+            <div class="left">
+                <h2>Homeless Care & Meal <br>Coordination Platform</h2>
+                <h6 data-zh="數位二甲 | 111219005 | 吳函蓁" data-en="NTUE DTD | 111219005 | Han-Jhen, Wu">數位二甲 | 111219005 | 吳函蓁</h6>
+                <h6 data-zh="數位二甲 | 111219007 | 趙翊如" data-en="NTUE DTD | 111219007 | Yi-Ju, Chao">數位二甲 | 111219007 | 趙翊如</h6>
+                <h6 data-zh="113學年度上學期（大二）" data-en="First semester of the 113th academic year (sophomore year)">113學年度上學期（大二）</h6>
+                <h6 data-zh="前端工程設計" data-en="Frontend web development">前端工程設計</h6>
+                <h6  data-zh="期末專題成果" data-en="Final Project Results">期中專題成果</h6>
             </div>
-            <div class = "footer-bottom">
-                <hr class = "footer-hr">
-                <p class = "footer-p">2024 produced by Yi-Ju, Chao & Han-Jhen, Wu</p>
+            <div class="middle1">
+                <h3 data-zh="人生百味" data-en="Do You a Flavor">人生百味</h3>
+                <a href="https://doyouaflavor.tw/" target="_blank" class = "footer-a"><h6 data-zh="官方網站" data-en="Official website">官方網站</h6></a> 
+                <a href="https://doyouaflavor.tw/activities/" target="_blank" class = "footer-a"><h6 data-zh="專案列表" data-en="Project list">專案列表</h6></a> 
+                <a href="https://doyouaflavor.tw/blog/" target="_blank" class = "footer-a"><h6 data-zh="議題文章" data-en="Topic articles">議題文章</h6></a> 
+                <a href="https://doyouaflavor.tw/donate/" target="_blank" class = "footer-a"><h6 data-zh="捐款支持" data-en="Donate to support">捐款資訊</h6></a> 
+                <a href="https://www.books.com.tw/products/0010741248?" target="_blank" class = "footer-a"><h6 data-zh="街頭生存指南" data-en="Street survival guide">街頭生存指南</h6></a> 
+                <a href="https://doyouaflavor.tw/homeless-helper/" target="_blank" class = "footer-a"><h6 data-zh="無家者小幫手" data-en="Homeless helper">無家者小幫手</h6></a> 
+            </div>
+            <div class="middle2">
+                <h3 data-zh="其他" data-en="Others">其他</h3>
+                <a href="https://www.instagram.com/tiatde/" target="_blank" class = "footer-a"><h6 data-zh="開發者支持" data-en="Developer support">開發者支持</h6></a> 
+                <a href="https://www.instagram.com/tiatde/" target="_blank" class = "footer-a"><h6 data-zh="平臺問題回報" data-en="Platform issue report">平臺問題回報</h6></a> 
+                <a href="https://www.youtube.com/@yijuchao5024" target="_blank" class = "footer-a"><h6 data-zh="更多影音作品" data-en="More video content">更多影音作品</h6></a> 
+            </div>
+            <div class="right">
+                <h3>FOLLOW</h3>
+                <a href="https://www.instagram.com/tiatde/" target="_blank" class = "footer-a"><img src="img/img_index/Instagram.png" alt="Instagram" class="instagram"></a> 
+                <a href="https://www.facebook.com/profile.php?id=100004458227420" target="_blank" class = "footer-a"><img src="img/img_index/Facebook.png" alt="Facebook" class="facebook"></a> 
+                <a href="https://www.youtube.com/@yijuchao5024" target="_blank" class = "footer-a"><img src="img/img_index/Youtube.png" alt="Youtube" class="youtube"></a> 
             </div>
         </div>
+        <div class = "footer-bottom">
+            <hr class = "footer-hr">
+            <p class = "footer-p">2024 produced by Yi-Ju, Chao & Han-Jhen, Wu</p>
+        </div class = "footer-bottom">
+    </div>
 
     </div>
 

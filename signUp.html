@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用戶註冊</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/signUp.css">
+    <link rel="stylesheet" type="text/css" href="CSS/basic.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=visibility_off" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_arrow_down" />
+    <meta name="google" content="notranslate">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="icon" href="img/img_favicon/box.png" type="image/png">
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js"></script>
+</head>
+<body>
+    <div class="contain">
+        <!--nav-header-->
+        <div class = "fixed">
+            <div class="nav-header">
+                <h2 data-zh="台灣無家者送愛整合平臺" data-en="Homeless Care and Meal Coordination Platform">台灣無家者送愛整合平臺</h2>
+                <div class="header-r">
+                    <button class="btn-lan">中</button>
+                    <button class="btn-lan">En</button>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search" class="search-input" id="search-input">
+                        <img src="img/img_index/Search.png" alt="Search Icon" class="search-icon" id="search-icon">
+                    </div>
+                </div>
+            </div>
+            <!--nav-content-->
+            <div class="nav-content">
+                <a href="index.html"><img src="img/img_index/Home.png" alt="Home Icon" class="home-icon" style="cursor: pointer;"></a><div class="dropdown">
+                <li><a href="#" data-zh="我要送愛" data-en="Donation Suppulies">我要送愛 </a>
+                    <ul>
+                        <li><a href="searchHomelessLocation.html" data-zh="無家者據點查詢" data-en="Search Homeless Locations">無家者據點查詢</a></li>
+                    <li><a href="donateRegistration.html" data-zh="送愛登錄" data-en="Donate Registration">送愛登錄</a></li>
+                    <li><a href="donationOverview.html" data-zh="送愛情形一覽" data-en="Donation Overview">送愛情形一覽</a></li>
+                    </ul>
+                </li>
+            </div>
+                <a href="aboutUs.html"  class=a-catalog><button class=btn-catalog data-zh="關於我們" data-en="About Us">關於我們</button></a>
+                <a href="moreStory.html" class=a-catalog><button class=btn-catalog data-zh="更多故事" data-en="More Stories">更多故事</button></a>
+                <a href="FAQ.html" class=a-catalog><button class=btn-catalog data-zh="常見問題" data-en="FAQ">常見問題</button></a>
+                <a href="signUp.html" class=a-catalog><button class=btn-catalog data-zh="用戶登入/註冊" data-en="User Login/Register">用戶登入/註冊</button></a>
+            </div>
+        </div>
+
+        <!-- content -->
+        <div class="main_contain">
+            <div class="signUp">
+                <h1 data-zh="用戶註冊" data-en="User Registration">用戶註冊</h1>
+                <form id="registerForm" action="signUp.php" method="post">
+                    <div class="input_box">
+                        <label for="username" id="registerName" data-zh="*用戶名稱" data-en="Username">*用戶名稱</label><br>
+                        <input type="text" name="username" id="username" required>
+                    </div>
+                    <div class="input_box">
+                        <label for="email" id="registerEmail" data-zh="*電子郵件" data-en="Email">*電子郵件</label><br>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="input_box">
+                        <label for="password" id="registerPassword" data-zh="*密碼(至少六位，至多十位)" data-en="Password (at least 6 characters, up to 10 characters)">*密碼(至少六位，至多十位)</label><br>
+                        <div class="visible"> 
+                            <input type="password" name="password" id="password" required>
+                            <button class="toggle-btn" id="togglePassword1"><img src="img/img_signUp/visibility_off.svg"></button>
+                        </div>
+                    </div>
+                    <div class="input_box" id="confirm_password">
+                        <label for="password" id="registerPassword_confirm" data-zh="*確認密碼" data-en="Password">*確認密碼</label><br>
+                        <div class="visible">
+                            <input type="password" name="confirmPassword" id="confirmPassword" required>
+                            <button class="toggle-btn" id="togglePassword2"><img src="img/img_signUp/visibility_off.svg"></button>
+                        </div>  
+                    </div>
+                </form>
+                <button class="btn_signUp" id="registerBtn" data-zh="註冊" data-en="Register">註冊</button>
+        
+                <div class="terms_container">
+                    <div class="terms_word">
+                    <p class="word_agreen" data-zh="點選「註冊」即表示您同意並接受台灣無家者送愛服務平台" data-en="By clicking Register, you agree to and accept the Taiwan Homeless Love Delivery Platform's ">點選「註冊」即表示您同意並接受台灣無家者送愛服務平台
+                    <button id="openTerms" class="open-btn" data-zh="會員服務條款" data-en="Terms of Service."><u>會員服務條款</u></button>
+                    </div>
+
+                    <!-- 彈出視窗 -->
+                    <div id="termsModal" class="modal hidden">
+                        <div class="modal-content">
+                            <button id="closeTerms" class="close-btn">&times;</button>
+                            <h2>台灣無家者送愛服務平台會員服務條款</h2>
+                            <div class="terms-scroll">
+                                <p>
+                                    歡迎您加入台灣無家者送愛服務平台（以下簡稱「本平台」）。為確保您的權益及平台的運行，請仔細閱讀以下會員服務條款（以下簡稱「本條款」）。當您註冊成為本平台會員並使用相關服務時，即表示您已閱讀、理解並同意接受本條款的約束。
+                                </p>
+                                <h3>第一條：服務說明</h3>
+                                <p>
+                                    1.本平台致力於促進資源共享，協助無家者獲得基本生活支持，並鼓勵送愛者貢獻社會愛心。<br>
+                                    2.本平台提供的服務包括但不限於：<br>
+                                    &nbsp;&nbsp;-資源登記與分配功能。<br>
+                                    &nbsp;&nbsp;-送愛者與無家者之間的互動記錄與管理功能。<br>
+                                    &nbsp;&nbsp;-個人故事分享與社會資源鏈接功能。<br>
+                                </p>
+                                <h3>第二條：會員資格</h3>
+                                <p>
+                                    1.您需年滿18歲，或經法定監護人同意，方可註冊並使用本平台服務。<br>
+                                    2.會員需提供真實且有效的個人資訊，包括但不限於姓名、電子郵件及聯絡方式。<br>
+                                </p>
+                                <h3>第三條：會員責任與義務</h3>
+                                <p>
+                                    1.誠實守信：<br>
+                                    &nbsp;&nbsp;-會員承諾所有提供的資訊均為真實、正確且完整，不得冒用他人身份。<br>
+                                    2.禁止行為：<br>
+                                    &nbsp;&nbsp;-發布任何違法、虛假或具攻擊性的內容。<br>
+                                    &nbsp;&nbsp;-濫用平台功能進行廣告、商業活動或散佈垃圾訊息。<br>
+                                    3.送愛者義務：<br>
+                                    &nbsp;&nbsp;-登記的資源必須為合法、適用且符合無家者需求。<br>
+                                    &nbsp;&nbsp;-不得提供過期、損壞或有安全隱患的物品。<br>
+                                    4.無家者義務：<br>
+                                    &nbsp;&nbsp;-應如實反映需求，並妥善使用獲得的資源。<br>
+                                </p>
+                                <h3>第四條：隱私權保護</h3>
+                                <p>
+                                    1.本平台承諾依據《個人資料保護法》妥善處理會員個人資料。<br>
+                                    2.您的個人資料僅用於平台服務之必要範圍，未經您的同意不會向第三方提供，法律另有規定者除外。<br>
+                                    3.詳細隱私政策請參閱「隱私權保護政策」專頁。<br>
+                                </p>
+                                <h3>第五條：服務中斷與責任限制</h3>
+                                <p>
+                                    1.本平台將盡力維持服務的穩定性，但若因不可抗力、系統維護或其他因素造成服務中斷，本平台不負擔賠償責任。<br>
+                                    2.本平台對於會員間的互動及交易，不承擔任何法律責任，會員應自行確認及評估風險。<br>
+                                </p>
+                                <h3>第六條：內容版權與智慧財產權</h3>
+                                <p>
+                                    1.本平台所提供的所有內容，包括文字、圖片、程式碼等，均屬本平台或相關權利人所有，未經授權不得擅自使用。<br>
+                                    2.會員提交至平台的內容，授予本平台全球範圍內的非專屬使用權，用於推廣、展示或改善服務。<br>
+                                </p>
+                                <h3>第七條：條款修改</h3>
+                                <p>
+                                    1.本平台保留隨時修訂本條款的權利，修改後的條款將公告於平台首頁。<br>
+                                    2.若您在條款修改後繼續使用平台服務，即表示您同意接受修訂後的條款。<br>
+                                </p>
+                                <h3>第八條：終止會員資格</h3>
+                                <p>
+                                    1.本平台有權在會員違反本條款時，暫停或終止其會員資格，並視情節嚴重性採取進一步法律行動。<br>
+                                    2.會員可隨時提出終止帳戶申請，平台將於確認後停止提供相關服務。<br>
+                                </p>
+                                <h3>第九條：適用法律與管轄法院</h3>
+                                <p>
+                                    1.本條款依據中華民國法律制定與解釋。<br>
+                                    2.因本條款引起之爭議，雙方同意以台灣台北地方法院為第一審管轄法院。<br>
+                                </p>
+                                <p>
+                                    <b>若您對本條款有任何疑問，歡迎隨時聯繫本平台客服。感謝您的支持與理解，讓我們共同努力傳遞愛與關懷！</b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </p>
+                <div class="line_or">
+                    <hr class="line">or<hr class="line">
+                </div>
+                <button class="btn_GG" data-zh="使用Google註冊" data-en="Register with Google Account"><img src="img/img_signUp/googleLogo.svg">使用Google註冊</button>
+                <p class="signIn" data-zh="已有帳號？" data-en="Already have an account?">
+                    <span data-zh="已有帳號？" data-en="Already have an account?">已有帳號？</span>
+                    <a href="signIn.html" data-zh="登入" data-en="Sign In">
+                        <span class="word_signIn" data-zh="登入" data-en="Sign In">登入</span>
+                    </a>
+                </p>
+            </div>
+            <div class="pic">
+                <img src="img/img_signUp/shake hand.svg" alt="Sign Up Image" class="img_signUp">
+                <div class="img_word">
+                    <img src="img/img_signUp/文字1.svg" alt="Sign Up Image" id="img_word1">
+                    <img src="img/img_signUp/文字2.svg" alt="Sign Up Image" id="img_word2">
+                </div>
+            </div>
+            <!-- <img src="img/img_signUp/rightPic.svg" alt="Sign Up Image" class="img_signUp"> -->
+
+
+        </div><!-- main_contain -->
+
+        <!--footer-->
+        <div class="footer">
+            <div class = "footer-top">
+                <div class="left">
+                    <h2>Homeless Care & Meal <br>Coordination Platform</h2>
+                    <h6 data-zh="數位二甲 | 111219005 | 吳函蓁" data-en="NTUE DTD | 111219005 | Han-Jhen, Wu">數位二甲 | 111219005 | 吳函蓁</h6>
+                    <h6 data-zh="數位二甲 | 111219007 | 趙翊如" data-en="NTUE DTD | 111219007 | Yi-Ju, Chao">數位二甲 | 111219007 | 趙翊如</h6>
+                    <h6 data-zh="113學年度上學期（大二）" data-en="First semester of the 113th academic year (sophomore year)">113學年度上學期（大二）</h6>
+                    <h6 data-zh="前端工程設計" data-en="Frontend web development">前端工程設計</h6>
+                    <h6  data-zh="期末專題成果" data-en="Final Project Results">期中專題成果</h6>
+                </div>
+                <div class="middle1">
+                    <h3 data-zh="人生百味" data-en="Do You a Flavor">人生百味</h3>
+                    <a href="https://doyouaflavor.tw/" target="_blank" class = "footer-a"><h6 data-zh="官方網站" data-en="Official website">官方網站</h6></a> 
+                    <a href="https://doyouaflavor.tw/activities/" target="_blank" class = "footer-a"><h6 data-zh="專案列表" data-en="Project list">專案列表</h6></a> 
+                    <a href="https://doyouaflavor.tw/blog/" target="_blank" class = "footer-a"><h6 data-zh="議題文章" data-en="Topic articles">議題文章</h6></a> 
+                    <a href="https://doyouaflavor.tw/donate/" target="_blank" class = "footer-a"><h6 data-zh="捐款支持" data-en="Donate to support">捐款資訊</h6></a> 
+                    <a href="https://www.books.com.tw/products/0010741248?" target="_blank" class = "footer-a"><h6 data-zh="街頭生存指南" data-en="Street survival guide">街頭生存指南</h6></a> 
+                    <a href="https://doyouaflavor.tw/homeless-helper/" target="_blank" class = "footer-a"><h6 data-zh="無家者小幫手" data-en="Homeless helper">無家者小幫手</h6></a> 
+                </div>
+                <div class="middle2">
+                    <h3 data-zh="其他" data-en="Others">其他</h3>
+                    <a href="https://www.instagram.com/tiatde/" target="_blank" class = "footer-a"><h6 data-zh="開發者支持" data-en="Developer support">開發者支持</h6></a> 
+                    <a href="https://www.instagram.com/tiatde/" target="_blank" class = "footer-a"><h6 data-zh="平臺問題回報" data-en="Platform issue report">平臺問題回報</h6></a> 
+                    <a href="https://www.youtube.com/@yijuchao5024" target="_blank" class = "footer-a"><h6 data-zh="更多影音作品" data-en="More video content">更多影音作品</h6></a> 
+                </div>
+                <div class="right">
+                    <h3>FOLLOW</h3>
+                    <a href="https://www.instagram.com/tiatde/" target="_blank" class = "footer-a"><img src="img/img_index/Instagram.png" alt="Instagram" class="instagram"></a> 
+                    <a href="https://www.facebook.com/profile.php?id=100004458227420" target="_blank" class = "footer-a"><img src="img/img_index/Facebook.png" alt="Facebook" class="facebook"></a> 
+                    <a href="https://www.youtube.com/@yijuchao5024" target="_blank" class = "footer-a"><img src="img/img_index/Youtube.png" alt="Youtube" class="youtube"></a> 
+                </div>
+            </div>
+            <div class = "footer-bottom">
+                <hr class = "footer-hr">
+                <p class = "footer-p">2024 produced by Yi-Ju, Chao & Han-Jhen, Wu</p>
+            </div class = "footer-bottom">
+        </div>
+    </div>
+    
+    <script src="JS/basic.js"></script>
+    <script src="JS/signUp.js"></script>
+</body>
+</html>
