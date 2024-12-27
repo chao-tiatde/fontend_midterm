@@ -246,9 +246,9 @@ body{
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (min-width: 359px) and (max-width: 767px){
     .main_contain{
-        width: 500px;
+        width: 340px;
         height: auto;
         margin-top: 147px;
         color: #354567;
@@ -260,9 +260,16 @@ body{
         align-items: center;
     }
 
+    .title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 20px !important;
+    }
+
     .Q{
-        width: 500px;
-        height: 51px;
+        width: 340px;
+        display: inline-block;
         font-weight: 900;
         margin-top: 5px;
         cursor: pointer;
@@ -270,7 +277,7 @@ body{
     }
     
     .Q hr{
-        width: 500px;
+        width: 340px;
         height: 1px;
         border: none;
         margin: 0;
@@ -278,15 +285,15 @@ body{
     }
 
     .A{
-        height: 21px;
-        width: 500px;
+        display: inline-block;
+        width: 340px;
         margin-top: 5px;
         margin-bottom: 15px;
         max-height: 25px;
     }
 
     .line_last{
-        width: 500px;
+        width: 340px;
         height: 1px;
         border: none;
         margin-top: 5px;
@@ -294,31 +301,15 @@ body{
     }
 
     .subtitle{
-        width: 500px;
-        height: 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 30px;
-        margin-bottom: 45px;
+        display: none;
     }
     
     .sub{
-        width: 80px;
-        height: 40px;
-        background-color: #B9C1D2;
-        color: #354567;
-        border-radius: 2px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: none;
+        display: none;
     }
 
-    .sub h2{
-        font-size: 16px;
+    .Q_content h2{
+        text-align: left;
     }
 }
 
