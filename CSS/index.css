@@ -11,38 +11,38 @@ body{
 }
 h2{
     font-size: 20px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         font-size: 10px;
         white-space: nowrap;
     }
 }
 h3{
     font-size: 17px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         font-size: 9px;
     }
 }
 h4{
     font-size: 15px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         font-size: 8px;
     }
 }
 h5{
     font-size: 14px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         font-size: 7px;
     }
 }
 h6{
     font-size: 12px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         font-size: 6px;
     }
 }
 p{
     font-size: 10px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         font-size: 5px;
     }
 }
@@ -64,7 +64,7 @@ p{
     width: 100%;
     height: 59px;
     box-shadow: 0px 1px 3px 0px #0000004D, 0px 4px 8px 3px #00000026;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         height: 30px;
     }
 }
@@ -77,7 +77,7 @@ p{
     align-items: center;
     justify-content: space-between;
     width: 240px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         transform: scale(0.5);
     }
 }
@@ -119,7 +119,7 @@ p{
     cursor: pointer;
     border-radius: 2px;
     font-size: auto;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         margin-right: 5px;
     }
 }
@@ -134,7 +134,7 @@ p{
     padding-left: 115px;
     padding-top: 20px;
     padding-bottom: 10px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         height: 90px;
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* 分成三等份 */
@@ -154,7 +154,7 @@ p{
     padding: 10px 20px;
     cursor: pointer;
     text-decoration: none;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         padding-right: 0px;
         padding-left: 0px;
     }
@@ -173,14 +173,14 @@ p{
         white-space: nowrap;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 575px) {
     .dropdown, .a-catalog {
         transform: scale(0.5);
         white-space: nowrap;
     }
 }
 .home-icon{
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         transform: scale(0.5);
     }
 }
@@ -235,7 +235,7 @@ li > a:hover {
         height: 334px;
         overflow: hidden;
     }
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         height: 167px;
         margin-top: 120px;
     }
@@ -258,7 +258,7 @@ li > a:hover {
     opacity: 0; 
     transform: translateX(-100%); 
     transition: opacity 0.5s ease, transform 0.8s ease; 
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         gap: 2px;
         left: 15px;
         top: 15px;
@@ -275,7 +275,7 @@ li > a:hover {
     opacity: 0; 
     transform: translateX(+100%); 
     transition: opacity 0.5s ease, transform 0.8s ease; 
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         gap: 2px;
         right: 15px;
         bottom: 15px;
@@ -294,7 +294,7 @@ li > a:hover {
     padding-bottom: 0px;
     margin: 0px;
     color: black;
-    @media(max-width: 360px){
+    @media(max-width:575px){
         padding-left: 2px;
         padding-right: 2px;
     }
@@ -313,7 +313,7 @@ li > a:hover {
     margin-bottom: 34px;
     text-align: center;
     font-weight: 700;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         margin-bottom: 0px;
     }
 }
@@ -322,7 +322,7 @@ li > a:hover {
     justify-content: center;
     align-items: center;
     width: 100%;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-gap: 0px;
@@ -346,7 +346,7 @@ li > a:hover {
     border-radius: 2px;
     grid-column: span 6;
 }
-@media (max-width: 360px) {
+@media (max-width: 575px) {
     .giver, .taker {
       grid-column: span 12;
       transform: scale(0.7);
@@ -410,7 +410,7 @@ li > a:hover {
     width: 100%;
     margin-top: 83px;
     border-radius: 30px 30px 0px 0px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         margin-top: 0px;
     }
 }
@@ -492,7 +492,7 @@ li > a:hover {
     @media(max-width: 768px){
         white-space: nowrap;
     }
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         font-size: 80px;
     }
 }
@@ -526,14 +526,14 @@ li > a:hover {
     @media(max-width: 768px){
         gap: 5px;
     }
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 20px;
         margin-left: 100px;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 575px) {
     .winter, .summer, .spring, .autumn {
       grid-template-columns: 1fr;
     }
@@ -584,7 +584,7 @@ li > a:hover {
     text-align: center;
     font-weight: 700;
     margin-bottom: 33px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         margin-top: 1150px;
     }
 }
@@ -596,7 +596,7 @@ li > a:hover {
     margin-bottom: 68px;
     opacity: 0; 
     transition: opacity 0.8s ease; 
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         height: 178px;
     }
 }
@@ -607,7 +607,7 @@ li > a:hover {
     width: 50%;
     height: 356px;
     position: relative;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         height: 178px;
     }
 }
@@ -620,7 +620,7 @@ li > a:hover {
 .carousel-img > div {
     width: 100%;
     display: none; /* 初始隱藏所有幻燈片 */
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         overflow: hidden;
     }
 }
@@ -649,14 +649,14 @@ li > a:hover {
 }
 .control-prev {
     left: 31px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         left: 15px;
         transform: scale(0.5);
     }
 }
 .control-next {
     right: 31px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         transform: scale(0.5);
         right: 15px;
     }
@@ -687,7 +687,7 @@ li > a:hover {
     padding-top: 100px;
     padding-left: 90px;
     padding-right: 90px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         padding-top: 25px;
         padding-left: 25px;
         padding-right: 25px;
@@ -719,20 +719,20 @@ li > a:hover {
     padding-left: 92px;
     padding-right: 92px;
     position: relative;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         height: 580px;
     }
 }
 .footer-top{
     display: flex;
     justify-content: space-between;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 20px;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 575px) {
     .footer-top {
       grid-template-columns: 1fr;
     }

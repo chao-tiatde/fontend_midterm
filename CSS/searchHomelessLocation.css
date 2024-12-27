@@ -11,38 +11,38 @@ body{
 }
 h2{
     font-size: 20px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         font-size: 10px;
         white-space: nowrap;
     }
 }
 h3{
     font-size: 17px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         font-size: 9px;
     }
 }
 h4{
     font-size: 15px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         font-size: 8px;
     }
 }
 h5{
     font-size: 14px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         font-size: 7px;
     }
 }
 h6{
     font-size: 12px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         font-size: 6px;
     }
 }
 p{
     font-size: 10px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         font-size: 5px;
     }
 }
@@ -64,7 +64,7 @@ p{
     width: 100%;
     height: 59px;
     box-shadow: 0px 1px 3px 0px #0000004D, 0px 4px 8px 3px #00000026;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         height: 30px;
     }
 }
@@ -77,7 +77,7 @@ p{
     align-items: center;
     justify-content: space-between;
     width: 240px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         transform: scale(0.5);
     }
 }
@@ -119,7 +119,7 @@ p{
     cursor: pointer;
     border-radius: 2px;
     font-size: auto;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         margin-right: 5px;
     }
 }
@@ -134,7 +134,7 @@ p{
     padding-left: 115px;
     padding-top: 20px;
     padding-bottom: 10px;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         height: 90px;
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* 分成三等份 */
@@ -154,7 +154,7 @@ p{
     padding: 10px 20px;
     cursor: pointer;
     text-decoration: none;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         padding-right: 0px;
         padding-left: 0px;
     }
@@ -173,14 +173,14 @@ p{
         white-space: nowrap;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 575px) {
     .dropdown, .a-catalog {
         transform: scale(0.5);
         white-space: nowrap;
     }
 }
 .home-icon{
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         transform: scale(0.5);
     }
 }
@@ -230,7 +230,7 @@ li > a:hover {
     margin-top: 107px;
     z-index: 1;
     position: relative;
-    @media (max-width: 360px) {
+    @media (max-width: 575px) {
         margin-top: 120px;
     }
 }
@@ -243,22 +243,21 @@ li > a:hover {
         margin-left: 25px;
         margin-right: 25px;
 }
-@media (max-width: 360px) {
+@media (max-width: 575px) {
     margin-top: 20px;
     margin-bottom: 10px;
 }
 }
 .choose{
-    position: relative;
     position: absolute;
     left: 20px;
     top: 127px;
-    bottom: 20px;
+    height: 550px;;
     z-index: 2;
     background-color: white;
     width: 36%;
     border-radius: 30px;
-    @media (max-width: 360px) {
+    @media (max-width: 575px) {
        width: 85%;
        height: 290px;
 }
@@ -268,7 +267,7 @@ li > a:hover {
     text-align: center;
     margin-top: 45px;
     margin-bottom: 0px;
-    @media (max-width: 360px) {
+    @media (max-width: 575px) {
         margin-top: 20px;
 }
 }
@@ -278,7 +277,7 @@ li > a:hover {
     border: 1px solid #19396D;
     margin-right: 50px;
     margin-left: 50px;
-    @media (max-width: 360px) {
+    @media (max-width: 575px) {
         margin-top: 7px;
 }
 }
@@ -297,14 +296,14 @@ li > a:hover {
     height: 40px;
     margin-right: 10px;
     cursor: pointer;
-    @media (max-width: 360px) {
+    @media (max-width: 575px) {
         width: 20px;
         height: 20px;
 }
 }
 .search-box1{
     position: relative;
-    @media (max-width: 360px) {
+    @media (max-width: 575px) {
         height: 20px;
 }
 }
@@ -313,7 +312,7 @@ li > a:hover {
 }
 .search-input1{
     padding-right: 28px;
-    @media (max-width: 360px) {
+    @media (max-width: 575px) {
         padding-right: 14px;
         height: 20px;
         font-size: 10px;
@@ -324,7 +323,7 @@ li > a:hover {
     right: 11px;
     cursor: pointer;
     top: 11px;
-    @media (max-width: 360px) {
+    @media (max-width: 575px) {
        transform: scale(0.5);
 }
 }
@@ -361,7 +360,7 @@ li > a:hover {
 }
 .input{
     width: 100%;
-    @media (max-width: 360px) {
+    @media (max-width: 575px) {
         height: 20px;
         font-size: 10px;
     }
@@ -381,7 +380,7 @@ li > a:hover {
     @media (max-width: 768px) {
         right: 25px;
 }
-@media (max-width: 360px) {
+@media (max-width: 575px) {
     transform: scale(0.5);
     right: 12px;
 }
@@ -408,7 +407,7 @@ li > a:hover {
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(575deg);
     }
 }
 /*footer*/
@@ -420,20 +419,20 @@ li > a:hover {
     padding-left: 92px;
     padding-right: 92px;
     position: relative;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         height: 580px;
     }
 }
 .footer-top{
     display: flex;
     justify-content: space-between;
-    @media(max-width: 360px){
+    @media(max-width: 575px){
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 20px;
     }
 }
-@media (max-width: 360px) {
+@media (max-width: 575px) {
     .footer-top {
       grid-template-columns: 1fr;
     }
