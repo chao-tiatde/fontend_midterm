@@ -11,21 +11,40 @@ body{
 }
 h2{
     font-size: 20px;
+    @media(max-width: 360px){
+        font-size: 10px;
+        white-space: nowrap;
+    }
 }
 h3{
     font-size: 17px;
+    @media(max-width: 360px){
+        font-size: 9px;
+    }
 }
 h4{
-    font-size: 15px;;
+    font-size: 15px;
+    @media(max-width: 360px){
+        font-size: 8px;
+    }
 }
 h5{
     font-size: 14px;
+    @media(max-width: 360px){
+        font-size: 7px;
+    }
 }
 h6{
     font-size: 12px;
+    @media(max-width: 360px){
+        font-size: 6px;
+    }
 }
 p{
-    font-size: 10px;;
+    font-size: 10px;
+    @media(max-width: 360px){
+        font-size: 5px;
+    }
 }
 /*header*/
 .fixed{
@@ -45,6 +64,9 @@ p{
     width: 100%;
     height: 59px;
     box-shadow: 0px 1px 3px 0px #0000004D, 0px 4px 8px 3px #00000026;
+    @media(max-width: 360px){
+        height: 30px;
+    }
 }
 .nav-header h2{
     color: white;
@@ -55,11 +77,14 @@ p{
     align-items: center;
     justify-content: space-between;
     width: 240px;
+    @media(max-width: 360px){
+        transform: scale(0.5);
+    }
 }
 .search-box{
     position: relative;
     width: 170px;
-    height: 25px;;
+    height: 25px;
 }
 .search-input{
     font-size: 15px;
@@ -82,7 +107,7 @@ p{
     cursor: pointer;
 }
 .btn-lan{
-    weight: 25px;
+    width: 25px;
     height: 25px;
     background-color: white;
     border: 0;
@@ -93,6 +118,10 @@ p{
     padding-bottom: 3px;
     cursor: pointer;
     border-radius: 2px;
+    font-size: auto;
+    @media(max-width: 360px){
+        margin-right: 5px;
+    }
 }
 .nav-content{
     width: 100%;
@@ -105,6 +134,17 @@ p{
     padding-left: 115px;
     padding-top: 20px;
     padding-bottom: 10px;
+    @media(max-width: 360px){
+        height: 90px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 分成三等份 */
+        grid-gap: 10px; /* 設定格間間距 */
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto); /* 分成兩行，高度自動 */
+        padding-left: 30px;
+        padding-top: 0px;
+        padding-bottom: 0px;   
+    }
 }
 .btn-catalog {
     color: #FFFFFF;
@@ -114,6 +154,10 @@ p{
     padding: 10px 20px;
     cursor: pointer;
     text-decoration: none;
+    @media(max-width: 360px){
+        padding-right: 0px;
+        padding-left: 0px;
+    }
 }
 .a-catalog{
     color: #FFFFFF;
@@ -123,6 +167,22 @@ p{
     padding: 0px;
     cursor: pointer;
     text-decoration: none;
+}
+@media (max-width: 768px) {
+    .dropdown, .a-catalog {
+        white-space: nowrap;
+    }
+}
+@media (max-width: 360px) {
+    .dropdown, .a-catalog {
+        transform: scale(0.5);
+        white-space: nowrap;
+    }
+}
+.home-icon{
+    @media(max-width: 360px){
+        transform: scale(0.5);
+    }
 }
 .btn-catalog:hover {
     background-color: #505f75; 
@@ -165,6 +225,7 @@ li > a {
 li > a:hover {
     background-color: #505f75;
 }
+
 /*list*/
 .list-bg{
     margin-top: 107px;
@@ -175,6 +236,9 @@ li > a:hover {
     padding-top: 40px;
     z-index: 1;
     margin-bottom: 330px;
+    @media (max-width: 360px) {
+        height: 320px;
+}
 }
 .list-h{
     color: white;
@@ -188,6 +252,11 @@ li > a:hover {
     margin-top: 40px;
     height: 540px;
     z-index: 2;
+    @media (max-width: 360px) {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+}
 }
 /*chart*/
 .chart-h{
@@ -209,6 +278,12 @@ li > a:hover {
     margin-right: 60px;
     height: 480px;
     margin-bottom: 70px;
+    @media (max-width: 360px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 分成兩列，寬度相等 */
+        gap: 20px; /* 設定列與列之間的間距 */
+        grid-template-columns: 1fr; 
+}
 }
 .chart-l{
     padding-right: 42.5px;
@@ -231,6 +306,12 @@ li > a:hover {
     margin-top: 0px;
     margin-bottom: 27px;
 }
+@media (max-width: 768px) {
+    .chart-lh, .chart-lp, .chart-rh, .chart-rp{
+        transform: scale(0.8);
+        white-space: nowrap;
+    }
+}
 /*footer*/
 .footer{
     width: 100%;
@@ -240,11 +321,25 @@ li > a:hover {
     padding-left: 92px;
     padding-right: 92px;
     position: relative;
+    @media(max-width: 360px){
+        height: 580px;
+        top: 450px;
+    }
 }
 .footer-top{
     display: flex;
     justify-content: space-between;
+    @media(max-width: 360px){
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 20px;
+    }
 }
+@media (max-width: 360px) {
+    .footer-top {
+      grid-template-columns: 1fr;
+    }
+  }
 .left h6, .middle1 h6, .middle2 h6, .right h6{
     margin-top: 0px;
     margin-bottom: 10px;
