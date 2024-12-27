@@ -9,7 +9,6 @@ html{
     box-sizing: inherit;
 }
 body{
-    font-family: "Noto sans", sans-serif;
     font-weight: 550;
     margin: 0;
     padding: 0;
@@ -55,6 +54,7 @@ p{
 }
 /*header*/
 .fixed{
+    font-family: 'Inter', sans-serif;
     position: fixed;
     top: 0;
     left: 0;
@@ -194,7 +194,7 @@ p{
 .btn-catalog:hover {
     background-color: #505f75; 
 }
-ul {
+.nav-content ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -207,29 +207,30 @@ ul {
     width: 200px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
-li > a {
+.nav-content li > a {
     color: white;
     padding: 10px;
     text-decoration: none;
     display: block;
+    font-weight: 400;
 }
-li > a:hover {
+.nav-content li > a:hover {
     background-color: #505f75;
 }
-li:hover > ul {
+.nav-content li:hover > ul {
     display: block;
 }
-li {
+.nav-content li {
     position: relative;
     list-style-type: none;
 }
-li > a {
+.nav-content li > a {
     padding: 10px 20px;
     font-size: 16px;
     background-color: transparent;
     display: block;
 }
-li > a:hover {
+.nav-content li > a:hover {
     background-color: #505f75;
 }
 
